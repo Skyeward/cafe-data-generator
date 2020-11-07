@@ -27,6 +27,7 @@ def get_raw_text(filepath):
 
 
 def print_stats(file_name, file_text_line_list):
+    #HEADER WITH FILE NAME
     print("-----")
     print(file_name.replace("data_files/", ""))
     print("-----")
@@ -46,11 +47,19 @@ def print_stats(file_name, file_text_line_list):
 
     number_of_drink_purchases = price_count
 
-
+    #FINDING LARGES AND REGULARS
+    for line in file_text_line_list:
+        number_of_large += line[3].count("Large")
+        number_of_regular += line[3].count("Regular")
 
     #PRINTING STATS
     print("number of orders: " + str(number_of_orders))
     print("number of individual drinks purchased: " + str(number_of_drink_purchases))
+    print()
+    print("number of Large drinks: " + str(number_of_large))
+    print("number of Regular drinks: " + str(number_of_regular))
+    print("-----")
+    print()
     print()
 
 
