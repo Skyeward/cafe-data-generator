@@ -44,8 +44,9 @@ def print_stats(file_name, file_text_line_list, time_period):
     drink_count = 0
 
     for line in file_text_line_list:
-        drink_count += line[3].count(".") #[3] is purchases, and all drink prices contain a dot, thus finding drink count
-        max_drinks_in_single_order = max(max_drinks_in_single_order, drink_count)
+        drinks_in_line = line[3].count(".")
+        drink_count += drinks_in_line #[3] is purchases, and all drink prices contain a dot, thus finding drink count
+        max_drinks_in_single_order = max(max_drinks_in_single_order, drinks_in_line)
 
     number_of_drink_purchases = drink_count
 
