@@ -40,17 +40,53 @@ def print_stats(file_name, file_text_line_list):
     #NUMBER OF ORDERS AND DRINK PURCHASES
     number_of_orders = len(file_text_line_list)
 
-    price_count = 0
+    drink_count = 0
 
     for line in file_text_line_list:
-        price_count += line[3].count(".") #[3] is purchases, and all drink prices contain a dot, thus finding drink count
+        drink_count += line[3].count(".") #[3] is purchases, and all drink prices contain a dot, thus finding drink count
 
-    number_of_drink_purchases = price_count
+    number_of_drink_purchases = drink_count
 
     #FINDING LARGES AND REGULARS
     for line in file_text_line_list:
         number_of_large += line[3].count("Large")
         number_of_regular += line[3].count("Regular")
+
+    #FINDING DRINK PURCHASES OVER TIME
+    first_order_time = file_text_line_list[0][0].split(" ")[1]
+    first_order_time_hours_and_minutes = first_order_time.split(":")
+    opening_time_minutes_total = (int(first_order_time_hours_and_minutes[0]) * 60) + int(first_order_time_hours_and_minutes[1])
+    counts_per_half_hour = {}
+
+    for line in file_text_line_list:
+        order_time = line[0].split(" ")[1]
+        hours_and_minutes = order_time.split(":")
+        minutes_total = (int(hours_and_minutes[0]) * 60) + int(hours_and_minutes[1])
+        minutes_total_after_opening = minutes_total - opening_time_minutes_total
+        half_hour_time_period = int(minutes_total_after_opening / 30)
+
+        drink_count = line[3].count(".")
+
+        if half_hour_time_period in counts_per_half_hour:
+            counts_per_half_hour[half_hour_time_period] += drink_count
+        else:
+            counts_per_half_hour[half_hour_time_period] = drink_count
+    
+    counts_per_half_hour_formatted_times = {}
+
+    for key, value in counts_per_half_hour.items():
+        time_period_start_minutes_total = opening_time_minutes_total + (key * 30)
+        time_period_hour = str(int(time_period_start_minutes_total / 60))
+        time_period_minutes = str(time_period_start_minutes_total % 60)
+
+        if len(time_period_minutes) == 1:
+            time_period_minutes = "0" + time_period_minutes
+
+        formatted_time = str(time_period_hour) + ":" + str(time_period_minutes)
+
+        counts_per_half_hour_formatted_times[formatted_time] = value
+
+
 
     #PRINTING STATS
     print("number of orders: " + str(number_of_orders))
@@ -58,12 +94,22 @@ def print_stats(file_name, file_text_line_list):
     print()
     print("number of Large drinks: " + str(number_of_large))
     print("number of Regular drinks: " + str(number_of_regular))
+    print()
+    print("cafe opens at " + first_order_time)
+    print()
+
+    for period, count in counts_per_half_hour_formatted_times.items():
+        print("drinks sold during the 30 minutes beginning at " + period + " - " + str(count))
+
+    print()
     print("-----")
     print()
     print()
 
 
 if __name__ == "__main__":
+    print()
+    
     files = define_file_list()
 
     for file_ in files:
