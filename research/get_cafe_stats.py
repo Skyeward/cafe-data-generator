@@ -26,7 +26,7 @@ def get_raw_text(filepath):
     return line_list
 
 
-def print_stats(file_name, file_text_line_list):
+def print_stats(file_name, file_text_line_list, time_period):
     #HEADER WITH FILE NAME
     print("-----")
     print(file_name.replace("data_files/", ""))
@@ -57,13 +57,14 @@ def print_stats(file_name, file_text_line_list):
     first_order_time_hours_and_minutes = first_order_time.split(":")
     opening_time_minutes_total = (int(first_order_time_hours_and_minutes[0]) * 60) + int(first_order_time_hours_and_minutes[1])
     counts_per_half_hour = {}
+    
 
     for line in file_text_line_list:
         order_time = line[0].split(" ")[1]
         hours_and_minutes = order_time.split(":")
         minutes_total = (int(hours_and_minutes[0]) * 60) + int(hours_and_minutes[1])
         minutes_total_after_opening = minutes_total - opening_time_minutes_total
-        half_hour_time_period = int(minutes_total_after_opening / 30)
+        half_hour_time_period = int(minutes_total_after_opening / time_period)
 
         drink_count = line[3].count(".")
 
@@ -72,10 +73,10 @@ def print_stats(file_name, file_text_line_list):
         else:
             counts_per_half_hour[half_hour_time_period] = drink_count
     
-    counts_per_half_hour_formatted_times = {}
+    counts_per_period_formatted_times = {}
 
     for key, value in counts_per_half_hour.items():
-        time_period_start_minutes_total = opening_time_minutes_total + (key * 30)
+        time_period_start_minutes_total = opening_time_minutes_total + (key * time_period)
         time_period_hour = str(int(time_period_start_minutes_total / 60))
         time_period_minutes = str(time_period_start_minutes_total % 60)
 
@@ -84,7 +85,7 @@ def print_stats(file_name, file_text_line_list):
 
         formatted_time = str(time_period_hour) + ":" + str(time_period_minutes)
 
-        counts_per_half_hour_formatted_times[formatted_time] = value
+        counts_per_period_formatted_times[formatted_time] = value
 
 
 
@@ -98,8 +99,8 @@ def print_stats(file_name, file_text_line_list):
     print("cafe opens at " + first_order_time)
     print()
 
-    for period, count in counts_per_half_hour_formatted_times.items():
-        print("drinks sold during the 30 minutes beginning at " + period + " - " + str(count))
+    for period, count in counts_per_period_formatted_times.items():
+        print("drinks sold during the " + str(time_period) + " minutes beginning at " + period + " - " + str(count))
 
     print()
     print("-----")
@@ -114,4 +115,5 @@ if __name__ == "__main__":
 
     for file_ in files:
         text = get_raw_text(file_)
-        print_stats(file_, text)
+        sales_time_period = 60
+        print_stats(file_, text, sales_time_period)
