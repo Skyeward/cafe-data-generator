@@ -1,0 +1,5969 @@
+close_time: 1700
+frequency:
+  914: 57
+  1014: 124
+  1114: 46
+  1214: 27
+  1314: 59
+  1414: 95
+  1514: 97
+  1614: 34
+menu_probability_weights:
+  Flat white: 226
+  Flavoured iced latte - Caramel: 197
+  Flavoured iced latte - Hazelnut: 230
+  Flavoured iced latte - Vanilla: 181
+  Flavoured latte - Hazelnut: 203
+  Latte: 212
+name: Chesterfield
+open_time: 814
+payment_method_probability_weights:
+  CARD: 227
+size_probability_weights:
+  Large: 320
+---
+close_time: 1700
+frequency:
+  905: 111
+  1005: 38
+  1105: 16
+  1205: 21
+  1305: 126
+  1405: 39
+  1505: 116
+  1605: 60
+menu_probability_weights:
+  Flavoured iced latte - Caramel: 233
+  Frappes - Strawberries & Cream: 246
+  Glass of milk: 171
+  Mocha: 205
+  Smoothies - Glowing Greens: 196
+  Speciality Tea - Earl Grey: 201
+name: Longridge
+open_time: 805
+payment_method_probability_weights:
+  CASH: 163
+size_probability_weights:
+  Large: 344
+---
+close_time: 1700
+frequency:
+  906: 118
+  1006: 96
+  1106: 61
+  1206: 39
+  1306: 64
+  1406: 36
+  1506: 36
+  1606: 69
+menu_probability_weights:
+  Cortado: 230
+  Flavoured hot chocolate - Vanilla: 159
+  Flavoured latte - Caramel: 208
+  Flavoured latte - Hazelnut: 229
+  Hot chocolate: 232
+  Mocha: 239
+  Red Label tea: 223
+  Smoothies - Berry Beautiful: 188
+  Speciality Tea - Green: 223
+  Speciality Tea - Peppermint: 183
+name: Uppingham
+open_time: 806
+payment_method_probability_weights:
+  CARD: 182
+size_probability_weights:
+  Large: 180
+---
+close_time: 1700
+frequency:
+  906: 60
+  1006: 56
+  1106: 10
+  1206: 56
+  1306: 47
+  1406: 130
+  1506: 52
+  1606: 52
+menu_probability_weights:
+  Espresso: 209
+  Frappes - Coffee: 183
+  Speciality Tea - Camomile: 219
+name: London Soho
+open_time: 806
+payment_method_probability_weights:
+  CASH: 167
+size_probability_weights:
+  Large: 270
+---
+close_time: 1700
+frequency:
+  914: 44
+  1014: 54
+  1114: 49
+  1214: 62
+  1314: 135
+  1414: 138
+  1514: 102
+  1614: 55
+menu_probability_weights:
+  Babyccino: 203
+  Chai latte: 176
+  Flavoured hot chocolate - Hazelnut: 181
+  Flavoured hot chocolate - Vanilla: 224
+  Flavoured latte - Vanilla: 222
+  Hot chocolate: 192
+  Iced latte: 189
+  Luxury hot chocolate: 180
+  Speciality Tea - Peppermint: 226
+name: London Camden
+open_time: 814
+payment_method_probability_weights:
+  CARD: 330
+size_probability_weights:
+  Large: 192
+---
+close_time: 2100
+frequency:
+  800: 68
+  900: 34
+  1000: 87
+  1100: 67
+  1200: 54
+  1300: 126
+  1400: 127
+  1500: 87
+  1600: 58
+  1700: 52
+  1800: 62
+  1900: 58
+  2000: 87
+menu_probability_weights:
+  Flavoured iced latte - Caramel: 244
+  Frappes - Chocolate Cookie: 165
+  Frappes - Strawberries & Cream: 216
+  Iced americano: 155
+  Latte: 204
+name: London Greenwich
+open_time: 700
+payment_method_probability_weights:
+  CARD: 367
+size_probability_weights:
+  Large: 201
+---
+close_time: 1700
+frequency:
+  903: 28
+  1003: 107
+  1103: 11
+  1203: 18
+  1303: 44
+  1403: 75
+  1503: 34
+  1603: 61
+menu_probability_weights:
+  Cortado: 152
+  Flavoured hot chocolate - Vanilla: 164
+  Flavoured iced latte - Caramel: 231
+  Flavoured iced latte - Vanilla: 225
+  Flavoured latte - Hazelnut: 225
+  Iced latte: 210
+  Smoothies - Carrot Kick: 165
+  Speciality Tea - Peppermint: 167
+name: London Piccadilly
+open_time: 803
+payment_method_probability_weights:
+  CASH: 163
+size_probability_weights:
+  Large: 256
+---
+close_time: 2100
+frequency:
+  813: 123
+  913: 102
+  1013: 102
+  1113: 64
+  1213: 62
+  1313: 131
+  1413: 123
+  1513: 70
+  1613: 38
+  1713: 51
+  1813: 57
+  1913: 88
+  2013: 51
+menu_probability_weights:
+  Cappuccino: 186
+  Espresso: 154
+  Frappes - Strawberries & Cream: 164
+  Hot chocolate: 194
+  Iced americano: 233
+  Smoothies - Carrot Kick: 161
+  Smoothies - Glowing Greens: 207
+  Speciality Tea - Earl Grey: 237
+name: London Brixton
+open_time: 713
+payment_method_probability_weights:
+  CARD: 154
+size_probability_weights:
+  Large: 165
+---
+close_time: 1700
+frequency:
+  910: 39
+  1010: 79
+  1110: 9
+  1210: 43
+  1310: 109
+  1410: 104
+  1510: 95
+  1610: 35
+menu_probability_weights:
+  Chai latte: 213
+  Cortado: 219
+  Flavoured hot chocolate - Caramel: 185
+  Red Label tea: 180
+  Speciality Tea - Camomile: 218
+  Speciality Tea - English breakfast: 235
+name: Birmingham
+open_time: 810
+payment_method_probability_weights:
+  CARD: 251
+size_probability_weights:
+  Large: 300
+---
+close_time: 1700
+frequency:
+  914: 75
+  1014: 112
+  1114: 30
+  1214: 72
+  1314: 143
+  1414: 126
+  1514: 137
+  1614: 68
+menu_probability_weights:
+  Chai latte: 213
+  Filter coffee: 238
+  Hot Chocolate: 156
+  Iced americano: 155
+  Speciality Tea - English breakfast: 157
+name: Leeds
+open_time: 814
+payment_method_probability_weights:
+  CARD: 328
+size_probability_weights:
+  Large: 345
+---
+close_time: 1700
+frequency:
+  906: 56
+  1006: 103
+  1106: 39
+  1206: 22
+  1306: 144
+  1406: 45
+  1506: 57
+  1606: 42
+menu_probability_weights:
+  Filter coffee: 175
+  Iced latte: 162
+name: Sheffield
+open_time: 806
+payment_method_probability_weights:
+  CARD: 176
+size_probability_weights:
+  Large: 338
+---
+close_time: 1700
+frequency:
+  900: 62
+  1000: 73
+  1100: 46
+  1200: 49
+  1300: 51
+  1400: 63
+  1500: 47
+  1600: 42
+menu_probability_weights:
+  Americano: 239
+  Cappuccino: 164
+  Chai latte: 165
+  Flavoured hot chocolate - Hazelnut: 178
+  Flavoured iced latte - Hazelnut: 223
+  Flavoured iced latte - Vanilla: 247
+  Frappes - Coffee: 213
+  Hot chocolate: 190
+  Smoothies - Berry Beautiful: 235
+  Speciality Tea - Camomile: 230
+name: Glasgow
+open_time: 800
+payment_method_probability_weights:
+  CARD: 211
+size_probability_weights:
+  Large: 293
+---
+close_time: 2100
+frequency:
+  802: 98
+  902: 119
+  1002: 72
+  1102: 24
+  1202: 31
+  1302: 68
+  1402: 63
+  1502: 76
+  1602: 64
+  1702: 57
+  1802: 46
+  1902: 26
+  2002: 29
+menu_probability_weights:
+  Americano: 202
+  Babyccino: 196
+  Iced latte: 180
+  Smoothies - Glowing Greens: 239
+  Speciality Tea - Camomile: 222
+  Speciality Tea - English breakfast: 186
+name: Newcastle upon Tyne
+open_time: 702
+payment_method_probability_weights:
+  CARD: 339
+size_probability_weights:
+  Large: 144
+---
+close_time: 1700
+frequency:
+  908: 33
+  1008: 64
+  1108: 56
+  1208: 58
+  1308: 109
+  1408: 132
+  1508: 118
+  1608: 39
+menu_probability_weights:
+  Espresso: 206
+  Flavoured iced latte - Caramel: 186
+  Speciality Tea - Peppermint: 190
+name: Nottingham
+open_time: 808
+payment_method_probability_weights:
+  CARD: 271
+size_probability_weights:
+  Large: 272
+---
+close_time: 1700
+frequency:
+  905: 81
+  1005: 54
+  1105: 54
+  1205: 49
+  1305: 54
+  1405: 113
+  1505: 149
+  1605: 58
+menu_probability_weights:
+  Americano: 193
+  Flavoured iced latte - Caramel: 206
+  Hot Chocolate: 217
+  Luxury hot chocolate: 203
+  Red Label tea: 160
+  Speciality Tea - Darjeeling: 177
+  Speciality Tea - Peppermint: 172
+name: Southend-on-Sea
+open_time: 805
+payment_method_probability_weights:
+  CARD: 230
+size_probability_weights:
+  Large: 300
+---
+close_time: 2100
+frequency:
+  803: 120
+  903: 86
+  1003: 89
+  1103: 25
+  1203: 9
+  1303: 47
+  1403: 68
+  1503: 62
+  1603: 35
+  1703: 38
+  1803: 99
+  1903: 58
+  2003: 64
+menu_probability_weights:
+  Flavoured iced latte - Caramel: 194
+  Flavoured latte - Hazelnut: 192
+name: Bristol
+open_time: 703
+payment_method_probability_weights:
+  CARD: 168
+size_probability_weights:
+  Large: 132
+---
+close_time: 1700
+frequency:
+  912: 67
+  1012: 90
+  1112: 49
+  1212: 11
+  1312: 115
+  1412: 129
+  1512: 146
+  1612: 38
+menu_probability_weights:
+  Americano: 193
+  Chai latte: 214
+  Flavoured iced latte - Hazelnut: 223
+  Flavoured latte - Hazelnut: 179
+  Mocha: 215
+  Smoothies - Carrot Kick: 182
+  Smoothies - Glowing Greens: 195
+  Speciality Tea - Earl Grey: 176
+  Speciality Tea - Fruit: 166
+  Speciality Tea - Green: 211
+name: Edinburgh
+open_time: 812
+payment_method_probability_weights:
+  CARD: 186
+size_probability_weights:
+  Large: 297
+---
+close_time: 1700
+frequency:
+  913: 67
+  1013: 82
+  1113: 67
+  1213: 13
+  1313: 51
+  1413: 114
+  1513: 137
+  1613: 57
+menu_probability_weights:
+  Babyccino: 239
+  Flavoured hot chocolate - Vanilla: 245
+  Flavoured iced latte - Caramel: 178
+  Hot Chocolate: 218
+  Speciality Tea - Green: 232
+name: Brighton
+open_time: 813
+payment_method_probability_weights:
+  CASH: 161
+size_probability_weights:
+  Large: 224
+---
+close_time: 2100
+frequency:
+  801: 124
+  901: 45
+  1001: 34
+  1101: 36
+  1201: 55
+  1301: 29
+  1401: 86
+  1501: 97
+  1601: 67
+  1701: 60
+  1801: 71
+  1901: 68
+  2001: 52
+menu_probability_weights:
+  Americano: 209
+  Chai latte: 227
+  Filter coffee: 233
+  Flavoured hot chocolate - Caramel: 248
+  Flavoured iced latte - Caramel: 227
+  Flavoured latte - Vanilla: 183
+  Glass of milk: 163
+  Smoothies - Glowing Greens: 154
+  Speciality Tea - Earl Grey: 181
+name: Bradford
+open_time: 701
+payment_method_probability_weights:
+  CARD: 148
+size_probability_weights:
+  Large: 132
+---
+close_time: 1700
+frequency:
+  910: 79
+  1010: 26
+  1110: 31
+  1210: 53
+  1310: 104
+  1410: 29
+  1510: 70
+  1610: 61
+menu_probability_weights:
+  Americano: 193
+  Babyccino: 161
+  Espresso: 177
+  Filter coffee: 206
+  Flavoured hot chocolate - Vanilla: 236
+  Iced latte: 211
+  Speciality Tea - Peppermint: 183
+name: Leicester
+open_time: 810
+payment_method_probability_weights:
+  CASH: 174
+size_probability_weights:
+  Large: 315
+---
+close_time: 1700
+frequency:
+  900: 56
+  1000: 71
+  1100: 18
+  1200: 15
+  1300: 141
+  1400: 103
+  1500: 73
+  1600: 56
+menu_probability_weights:
+  Flavoured iced latte - Hazelnut: 245
+  Flavoured latte - Caramel: 216
+  Hot chocolate: 223
+  Speciality Tea - Fruit: 235
+  Speciality Tea - Green: 181
+name: Sunderland
+open_time: 800
+payment_method_probability_weights:
+  CARD: 176
+size_probability_weights:
+  Large: 340
+---
+close_time: 1700
+frequency:
+  904: 53
+  1004: 105
+  1104: 60
+  1204: 18
+  1304: 95
+  1404: 90
+  1504: 89
+  1604: 69
+menu_probability_weights:
+  Americano: 249
+  Filter coffee: 246
+  Flavoured iced latte - Caramel: 162
+  Flavoured latte - Gingerbread: 238
+  Glass of milk: 222
+  Luxury hot chocolate: 153
+  Speciality Tea - English breakfast: 210
+  Speciality Tea - Green: 234
+name: Belfast
+open_time: 804
+payment_method_probability_weights:
+  CARD: 317
+size_probability_weights:
+  Large: 346
+---
+close_time: 1700
+frequency:
+  910: 25
+  1010: 96
+  1110: 50
+  1210: 70
+  1310: 32
+  1410: 114
+  1510: 101
+  1610: 73
+menu_probability_weights:
+  Cappuccino: 157
+  Luxury hot chocolate: 184
+  Smoothies - Carrot Kick: 231
+  Speciality Tea - Fruit: 237
+  Speciality Tea - Green: 203
+name: Portsmouth
+open_time: 810
+payment_method_probability_weights:
+  CARD: 134
+size_probability_weights:
+  Large: 129
+---
+close_time: 2100
+frequency:
+  810: 70
+  910: 24
+  1010: 124
+  1110: 15
+  1210: 43
+  1310: 124
+  1410: 149
+  1510: 84
+  1610: 60
+  1710: 46
+  1810: 96
+  1910: 46
+  2010: 76
+menu_probability_weights:
+  Babyccino: 233
+  Flavoured hot chocolate - Vanilla: 165
+  Flavoured iced latte - Hazelnut: 150
+  Flavoured latte - Caramel: 229
+  Hot chocolate: 244
+  Iced americano: 208
+  Iced latte: 203
+  Red Label tea: 150
+  Speciality Tea - English breakfast: 241
+name: Bournemouth
+open_time: 710
+payment_method_probability_weights:
+  CARD: 286
+size_probability_weights:
+  Large: 234
+---
+close_time: 1700
+frequency:
+  911: 71
+  1011: 101
+  1111: 48
+  1211: 11
+  1311: 53
+  1411: 90
+  1511: 115
+  1611: 49
+menu_probability_weights:
+  Chai latte: 169
+  Cortado: 193
+  Glass of milk: 181
+  Iced latte: 211
+  Speciality Tea - Fruit: 156
+name: Middlesbrough
+open_time: 811
+payment_method_probability_weights:
+  CASH: 175
+size_probability_weights:
+  Large: 220
+---
+close_time: 2100
+frequency:
+  804: 98
+  904: 34
+  1004: 80
+  1104: 33
+  1204: 73
+  1304: 140
+  1404: 107
+  1504: 125
+  1604: 25
+  1704: 48
+  1804: 82
+  1904: 80
+  2004: 26
+menu_probability_weights:
+  Flavoured hot chocolate - Hazelnut: 243
+  Flavoured iced latte - Caramel: 239
+  Iced americano: 230
+  Iced latte: 167
+  Speciality Tea - Camomile: 161
+name: Coventry
+open_time: 704
+payment_method_probability_weights:
+  CARD: 322
+size_probability_weights:
+  Large: 192
+---
+close_time: 1700
+frequency:
+  902: 91
+  1002: 35
+  1102: 32
+  1202: 62
+  1302: 38
+  1402: 126
+  1502: 69
+  1602: 35
+menu_probability_weights:
+  Flavoured hot chocolate - Hazelnut: 151
+  Flavoured latte - Gingerbread: 178
+  Iced latte: 213
+name: Southampton
+open_time: 802
+payment_method_probability_weights:
+  CARD: 227
+size_probability_weights:
+  Large: 136
+---
+close_time: 1700
+frequency:
+  912: 50
+  1012: 32
+  1112: 36
+  1212: 28
+  1312: 82
+  1412: 133
+  1512: 110
+  1612: 65
+menu_probability_weights:
+  Filter coffee: 157
+  Flavoured latte - Caramel: 168
+  Flavoured latte - Gingerbread: 205
+  Flavoured latte - Hazelnut: 207
+  Frappes - Chocolate Cookie: 171
+  Hot chocolate: 204
+  Speciality Tea - Darjeeling: 207
+name: Reading
+open_time: 812
+payment_method_probability_weights:
+  CASH: 112
+size_probability_weights:
+  Large: 194
+---
+close_time: 1700
+frequency:
+  905: 51
+  1005: 65
+  1105: 38
+  1205: 15
+  1305: 115
+  1405: 89
+  1505: 92
+  1605: 65
+menu_probability_weights:
+  Cortado: 193
+  Flavoured hot chocolate - Caramel: 167
+  Flavoured iced latte - Hazelnut: 216
+  Flavoured iced latte - Vanilla: 190
+  Flavoured latte - Caramel: 165
+  Flavoured latte - Gingerbread: 175
+  Frappes - Strawberries & Cream: 168
+  Speciality Tea - Camomile: 173
+  Speciality Tea - Green: 214
+name: Sutton on Hull
+open_time: 805
+payment_method_probability_weights:
+  CARD: 231
+size_probability_weights:
+  Large: 321
+---
+close_time: 2100
+frequency:
+  802: 70
+  902: 91
+  1002: 122
+  1102: 35
+  1202: 62
+  1302: 36
+  1402: 63
+  1502: 131
+  1602: 27
+  1702: 40
+  1802: 28
+  1902: 57
+  2002: 80
+menu_probability_weights:
+  Cappuccino: 205
+  Cortado: 238
+  Flavoured latte - Hazelnut: 245
+  Red Label tea: 206
+name: Blackpool
+open_time: 702
+payment_method_probability_weights:
+  CARD: 138
+size_probability_weights:
+  Large: 148
+---
+close_time: 1700
+frequency:
+  903: 84
+  1003: 34
+  1103: 11
+  1203: 49
+  1303: 72
+  1403: 133
+  1503: 143
+  1603: 42
+menu_probability_weights:
+  Filter coffee: 195
+  Flavoured iced latte - Caramel: 164
+  Flavoured iced latte - Hazelnut: 157
+  Flavoured iced latte - Vanilla: 173
+  Hot Chocolate: 196
+  Iced latte: 221
+  Speciality Tea - Camomile: 241
+  Speciality Tea - Peppermint: 215
+name: Plymouth
+open_time: 803
+payment_method_probability_weights:
+  CARD: 304
+size_probability_weights:
+  Large: 282
+---
+close_time: 1700
+frequency:
+  903: 62
+  1003: 54
+  1103: 53
+  1203: 15
+  1303: 71
+  1403: 144
+  1503: 144
+  1603: 46
+menu_probability_weights:
+  Cappuccino: 248
+  Espresso: 161
+  Filter coffee: 191
+  Frappes - Chocolate Cookie: 207
+  Hot Chocolate: 153
+  Red Label tea: 204
+  Speciality Tea - Green: 232
+  Speciality Tea - Peppermint: 195
+name: Luton
+open_time: 803
+payment_method_probability_weights:
+  CARD: 244
+size_probability_weights:
+  Large: 242
+---
+close_time: 2100
+frequency:
+  815: 78
+  915: 34
+  1015: 86
+  1115: 38
+  1215: 65
+  1315: 53
+  1415: 120
+  1515: 61
+  1615: 38
+  1715: 59
+  1815: 36
+  1915: 69
+  2015: 69
+menu_probability_weights:
+  Americano: 193
+  Flavoured hot chocolate - Vanilla: 154
+  Flavoured latte - Caramel: 165
+  Flavoured latte - Gingerbread: 231
+  Glass of milk: 181
+  Hot Chocolate: 204
+  Speciality Tea - Darjeeling: 180
+  Speciality Tea - Fruit: 209
+name: Oxford
+open_time: 715
+payment_method_probability_weights:
+  CARD: 183
+size_probability_weights:
+  Large: 148
+---
+close_time: 1700
+frequency:
+  914: 25
+  1014: 28
+  1114: 27
+  1214: 60
+  1314: 38
+  1414: 69
+  1514: 137
+  1614: 71
+menu_probability_weights:
+  Iced americano: 182
+  Latte: 202
+  Smoothies - Glowing Greens: 160
+  Speciality Tea - Camomile: 190
+  Speciality Tea - Fruit: 231
+name: Norwich
+open_time: 814
+payment_method_probability_weights:
+  CARD: 218
+size_probability_weights:
+  Large: 288
+---
+close_time: 1700
+frequency:
+  903: 26
+  1003: 97
+  1103: 14
+  1203: 36
+  1303: 68
+  1403: 47
+  1503: 91
+  1603: 39
+menu_probability_weights:
+  Cortado: 178
+  Iced americano: 189
+  Iced latte: 237
+  Luxury hot chocolate: 238
+  Speciality Tea - Darjeeling: 176
+  Speciality Tea - Earl Grey: 151
+  Speciality Tea - Green: 222
+  Speciality Tea - Peppermint: 230
+name: Old Aberdeen
+open_time: 803
+payment_method_probability_weights:
+  CARD: 282
+size_probability_weights:
+  Large: 157
+---
+close_time: 1700
+frequency:
+  910: 27
+  1010: 86
+  1110: 53
+  1210: 51
+  1310: 131
+  1410: 71
+  1510: 117
+  1610: 71
+menu_probability_weights:
+  Chai latte: 220
+  Flat white: 236
+  Flavoured latte - Hazelnut: 152
+  Frappes - Coffee: 195
+  Iced americano: 235
+  Iced latte: 155
+  Red Label tea: 246
+  Smoothies - Berry Beautiful: 165
+  Speciality Tea - Earl Grey: 172
+name: York
+open_time: 810
+payment_method_probability_weights:
+  CARD: 148
+size_probability_weights:
+  Large: 290
+---
+close_time: 1700
+frequency:
+  914: 73
+  1014: 76
+  1114: 10
+  1214: 70
+  1314: 139
+  1414: 99
+  1514: 94
+  1614: 44
+menu_probability_weights:
+  Americano: 225
+  Luxury hot chocolate: 224
+  Smoothies - Berry Beautiful: 231
+  Speciality Tea - English breakfast: 248
+  Speciality Tea - Fruit: 183
+name: Dundee
+open_time: 814
+payment_method_probability_weights:
+  CARD: 224
+size_probability_weights:
+  Large: 274
+---
+close_time: 1700
+frequency:
+  912: 74
+  1012: 47
+  1112: 25
+  1212: 45
+  1312: 137
+  1412: 84
+  1512: 47
+  1612: 60
+menu_probability_weights:
+  Babyccino: 177
+  Cappuccino: 236
+  Flat white: 159
+  Flavoured hot chocolate - Vanilla: 227
+  Flavoured iced latte - Caramel: 156
+  Flavoured iced latte - Vanilla: 164
+  Flavoured latte - Caramel: 169
+  Smoothies - Berry Beautiful: 218
+name: Ipswich
+open_time: 812
+payment_method_probability_weights:
+  CARD: 228
+size_probability_weights:
+  Large: 195
+---
+close_time: 1700
+frequency:
+  903: 87
+  1003: 30
+  1103: 58
+  1203: 10
+  1303: 37
+  1403: 34
+  1503: 58
+  1603: 74
+menu_probability_weights:
+  Cortado: 174
+  Flavoured hot chocolate - Vanilla: 213
+  Flavoured latte - Caramel: 159
+  Hot chocolate: 196
+  Latte: 150
+  Red Label tea: 242
+  Speciality Tea - Camomile: 201
+name: Peterborough
+open_time: 803
+payment_method_probability_weights:
+  CASH: 160
+size_probability_weights:
+  Large: 137
+---
+close_time: 1700
+frequency:
+  902: 118
+  1002: 101
+  1102: 32
+  1202: 17
+  1302: 146
+  1402: 118
+  1502: 49
+  1602: 72
+menu_probability_weights:
+  Espresso: 235
+  Flat white: 238
+  Flavoured hot chocolate - Caramel: 200
+  Flavoured latte - Vanilla: 154
+  Speciality Tea - Earl Grey: 167
+name: Cambridge
+open_time: 802
+payment_method_probability_weights:
+  CARD: 338
+size_probability_weights:
+  Large: 152
+---
+close_time: 1700
+frequency:
+  913: 31
+  1013: 36
+  1113: 40
+  1213: 36
+  1313: 132
+  1413: 56
+  1513: 94
+  1613: 63
+menu_probability_weights:
+  Cappuccino: 231
+  Flavoured hot chocolate - Hazelnut: 229
+  Flavoured latte - Vanilla: 210
+  Smoothies - Berry Beautiful: 170
+  Speciality Tea - Camomile: 157
+  Speciality Tea - Fruit: 224
+  Speciality Tea - Peppermint: 229
+name: Exminster
+open_time: 813
+payment_method_probability_weights:
+  CASH: 131
+size_probability_weights:
+  Large: 121
+---
+close_time: 1700
+frequency:
+  915: 47
+  1015: 111
+  1115: 42
+  1215: 50
+  1315: 102
+  1415: 137
+  1515: 93
+  1615: 49
+menu_probability_weights:
+  Flavoured hot chocolate - Hazelnut: 179
+  Flavoured hot chocolate - Vanilla: 187
+  Frappes - Strawberries & Cream: 200
+  Iced americano: 245
+  Mocha: 174
+  Speciality Tea - Darjeeling: 159
+name: Bath
+open_time: 815
+payment_method_probability_weights:
+  CASH: 184
+size_probability_weights:
+  Large: 172
+---
+close_time: 1700
+frequency:
+  905: 88
+  1005: 77
+  1105: 40
+  1205: 53
+  1305: 42
+  1405: 123
+  1505: 92
+  1605: 32
+menu_probability_weights:
+  Cortado: 215
+  Flavoured iced latte - Caramel: 237
+  Flavoured iced latte - Hazelnut: 219
+  Hot chocolate: 164
+  Mocha: 248
+  Speciality Tea - Camomile: 239
+name: Chester
+open_time: 805
+payment_method_probability_weights:
+  CARD: 130
+size_probability_weights:
+  Large: 323
+---
+close_time: 1700
+frequency:
+  901: 46
+  1001: 105
+  1101: 52
+  1201: 67
+  1301: 131
+  1401: 149
+  1501: 98
+  1601: 65
+menu_probability_weights:
+  Cappuccino: 161
+  Flavoured iced latte - Caramel: 227
+  Frappes - Strawberries & Cream: 219
+  Glass of milk: 229
+  Latte: 166
+  Luxury hot chocolate: 190
+name: Greenock
+open_time: 801
+payment_method_probability_weights:
+  CARD: 177
+size_probability_weights:
+  Large: 320
+---
+close_time: 1700
+frequency:
+  904: 104
+  1004: 80
+  1104: 70
+  1204: 25
+  1304: 80
+  1404: 29
+  1504: 103
+  1604: 62
+menu_probability_weights:
+  Flavoured latte - Gingerbread: 227
+  Flavoured latte - Hazelnut: 158
+  Frappes - Coffee: 235
+  Latte: 239
+name: Carlisle
+open_time: 804
+payment_method_probability_weights:
+  CARD: 131
+size_probability_weights:
+  Large: 222
+---
+close_time: 1700
+frequency:
+  909: 58
+  1009: 35
+  1109: 66
+  1209: 73
+  1309: 34
+  1409: 109
+  1509: 118
+  1609: 66
+menu_probability_weights:
+  Cappuccino: 220
+  Chai latte: 179
+  Flavoured hot chocolate - Hazelnut: 191
+  Flavoured hot chocolate - Vanilla: 240
+  Hot Chocolate: 215
+  Smoothies - Berry Beautiful: 210
+  Smoothies - Carrot Kick: 242
+  Speciality Tea - Fruit: 165
+name: Scarborough
+open_time: 809
+payment_method_probability_weights:
+  CARD: 196
+size_probability_weights:
+  Large: 264
+---
+close_time: 1700
+frequency:
+  915: 46
+  1015: 85
+  1115: 13
+  1215: 49
+  1315: 66
+  1415: 75
+  1515: 30
+  1615: 72
+menu_probability_weights:
+  Espresso: 175
+  Flavoured hot chocolate - Caramel: 202
+  Frappes - Strawberries & Cream: 188
+  Iced latte: 241
+  Speciality Tea - Fruit: 195
+  Speciality Tea - Green: 151
+name: Ayr
+open_time: 815
+payment_method_probability_weights:
+  CARD: 327
+size_probability_weights:
+  Large: 227
+---
+close_time: 1700
+frequency:
+  902: 106
+  1002: 34
+  1102: 24
+  1202: 38
+  1302: 84
+  1402: 106
+  1502: 76
+  1602: 70
+menu_probability_weights:
+  Chai latte: 224
+  Filter coffee: 160
+  Flavoured hot chocolate - Caramel: 202
+  Flavoured iced latte - Hazelnut: 212
+  Hot chocolate: 242
+  Iced latte: 241
+  Mocha: 241
+name: Inverness
+open_time: 802
+payment_method_probability_weights:
+  CARD: 345
+size_probability_weights:
+  Large: 245
+---
+close_time: 1700
+frequency:
+  907: 89
+  1007: 39
+  1107: 55
+  1207: 32
+  1307: 73
+  1407: 132
+  1507: 43
+  1607: 36
+menu_probability_weights:
+  Espresso: 189
+  Frappes - Coffee: 219
+  Glass of milk: 196
+  Hot Chocolate: 203
+  Iced latte: 248
+name: Perth
+open_time: 807
+payment_method_probability_weights:
+  CARD: 333
+size_probability_weights:
+  Large: 283
+---
+close_time: 2100
+frequency:
+  814: 34
+  914: 97
+  1014: 71
+  1114: 45
+  1214: 40
+  1314: 34
+  1414: 58
+  1514: 96
+  1614: 53
+  1714: 36
+  1814: 71
+  1914: 34
+  2014: 68
+menu_probability_weights:
+  Flavoured hot chocolate - Vanilla: 188
+  Flavoured iced latte - Caramel: 228
+  Flavoured iced latte - Hazelnut: 229
+  Flavoured latte - Gingerbread: 182
+  Frappes - Coffee: 183
+  Hot Chocolate: 153
+  Iced americano: 159
+  Iced latte: 235
+  Red Label tea: 156
+  Smoothies - Glowing Greens: 204
+name: River
+open_time: 714
+payment_method_probability_weights:
+  CARD: 259
+size_probability_weights:
+  Large: 332
+---
+close_time: 1700
+frequency:
+  911: 123
+  1011: 90
+  1111: 10
+  1211: 49
+  1311: 39
+  1411: 65
+  1511: 28
+  1611: 73
+menu_probability_weights:
+  Babyccino: 226
+  Cortado: 186
+  Filter coffee: 163
+  Flat white: 171
+  Flavoured hot chocolate - Hazelnut: 168
+  Flavoured hot chocolate - Vanilla: 153
+  Glass of milk: 221
+  Latte: 186
+  Speciality Tea - Darjeeling: 186
+name: Dumfries
+open_time: 811
+payment_method_probability_weights:
+  CARD: 133
+size_probability_weights:
+  Large: 336
+---
+close_time: 1700
+frequency:
+  902: 122
+  1002: 27
+  1102: 57
+  1202: 18
+  1302: 48
+  1402: 132
+  1502: 41
+  1602: 55
+menu_probability_weights:
+  Babyccino: 162
+  Flavoured latte - Gingerbread: 226
+  Speciality Tea - Fruit: 236
+name: Omagh
+open_time: 802
+payment_method_probability_weights:
+  CARD: 369
+size_probability_weights:
+  Large: 338
+---
+close_time: 1700
+frequency:
+  902: 114
+  1002: 39
+  1102: 71
+  1202: 72
+  1302: 76
+  1402: 93
+  1502: 111
+  1602: 68
+menu_probability_weights:
+  Chai latte: 229
+  Flavoured iced latte - Hazelnut: 185
+  Glass of milk: 237
+  Iced americano: 180
+  Latte: 165
+  Mocha: 185
+  Smoothies - Carrot Kick: 198
+  Speciality Tea - Darjeeling: 215
+  Speciality Tea - Fruit: 204
+name: Penzance
+open_time: 802
+payment_method_probability_weights:
+  CASH: 181
+size_probability_weights:
+  Large: 206
+---
+close_time: 1700
+frequency:
+  901: 93
+  1001: 114
+  1101: 31
+  1201: 68
+  1301: 123
+  1401: 124
+  1501: 27
+  1601: 45
+menu_probability_weights:
+  Flavoured hot chocolate - Vanilla: 234
+  Flavoured iced latte - Vanilla: 220
+  Iced latte: 219
+  Speciality Tea - Earl Grey: 234
+  Speciality Tea - English breakfast: 152
+  Speciality Tea - Peppermint: 223
+name: Fort William
+open_time: 801
+payment_method_probability_weights:
+  CARD: 290
+size_probability_weights:
+  Large: 305
+---
+close_time: 1700
+frequency:
+  913: 54
+  1013: 32
+  1113: 13
+  1213: 44
+  1313: 82
+  1413: 54
+  1513: 39
+  1613: 27
+menu_probability_weights:
+  Filter coffee: 185
+  Flat white: 175
+  Hot chocolate: 168
+  Speciality Tea - Green: 206
+name: Kirkwall
+open_time: 813
+payment_method_probability_weights:
+  CARD: 243
+size_probability_weights:
+  Large: 228
+---
+close_time: 1700
+frequency:
+  913: 83
+  1013: 37
+  1113: 57
+  1213: 30
+  1313: 84
+  1413: 77
+  1513: 31
+  1613: 27
+menu_probability_weights:
+  Filter coffee: 244
+  Flavoured latte - Gingerbread: 187
+  Hot chocolate: 215
+name: Wick
+open_time: 813
+payment_method_probability_weights:
+  CARD: 183
+size_probability_weights:
+  Large: 165
+---
+close_time: 1700
+frequency:
+  900: 36
+  1000: 88
+  1100: 33
+  1200: 66
+  1300: 38
+  1400: 143
+  1500: 49
+  1600: 67
+menu_probability_weights:
+  Flavoured iced latte - Vanilla: 245
+  Flavoured latte - Vanilla: 205
+  Speciality Tea - Fruit: 249
+name: Lerwick
+open_time: 800
+payment_method_probability_weights:
+  CASH: 155
+size_probability_weights:
+  Large: 177
+---
+close_time: 1700
+frequency:
+  908: 83
+  1008: 34
+  1108: 42
+  1208: 26
+  1308: 113
+  1408: 148
+  1508: 40
+  1608: 60
+menu_probability_weights:
+  Babyccino: 215
+  Flat white: 164
+  Flavoured iced latte - Hazelnut: 208
+  Flavoured latte - Caramel: 197
+  Glass of milk: 231
+  Iced americano: 212
+  Latte: 239
+  Speciality Tea - Green: 239
+name: Ilford
+open_time: 808
+payment_method_probability_weights:
+  CARD: 266
+size_probability_weights:
+  Large: 348
+---
+close_time: 1700
+frequency:
+  906: 38
+  1006: 123
+  1106: 46
+  1206: 57
+  1306: 111
+  1406: 112
+  1506: 75
+  1606: 31
+menu_probability_weights:
+  Cappuccino: 171
+  Cortado: 197
+  Flavoured hot chocolate - Vanilla: 163
+  Flavoured iced latte - Caramel: 205
+  Flavoured iced latte - Hazelnut: 179
+name: Chelmsford
+open_time: 806
+payment_method_probability_weights:
+  CARD: 241
+size_probability_weights:
+  Large: 151
+---
+close_time: 1700
+frequency:
+  902: 49
+  1002: 105
+  1102: 62
+  1202: 16
+  1302: 44
+  1402: 27
+  1502: 26
+  1602: 52
+menu_probability_weights:
+  Espresso: 219
+  Flavoured iced latte - Caramel: 170
+  Iced americano: 246
+  Speciality Tea - Darjeeling: 195
+  Speciality Tea - Peppermint: 219
+name: Weston-super-Mare
+open_time: 802
+payment_method_probability_weights:
+  CARD: 318
+size_probability_weights:
+  Large: 272
+---
+close_time: 1700
+frequency:
+  906: 78
+  1006: 46
+  1106: 48
+  1206: 41
+  1306: 140
+  1406: 24
+  1506: 83
+  1606: 26
+menu_probability_weights:
+  Cortado: 175
+  Mocha: 235
+  Speciality Tea - Camomile: 202
+name: Llangefni
+open_time: 806
+payment_method_probability_weights:
+  CARD: 259
+size_probability_weights:
+  Large: 156
+---
+close_time: 2100
+frequency:
+  815: 28
+  915: 94
+  1015: 90
+  1115: 28
+  1215: 62
+  1315: 31
+  1415: 39
+  1515: 35
+  1615: 53
+  1715: 56
+  1815: 25
+  1915: 79
+  2015: 82
+menu_probability_weights:
+  Espresso: 166
+  Frappes - Coffee: 209
+  Latte: 242
+  Speciality Tea - Camomile: 248
+name: Southport
+open_time: 715
+payment_method_probability_weights:
+  CARD: 165
+size_probability_weights:
+  Large: 297
+---
+close_time: 1700
+frequency:
+  912: 58
+  1012: 72
+  1112: 12
+  1212: 23
+  1312: 148
+  1412: 50
+  1512: 101
+  1612: 45
+menu_probability_weights:
+  Chai latte: 201
+  Flavoured hot chocolate - Hazelnut: 201
+  Flavoured iced latte - Caramel: 240
+  Frappes - Coffee: 182
+  Frappes - Strawberries & Cream: 240
+  Speciality Tea - Darjeeling: 189
+  Speciality Tea - Green: 165
+name: Armagh
+open_time: 812
+payment_method_probability_weights:
+  CARD: 317
+size_probability_weights:
+  Large: 270
+---
+close_time: 2100
+frequency:
+  803: 119
+  903: 52
+  1003: 84
+  1103: 52
+  1203: 74
+  1303: 98
+  1403: 43
+  1503: 57
+  1603: 51
+  1703: 48
+  1803: 44
+  1903: 28
+  2003: 71
+menu_probability_weights:
+  Americano: 174
+  Filter coffee: 174
+  Flavoured hot chocolate - Vanilla: 213
+  Frappes - Coffee: 239
+  Hot chocolate: 220
+  Iced americano: 237
+  Smoothies - Glowing Greens: 200
+  Speciality Tea - Green: 228
+name: Rochester
+open_time: 703
+payment_method_probability_weights:
+  CARD: 259
+size_probability_weights:
+  Large: 328
+---
+close_time: 1700
+frequency:
+  909: 93
+  1009: 65
+  1109: 26
+  1209: 27
+  1309: 105
+  1409: 48
+  1509: 65
+  1609: 46
+menu_probability_weights:
+  Babyccino: 213
+  Filter coffee: 167
+  Flavoured latte - Gingerbread: 225
+  Flavoured latte - Vanilla: 195
+  Hot Chocolate: 209
+  Smoothies - Berry Beautiful: 164
+  Speciality Tea - English breakfast: 195
+name: Rochdale
+open_time: 809
+payment_method_probability_weights:
+  CASH: 167
+size_probability_weights:
+  Large: 312
+---
+close_time: 1700
+frequency:
+  904: 86
+  1004: 122
+  1104: 71
+  1204: 26
+  1304: 31
+  1404: 92
+  1504: 83
+  1604: 50
+menu_probability_weights:
+  Babyccino: 216
+  Cappuccino: 166
+  Flavoured hot chocolate - Vanilla: 168
+  Hot Chocolate: 202
+  Latte: 197
+  Speciality Tea - Camomile: 210
+name: Motherwell
+open_time: 804
+payment_method_probability_weights:
+  CARD: 140
+size_probability_weights:
+  Large: 115
+---
+close_time: 1700
+frequency:
+  903: 80
+  1003: 91
+  1103: 14
+  1203: 70
+  1303: 143
+  1403: 99
+  1503: 145
+  1603: 49
+menu_probability_weights:
+  Americano: 190
+  Filter coffee: 207
+  Flavoured iced latte - Hazelnut: 171
+  Flavoured iced latte - Vanilla: 203
+  Speciality Tea - Darjeeling: 171
+  Speciality Tea - Green: 215
+name: Clydach Vale
+open_time: 803
+payment_method_probability_weights:
+  CARD: 336
+size_probability_weights:
+  Large: 175
+---
+close_time: 1700
+frequency:
+  912: 71
+  1012: 54
+  1112: 23
+  1212: 31
+  1312: 43
+  1412: 36
+  1512: 111
+  1612: 38
+menu_probability_weights:
+  Americano: 248
+  Filter coffee: 196
+  Hot chocolate: 207
+  Latte: 206
+  Speciality Tea - English breakfast: 169
+  Speciality Tea - Green: 171
+name: Kirkintilloch
+open_time: 812
+payment_method_probability_weights:
+  CARD: 199
+size_probability_weights:
+  Large: 296
+---
+close_time: 1700
+frequency:
+  908: 36
+  1008: 117
+  1108: 20
+  1208: 61
+  1308: 41
+  1408: 53
+  1508: 119
+  1608: 60
+menu_probability_weights:
+  Flavoured hot chocolate - Caramel: 158
+  Flavoured hot chocolate - Hazelnut: 195
+  Flavoured latte - Vanilla: 169
+  Glass of milk: 210
+  Luxury hot chocolate: 191
+name: Stirling
+open_time: 808
+payment_method_probability_weights:
+  CARD: 205
+size_probability_weights:
+  Large: 174
+---
+close_time: 2100
+frequency:
+  806: 106
+  906: 45
+  1006: 116
+  1106: 53
+  1206: 13
+  1306: 25
+  1406: 95
+  1506: 100
+  1606: 74
+  1706: 53
+  1806: 70
+  1906: 61
+  2006: 99
+menu_probability_weights:
+  Cortado: 153
+  Filter coffee: 236
+  Flavoured hot chocolate - Caramel: 205
+  Flavoured hot chocolate - Hazelnut: 176
+  Frappes - Chocolate Cookie: 220
+  Hot Chocolate: 237
+  Speciality Tea - Earl Grey: 211
+  Speciality Tea - Fruit: 184
+  Speciality Tea - Green: 169
+name: Lambeth
+open_time: 706
+payment_method_probability_weights:
+  CARD: 306
+size_probability_weights:
+  Large: 304
+---
+close_time: 1700
+frequency:
+  907: 99
+  1007: 120
+  1107: 33
+  1207: 69
+  1307: 30
+  1407: 88
+  1507: 72
+  1607: 36
+menu_probability_weights:
+  Frappes - Chocolate Cookie: 234
+  Frappes - Coffee: 235
+  Red Label tea: 188
+  Smoothies - Glowing Greens: 193
+  Speciality Tea - Peppermint: 220
+name: Dungannon
+open_time: 807
+payment_method_probability_weights:
+  CARD: 153
+size_probability_weights:
+  Large: 336
+---
+close_time: 1700
+frequency:
+  908: 103
+  1008: 82
+  1108: 58
+  1208: 32
+  1308: 118
+  1408: 77
+  1508: 77
+  1608: 59
+menu_probability_weights:
+  Flat white: 238
+  Flavoured hot chocolate - Caramel: 218
+  Flavoured iced latte - Vanilla: 221
+  Glass of milk: 209
+  Iced americano: 193
+  Mocha: 222
+  Red Label tea: 169
+  Speciality Tea - Fruit: 228
+name: Huddersfield
+open_time: 808
+payment_method_probability_weights:
+  CASH: 152
+size_probability_weights:
+  Large: 284
+---
+close_time: 2100
+frequency:
+  806: 75
+  906: 85
+  1006: 90
+  1106: 67
+  1206: 13
+  1306: 88
+  1406: 53
+  1506: 148
+  1606: 35
+  1706: 42
+  1806: 56
+  1906: 53
+  2006: 30
+menu_probability_weights:
+  Cortado: 217
+  Filter coffee: 210
+  Frappes - Coffee: 176
+  Mocha: 191
+  Speciality Tea - Darjeeling: 208
+name: Stretford
+open_time: 706
+payment_method_probability_weights:
+  CARD: 356
+size_probability_weights:
+  Large: 123
+---
+close_time: 1700
+frequency:
+  912: 68
+  1012: 70
+  1112: 21
+  1212: 46
+  1312: 120
+  1412: 74
+  1512: 87
+  1612: 24
+menu_probability_weights:
+  Flavoured latte - Vanilla: 208
+  Frappes - Chocolate Cookie: 193
+  Glass of milk: 229
+  Mocha: 159
+  Red Label tea: 189
+  Speciality Tea - English breakfast: 178
+name: Preston
+open_time: 812
+payment_method_probability_weights:
+  CARD: 220
+size_probability_weights:
+  Large: 163
+---
+close_time: 1700
+frequency:
+  903: 123
+  1003: 84
+  1103: 42
+  1203: 43
+  1303: 40
+  1403: 129
+  1503: 139
+  1603: 69
+menu_probability_weights:
+  Filter coffee: 165
+  Flavoured hot chocolate - Caramel: 185
+  Hot chocolate: 153
+  Iced latte: 216
+  Red Label tea: 170
+name: Newbury
+open_time: 803
+payment_method_probability_weights:
+  CARD: 168
+size_probability_weights:
+  Large: 305
+---
+close_time: 1700
+frequency:
+  908: 119
+  1008: 82
+  1108: 64
+  1208: 17
+  1308: 119
+  1408: 40
+  1508: 149
+  1608: 50
+menu_probability_weights:
+  Babyccino: 161
+  Flavoured hot chocolate - Hazelnut: 200
+  Speciality Tea - Fruit: 213
+name: Rhuthun
+open_time: 808
+payment_method_probability_weights:
+  CARD: 254
+size_probability_weights:
+  Large: 157
+---
+close_time: 2100
+frequency:
+  811: 104
+  911: 55
+  1011: 37
+  1111: 34
+  1211: 54
+  1311: 47
+  1411: 80
+  1511: 82
+  1611: 47
+  1711: 51
+  1811: 74
+  1911: 64
+  2011: 53
+menu_probability_weights:
+  Espresso: 179
+  Filter coffee: 244
+  Flavoured iced latte - Caramel: 184
+  Flavoured iced latte - Vanilla: 155
+  Flavoured latte - Caramel: 161
+  Frappes - Strawberries & Cream: 248
+  Hot Chocolate: 232
+  Hot chocolate: 163
+  Speciality Tea - Camomile: 230
+name: Blackburn
+open_time: 711
+payment_method_probability_weights:
+  CARD: 167
+size_probability_weights:
+  Large: 167
+---
+close_time: 2100
+frequency:
+  811: 99
+  911: 57
+  1011: 75
+  1111: 12
+  1211: 17
+  1311: 46
+  1411: 109
+  1511: 126
+  1611: 58
+  1711: 66
+  1811: 62
+  1911: 95
+  2011: 92
+menu_probability_weights:
+  Babyccino: 158
+  Filter coffee: 248
+  Flavoured iced latte - Vanilla: 202
+  Frappes - Coffee: 167
+  Glass of milk: 242
+  Hot Chocolate: 186
+  Red Label tea: 216
+  Speciality Tea - English breakfast: 155
+  Speciality Tea - Fruit: 226
+name: Wood Green
+open_time: 711
+payment_method_probability_weights:
+  CARD: 233
+size_probability_weights:
+  Large: 349
+---
+close_time: 1700
+frequency:
+  905: 83
+  1005: 63
+  1105: 26
+  1205: 57
+  1305: 34
+  1405: 131
+  1505: 122
+  1605: 28
+menu_probability_weights:
+  Frappes - Chocolate Cookie: 216
+  Hot chocolate: 214
+  Speciality Tea - Camomile: 159
+  Speciality Tea - Green: 179
+name: Stafford
+open_time: 805
+payment_method_probability_weights:
+  CARD: 136
+size_probability_weights:
+  Large: 133
+---
+close_time: 1700
+frequency:
+  909: 121
+  1009: 118
+  1109: 48
+  1209: 44
+  1309: 136
+  1409: 53
+  1509: 38
+  1609: 62
+menu_probability_weights:
+  Filter coffee: 221
+  Flavoured latte - Gingerbread: 246
+  Latte: 189
+  Smoothies - Berry Beautiful: 228
+  Speciality Tea - Camomile: 225
+name: Gloucester
+open_time: 809
+payment_method_probability_weights:
+  CARD: 238
+size_probability_weights:
+  Large: 224
+---
+close_time: 2100
+frequency:
+  803: 34
+  903: 102
+  1003: 58
+  1103: 55
+  1203: 22
+  1303: 143
+  1403: 38
+  1503: 130
+  1603: 65
+  1703: 61
+  1803: 46
+  1903: 45
+  2003: 46
+menu_probability_weights:
+  Chai latte: 226
+  Filter coffee: 178
+  Flat white: 222
+  Red Label tea: 171
+  Speciality Tea - Peppermint: 223
+name: Glenrothes
+open_time: 703
+payment_method_probability_weights:
+  CARD: 306
+size_probability_weights:
+  Large: 254
+---
+close_time: 1700
+frequency:
+  915: 100
+  1015: 123
+  1115: 34
+  1215: 58
+  1315: 58
+  1415: 122
+  1515: 31
+  1615: 46
+menu_probability_weights:
+  Babyccino: 172
+  Cappuccino: 206
+  Espresso: 248
+  Hot chocolate: 215
+  Red Label tea: 235
+  Smoothies - Berry Beautiful: 218
+  Speciality Tea - Darjeeling: 218
+  Speciality Tea - Fruit: 232
+name: South Bank
+open_time: 815
+payment_method_probability_weights:
+  CARD: 352
+size_probability_weights:
+  Large: 217
+---
+close_time: 2100
+frequency:
+  804: 65
+  904: 94
+  1004: 66
+  1104: 50
+  1204: 25
+  1304: 94
+  1404: 93
+  1504: 126
+  1604: 47
+  1704: 56
+  1804: 90
+  1904: 48
+  2004: 76
+menu_probability_weights:
+  Flavoured iced latte - Hazelnut: 192
+  Flavoured latte - Caramel: 249
+  Flavoured latte - Gingerbread: 212
+  Flavoured latte - Hazelnut: 235
+  Smoothies - Carrot Kick: 166
+  Speciality Tea - Camomile: 245
+name: "Pont-y-p\u0175l"
+open_time: 704
+payment_method_probability_weights:
+  CARD: 268
+size_probability_weights:
+  Large: 240
+---
+close_time: 2100
+frequency:
+  807: 106
+  907: 98
+  1007: 57
+  1107: 56
+  1207: 62
+  1307: 75
+  1407: 62
+  1507: 80
+  1607: 55
+  1707: 52
+  1807: 78
+  1907: 84
+  2007: 51
+menu_probability_weights:
+  Frappes - Strawberries & Cream: 245
+  Latte: 156
+  Smoothies - Berry Beautiful: 196
+name: Durham
+open_time: 707
+payment_method_probability_weights:
+  CARD: 361
+size_probability_weights:
+  Large: 345
+---
+close_time: 1700
+frequency:
+  903: 31
+  1003: 57
+  1103: 53
+  1203: 17
+  1303: 65
+  1403: 120
+  1503: 115
+  1603: 35
+menu_probability_weights:
+  Americano: 249
+  Espresso: 210
+  Flavoured iced latte - Caramel: 166
+  Flavoured latte - Vanilla: 245
+name: Bedford
+open_time: 803
+payment_method_probability_weights:
+  CARD: 204
+size_probability_weights:
+  Large: 278
+---
+close_time: 1700
+frequency:
+  902: 46
+  1002: 115
+  1102: 17
+  1202: 73
+  1302: 48
+  1402: 94
+  1502: 119
+  1602: 37
+menu_probability_weights:
+  Cappuccino: 159
+  Flavoured hot chocolate - Caramel: 210
+  Flavoured hot chocolate - Hazelnut: 196
+  Flavoured latte - Caramel: 245
+  Luxury hot chocolate: 230
+  Speciality Tea - Earl Grey: 205
+name: Taunton
+open_time: 802
+payment_method_probability_weights:
+  CASH: 102
+size_probability_weights:
+  Large: 311
+---
+close_time: 2100
+frequency:
+  811: 37
+  911: 78
+  1011: 50
+  1111: 57
+  1211: 51
+  1311: 41
+  1411: 95
+  1511: 43
+  1611: 68
+  1711: 74
+  1811: 38
+  1911: 74
+  2011: 41
+menu_probability_weights:
+  Cortado: 224
+  Espresso: 215
+  Flavoured hot chocolate - Caramel: 205
+  Flavoured iced latte - Hazelnut: 205
+  Flavoured latte - Gingerbread: 173
+  Frappes - Strawberries & Cream: 151
+  Luxury hot chocolate: 241
+  Smoothies - Glowing Greens: 175
+name: Widnes
+open_time: 711
+payment_method_probability_weights:
+  CARD: 216
+size_probability_weights:
+  Large: 299
+---
+close_time: 1700
+frequency:
+  901: 35
+  1001: 40
+  1101: 56
+  1201: 47
+  1301: 142
+  1401: 102
+  1501: 134
+  1601: 39
+menu_probability_weights:
+  Flat white: 239
+  Smoothies - Carrot Kick: 195
+  Speciality Tea - English breakfast: 186
+name: Uxbridge
+open_time: 801
+payment_method_probability_weights:
+  CARD: 226
+size_probability_weights:
+  Large: 108
+---
+close_time: 1700
+frequency:
+  914: 44
+  1014: 79
+  1114: 16
+  1214: 74
+  1314: 136
+  1414: 86
+  1514: 76
+  1614: 63
+menu_probability_weights:
+  Americano: 184
+  Cortado: 197
+  Flavoured iced latte - Hazelnut: 151
+  Frappes - Coffee: 178
+  Glass of milk: 232
+  Iced latte: 165
+  Speciality Tea - Earl Grey: 190
+name: Elgin
+open_time: 814
+payment_method_probability_weights:
+  CARD: 268
+size_probability_weights:
+  Large: 266
+---
+close_time: 1700
+frequency:
+  906: 68
+  1006: 29
+  1106: 58
+  1206: 64
+  1306: 146
+  1406: 48
+  1506: 122
+  1606: 30
+menu_probability_weights:
+  Espresso: 233
+  Flat white: 202
+  Flavoured iced latte - Hazelnut: 244
+name: Hove
+open_time: 806
+payment_method_probability_weights:
+  CARD: 196
+size_probability_weights:
+  Large: 126
+---
+close_time: 1700
+frequency:
+  914: 30
+  1014: 81
+  1114: 62
+  1214: 61
+  1314: 105
+  1414: 40
+  1514: 61
+  1614: 47
+menu_probability_weights:
+  Americano: 191
+  Flavoured iced latte - Vanilla: 178
+  Frappes - Chocolate Cookie: 249
+name: Lewes
+open_time: 814
+payment_method_probability_weights:
+  CARD: 219
+size_probability_weights:
+  Large: 240
+---
+close_time: 1700
+frequency:
+  903: 103
+  1003: 31
+  1103: 39
+  1203: 65
+  1303: 135
+  1403: 24
+  1503: 131
+  1603: 62
+menu_probability_weights:
+  Espresso: 200
+  Flavoured latte - Caramel: 173
+  Iced americano: 185
+  Speciality Tea - Fruit: 167
+name: Maidstone
+open_time: 803
+payment_method_probability_weights:
+  CASH: 110
+size_probability_weights:
+  Large: 209
+---
+close_time: 1700
+frequency:
+  910: 110
+  1010: 55
+  1110: 65
+  1210: 40
+  1310: 63
+  1410: 65
+  1510: 65
+  1610: 35
+menu_probability_weights:
+  Flavoured latte - Gingerbread: 169
+  Flavoured latte - Vanilla: 168
+  Speciality Tea - Darjeeling: 156
+name: Llandrindod Wells
+open_time: 810
+payment_method_probability_weights:
+  CARD: 351
+size_probability_weights:
+  Large: 174
+---
+close_time: 2100
+frequency:
+  808: 107
+  908: 105
+  1008: 112
+  1108: 10
+  1208: 20
+  1308: 94
+  1408: 63
+  1508: 34
+  1608: 40
+  1708: 30
+  1808: 53
+  1908: 85
+  2008: 45
+menu_probability_weights:
+  Flavoured hot chocolate - Vanilla: 236
+  Glass of milk: 235
+  Mocha: 238
+name: Kingston upon Hull
+open_time: 708
+payment_method_probability_weights:
+  CARD: 316
+size_probability_weights:
+  Large: 220
+---
+close_time: 1700
+frequency:
+  900: 81
+  1000: 110
+  1100: 16
+  1200: 37
+  1300: 38
+  1400: 140
+  1500: 138
+  1600: 60
+menu_probability_weights:
+  Babyccino: 218
+  Cappuccino: 237
+  Smoothies - Carrot Kick: 150
+  Speciality Tea - Darjeeling: 186
+name: Kingston upon Thames
+open_time: 800
+payment_method_probability_weights:
+  CARD: 331
+size_probability_weights:
+  Large: 331
+---
+close_time: 1700
+frequency:
+  907: 79
+  1007: 105
+  1107: 48
+  1207: 37
+  1307: 140
+  1407: 121
+  1507: 143
+  1607: 63
+menu_probability_weights:
+  Americano: 182
+  Babyccino: 240
+  Flavoured latte - Caramel: 205
+  Flavoured latte - Gingerbread: 229
+  Flavoured latte - Vanilla: 174
+  Speciality Tea - Darjeeling: 218
+  Speciality Tea - Green: 168
+name: Barri
+open_time: 807
+payment_method_probability_weights:
+  CARD: 217
+size_probability_weights:
+  Large: 212
+---
+close_time: 1700
+frequency:
+  902: 69
+  1002: 111
+  1102: 66
+  1202: 13
+  1302: 80
+  1402: 64
+  1502: 71
+  1602: 66
+menu_probability_weights:
+  Americano: 195
+  Babyccino: 247
+  Flat white: 199
+  Flavoured hot chocolate - Hazelnut: 176
+  Flavoured hot chocolate - Vanilla: 237
+  Flavoured latte - Hazelnut: 245
+  Red Label tea: 159
+  Smoothies - Carrot Kick: 170
+  Speciality Tea - Earl Grey: 208
+name: Giffnock
+open_time: 802
+payment_method_probability_weights:
+  CARD: 251
+size_probability_weights:
+  Large: 210
+---
+close_time: 1700
+frequency:
+  904: 120
+  1004: 45
+  1104: 27
+  1204: 43
+  1304: 61
+  1404: 91
+  1504: 91
+  1604: 60
+menu_probability_weights:
+  Flavoured hot chocolate - Hazelnut: 184
+  Flavoured iced latte - Caramel: 235
+  Flavoured latte - Caramel: 191
+  Frappes - Strawberries & Cream: 154
+name: Hounslow
+open_time: 804
+payment_method_probability_weights:
+  CASH: 149
+size_probability_weights:
+  Large: 227
+---
+close_time: 1700
+frequency:
+  908: 59
+  1008: 109
+  1108: 49
+  1208: 70
+  1308: 94
+  1408: 116
+  1508: 127
+  1608: 73
+menu_probability_weights:
+  Cappuccino: 210
+  Flavoured iced latte - Vanilla: 222
+  Flavoured latte - Gingerbread: 237
+  Flavoured latte - Hazelnut: 182
+  Mocha: 155
+name: Derry
+open_time: 808
+payment_method_probability_weights:
+  CASH: 122
+size_probability_weights:
+  Large: 179
+---
+close_time: 1700
+frequency:
+  911: 72
+  1011: 61
+  1111: 74
+  1211: 20
+  1311: 41
+  1411: 91
+  1511: 119
+  1611: 46
+menu_probability_weights:
+  Flavoured latte - Vanilla: 225
+  Iced americano: 204
+  Smoothies - Berry Beautiful: 165
+  Speciality Tea - Camomile: 245
+name: Newtownabbey
+open_time: 811
+payment_method_probability_weights:
+  CARD: 367
+size_probability_weights:
+  Large: 246
+---
+close_time: 1700
+frequency:
+  912: 110
+  1012: 83
+  1112: 32
+  1212: 58
+  1312: 96
+  1412: 42
+  1512: 139
+  1612: 44
+menu_probability_weights:
+  Americano: 215
+  Flavoured hot chocolate - Vanilla: 171
+  Flavoured latte - Gingerbread: 195
+  Iced latte: 203
+  Luxury hot chocolate: 245
+  Mocha: 173
+  Smoothies - Carrot Kick: 156
+  Speciality Tea - Camomile: 191
+  Speciality Tea - Green: 228
+name: Forfar
+open_time: 812
+payment_method_probability_weights:
+  CARD: 279
+size_probability_weights:
+  Large: 113
+---
+close_time: 1700
+frequency:
+  906: 49
+  1006: 102
+  1106: 18
+  1206: 19
+  1306: 39
+  1406: 66
+  1506: 41
+  1606: 42
+menu_probability_weights:
+  Espresso: 164
+  Filter coffee: 164
+  Flavoured latte - Hazelnut: 229
+  Flavoured latte - Vanilla: 174
+  Hot Chocolate: 192
+  Red Label tea: 169
+name: Torquay
+open_time: 806
+payment_method_probability_weights:
+  CARD: 282
+size_probability_weights:
+  Large: 155
+---
+close_time: 1700
+frequency:
+  915: 52
+  1015: 120
+  1115: 53
+  1215: 64
+  1315: 27
+  1415: 145
+  1515: 120
+  1615: 36
+menu_probability_weights:
+  Flavoured iced latte - Caramel: 195
+  Flavoured iced latte - Hazelnut: 179
+  Glass of milk: 158
+  Hot Chocolate: 227
+  Mocha: 184
+  Smoothies - Berry Beautiful: 197
+name: East Ham
+open_time: 815
+payment_method_probability_weights:
+  CARD: 136
+size_probability_weights:
+  Large: 178
+---
+close_time: 1700
+frequency:
+  910: 89
+  1010: 64
+  1110: 53
+  1210: 52
+  1310: 115
+  1410: 72
+  1510: 37
+  1610: 56
+menu_probability_weights:
+  Babyccino: 154
+  Chai latte: 187
+  Flavoured iced latte - Vanilla: 160
+  Smoothies - Berry Beautiful: 174
+name: Solihull
+open_time: 810
+payment_method_probability_weights:
+  CARD: 323
+size_probability_weights:
+  Large: 172
+---
+close_time: 1700
+frequency:
+  907: 116
+  1007: 123
+  1107: 46
+  1207: 58
+  1307: 97
+  1407: 57
+  1507: 34
+  1607: 66
+menu_probability_weights:
+  Flavoured hot chocolate - Hazelnut: 176
+  Flavoured iced latte - Vanilla: 150
+  Hot Chocolate: 205
+  Hot chocolate: 193
+  Speciality Tea - Camomile: 249
+name: Poplar
+open_time: 807
+payment_method_probability_weights:
+  CARD: 316
+size_probability_weights:
+  Large: 281
+---
+close_time: 2100
+frequency:
+  806: 41
+  906: 49
+  1006: 38
+  1106: 65
+  1206: 54
+  1306: 131
+  1406: 104
+  1506: 122
+  1606: 62
+  1706: 25
+  1806: 91
+  1906: 68
+  2006: 62
+menu_probability_weights:
+  Chai latte: 210
+  Frappes - Coffee: 195
+  Glass of milk: 226
+  Hot chocolate: 177
+  Iced americano: 249
+  Latte: 222
+  Smoothies - Glowing Greens: 208
+name: Mold
+open_time: 706
+payment_method_probability_weights:
+  CARD: 348
+size_probability_weights:
+  Large: 117
+---
+close_time: 2100
+frequency:
+  806: 118
+  906: 83
+  1006: 82
+  1106: 11
+  1206: 38
+  1306: 139
+  1406: 69
+  1506: 123
+  1606: 51
+  1706: 27
+  1806: 64
+  1906: 69
+  2006: 60
+menu_probability_weights:
+  Filter coffee: 212
+  Flat white: 241
+  Flavoured hot chocolate - Caramel: 184
+  Frappes - Chocolate Cookie: 184
+  Red Label tea: 186
+  Smoothies - Berry Beautiful: 162
+  Smoothies - Carrot Kick: 151
+  Speciality Tea - English breakfast: 200
+  Speciality Tea - Fruit: 218
+name: Warwick
+open_time: 706
+payment_method_probability_weights:
+  CARD: 203
+size_probability_weights:
+  Large: 301
+---
+close_time: 1700
+frequency:
+  911: 119
+  1011: 102
+  1111: 37
+  1211: 39
+  1311: 52
+  1411: 42
+  1511: 113
+  1611: 39
+menu_probability_weights:
+  Cortado: 164
+  Flat white: 231
+  Flavoured hot chocolate - Caramel: 212
+  Flavoured iced latte - Vanilla: 216
+  Frappes - Strawberries & Cream: 211
+name: Knowsley
+open_time: 811
+payment_method_probability_weights:
+  CARD: 331
+size_probability_weights:
+  Large: 237
+---
+close_time: 1700
+frequency:
+  913: 83
+  1013: 91
+  1113: 34
+  1213: 21
+  1313: 40
+  1413: 84
+  1513: 145
+  1613: 52
+menu_probability_weights:
+  Cappuccino: 206
+  Espresso: 186
+  Flavoured hot chocolate - Hazelnut: 186
+  Flavoured iced latte - Vanilla: 179
+  Flavoured latte - Gingerbread: 246
+  Frappes - Strawberries & Cream: 212
+  Hot chocolate: 194
+  Iced latte: 170
+  Smoothies - Berry Beautiful: 238
+  Speciality Tea - English breakfast: 205
+name: Hwlffordd
+open_time: 813
+payment_method_probability_weights:
+  CASH: 139
+size_probability_weights:
+  Large: 266
+---
+close_time: 1700
+frequency:
+  911: 29
+  1011: 54
+  1111: 66
+  1211: 20
+  1311: 77
+  1411: 84
+  1511: 104
+  1611: 46
+menu_probability_weights:
+  Americano: 248
+  Flavoured latte - Hazelnut: 248
+  Glass of milk: 228
+  Iced americano: 226
+  Iced latte: 229
+  Luxury hot chocolate: 216
+  Smoothies - Carrot Kick: 154
+  Smoothies - Glowing Greens: 174
+  Speciality Tea - Camomile: 208
+name: Rotherham
+open_time: 811
+payment_method_probability_weights:
+  CARD: 138
+size_probability_weights:
+  Large: 120
+---
+close_time: 1700
+frequency:
+  914: 116
+  1014: 71
+  1114: 62
+  1214: 30
+  1314: 131
+  1414: 105
+  1514: 124
+  1614: 26
+menu_probability_weights:
+  Cappuccino: 170
+  Flavoured hot chocolate - Hazelnut: 212
+  Flavoured latte - Hazelnut: 247
+  Frappes - Coffee: 160
+  Iced americano: 214
+  Smoothies - Carrot Kick: 240
+name: Caernarfon
+open_time: 814
+payment_method_probability_weights:
+  CARD: 249
+size_probability_weights:
+  Large: 232
+---
+close_time: 1700
+frequency:
+  915: 73
+  1015: 122
+  1115: 24
+  1215: 10
+  1315: 39
+  1415: 137
+  1515: 87
+  1615: 68
+menu_probability_weights:
+  Cappuccino: 202
+  Filter coffee: 159
+  Frappes - Chocolate Cookie: 158
+  Hot chocolate: 160
+  Iced latte: 182
+  Speciality Tea - Darjeeling: 228
+name: Morpeth
+open_time: 815
+payment_method_probability_weights:
+  CARD: 162
+size_probability_weights:
+  Large: 279
+---
+close_time: 1700
+frequency:
+  911: 81
+  1011: 39
+  1111: 11
+  1211: 44
+  1311: 72
+  1411: 58
+  1511: 27
+  1611: 25
+menu_probability_weights:
+  Babyccino: 244
+  Flavoured latte - Vanilla: 189
+  Frappes - Strawberries & Cream: 188
+  Glass of milk: 168
+  Hot Chocolate: 213
+  Iced americano: 243
+  Smoothies - Glowing Greens: 163
+  Speciality Tea - Green: 221
+name: Irvine
+open_time: 811
+payment_method_probability_weights:
+  CASH: 122
+size_probability_weights:
+  Large: 167
+---
+close_time: 1700
+frequency:
+  912: 66
+  1012: 50
+  1112: 22
+  1212: 70
+  1312: 100
+  1412: 102
+  1512: 84
+  1612: 73
+menu_probability_weights:
+  Chai latte: 189
+  Cortado: 225
+  Flavoured hot chocolate - Hazelnut: 225
+  Frappes - Strawberries & Cream: 182
+  Latte: 157
+  Smoothies - Berry Beautiful: 217
+  Speciality Tea - Earl Grey: 206
+  Speciality Tea - English breakfast: 234
+  Speciality Tea - Fruit: 235
+name: Cwmbran
+open_time: 812
+payment_method_probability_weights:
+  CASH: 105
+size_probability_weights:
+  Large: 241
+---
+close_time: 1700
+frequency:
+  907: 33
+  1007: 63
+  1107: 75
+  1207: 30
+  1307: 79
+  1407: 42
+  1507: 138
+  1607: 25
+menu_probability_weights:
+  Cappuccino: 233
+  Chai latte: 182
+  Frappes - Chocolate Cookie: 165
+  Frappes - Coffee: 218
+  Hot chocolate: 153
+  Speciality Tea - English breakfast: 198
+  Speciality Tea - Green: 191
+name: Stornoway
+open_time: 807
+payment_method_probability_weights:
+  CASH: 143
+size_probability_weights:
+  Large: 330
+---
+close_time: 1700
+frequency:
+  905: 30
+  1005: 59
+  1105: 18
+  1205: 72
+  1305: 126
+  1405: 89
+  1505: 86
+  1605: 25
+menu_probability_weights:
+  Flavoured hot chocolate - Vanilla: 237
+  Flavoured iced latte - Vanilla: 208
+  Frappes - Strawberries & Cream: 170
+  Hot Chocolate: 212
+  Latte: 231
+name: Darlington
+open_time: 805
+payment_method_probability_weights:
+  CARD: 152
+size_probability_weights:
+  Large: 346
+---
+close_time: 1700
+frequency:
+  912: 32
+  1012: 89
+  1112: 13
+  1212: 17
+  1312: 83
+  1412: 78
+  1512: 110
+  1612: 67
+menu_probability_weights:
+  Cortado: 197
+  Flat white: 215
+  Flavoured latte - Hazelnut: 226
+  Hot Chocolate: 153
+  Latte: 224
+  Red Label tea: 222
+name: Hackney
+open_time: 812
+payment_method_probability_weights:
+  CARD: 307
+size_probability_weights:
+  Large: 119
+---
+close_time: 1700
+frequency:
+  908: 37
+  1008: 37
+  1108: 39
+  1208: 19
+  1308: 50
+  1408: 43
+  1508: 40
+  1608: 28
+menu_probability_weights:
+  Chai latte: 194
+  Flavoured latte - Gingerbread: 178
+  Frappes - Coffee: 211
+  Hot chocolate: 234
+  Iced americano: 205
+  Speciality Tea - Camomile: 205
+  Speciality Tea - Darjeeling: 196
+name: Trowbridge
+open_time: 808
+payment_method_probability_weights:
+  CARD: 180
+size_probability_weights:
+  Large: 273
+---
+close_time: 1700
+frequency:
+  910: 118
+  1010: 103
+  1110: 74
+  1210: 17
+  1310: 48
+  1410: 144
+  1510: 57
+  1610: 26
+menu_probability_weights:
+  Cortado: 240
+  Flavoured latte - Gingerbread: 243
+  Flavoured latte - Hazelnut: 246
+  Hot Chocolate: 242
+  Mocha: 249
+  Speciality Tea - Earl Grey: 238
+name: Merthyr Tudful
+open_time: 810
+payment_method_probability_weights:
+  CARD: 135
+size_probability_weights:
+  Large: 307
+---
+close_time: 1700
+frequency:
+  910: 38
+  1010: 105
+  1110: 58
+  1210: 59
+  1310: 36
+  1410: 83
+  1510: 30
+  1610: 69
+menu_probability_weights:
+  Americano: 214
+  Flavoured hot chocolate - Caramel: 155
+  Flavoured latte - Caramel: 249
+  Flavoured latte - Vanilla: 193
+  Glass of milk: 249
+  Hot Chocolate: 168
+  Speciality Tea - Earl Grey: 226
+  Speciality Tea - Peppermint: 192
+name: Hertford
+open_time: 810
+payment_method_probability_weights:
+  CARD: 232
+size_probability_weights:
+  Large: 151
+---
+close_time: 2100
+frequency:
+  802: 110
+  902: 111
+  1002: 37
+  1102: 30
+  1202: 50
+  1302: 87
+  1402: 72
+  1502: 110
+  1602: 52
+  1702: 38
+  1802: 39
+  1902: 38
+  2002: 69
+menu_probability_weights:
+  Babyccino: 169
+  Flavoured iced latte - Vanilla: 178
+  Flavoured latte - Hazelnut: 237
+  Hot chocolate: 161
+  Luxury hot chocolate: 193
+  Mocha: 227
+  Smoothies - Carrot Kick: 162
+  Speciality Tea - Earl Grey: 175
+name: Newry
+open_time: 702
+payment_method_probability_weights:
+  CARD: 255
+size_probability_weights:
+  Large: 330
+---
+close_time: 1700
+frequency:
+  900: 87
+  1000: 103
+  1100: 72
+  1200: 33
+  1300: 82
+  1400: 133
+  1500: 129
+  1600: 39
+menu_probability_weights:
+  Filter coffee: 246
+  Flat white: 234
+  Iced latte: 161
+  Mocha: 195
+  Red Label tea: 226
+  Speciality Tea - Camomile: 160
+name: Belfast
+open_time: 800
+payment_method_probability_weights:
+  CARD: 135
+size_probability_weights:
+  Large: 121
+---
+close_time: 1700
+frequency:
+  915: 29
+  1015: 65
+  1115: 43
+  1215: 34
+  1315: 96
+  1415: 124
+  1515: 56
+  1615: 70
+menu_probability_weights:
+  Chai latte: 199
+  Cortado: 227
+  Flavoured hot chocolate - Vanilla: 151
+  Flavoured iced latte - Vanilla: 208
+  Iced americano: 226
+  Luxury hot chocolate: 181
+name: Camberwell
+open_time: 815
+payment_method_probability_weights:
+  CARD: 307
+size_probability_weights:
+  Large: 209
+---
+close_time: 1700
+frequency:
+  915: 100
+  1015: 94
+  1115: 17
+  1215: 65
+  1315: 28
+  1415: 79
+  1515: 115
+  1615: 25
+menu_probability_weights:
+  Flavoured hot chocolate - Caramel: 174
+  Flavoured hot chocolate - Hazelnut: 230
+  Flavoured latte - Vanilla: 207
+  Frappes - Strawberries & Cream: 220
+  Hot Chocolate: 247
+  Speciality Tea - English breakfast: 224
+  Speciality Tea - Fruit: 242
+  Speciality Tea - Green: 215
+name: Caerfyrddin
+open_time: 815
+payment_method_probability_weights:
+  CARD: 170
+size_probability_weights:
+  Large: 248
+---
+close_time: 1700
+frequency:
+  907: 104
+  1007: 66
+  1107: 66
+  1207: 40
+  1307: 148
+  1407: 66
+  1507: 90
+  1607: 53
+menu_probability_weights:
+  Americano: 156
+  Cappuccino: 239
+  Espresso: 242
+  Flavoured iced latte - Caramel: 185
+  Flavoured iced latte - Hazelnut: 195
+  Frappes - Chocolate Cookie: 152
+  Iced latte: 173
+  Red Label tea: 199
+  Speciality Tea - English breakfast: 154
+name: Cookstown
+open_time: 807
+payment_method_probability_weights:
+  CASH: 146
+size_probability_weights:
+  Large: 186
+---
+close_time: 2100
+frequency:
+  813: 85
+  913: 79
+  1013: 113
+  1113: 74
+  1213: 27
+  1313: 87
+  1413: 129
+  1513: 127
+  1613: 27
+  1713: 59
+  1813: 37
+  1913: 46
+  2013: 29
+menu_probability_weights:
+  Cortado: 202
+  Flat white: 217
+  Iced latte: 198
+  Mocha: 152
+  Red Label tea: 248
+  Speciality Tea - Earl Grey: 232
+name: Dorchester
+open_time: 713
+payment_method_probability_weights:
+  CARD: 238
+size_probability_weights:
+  Large: 189
+---
+close_time: 2100
+frequency:
+  808: 124
+  908: 24
+  1008: 62
+  1108: 36
+  1208: 61
+  1308: 65
+  1408: 138
+  1508: 62
+  1608: 25
+  1708: 42
+  1808: 42
+  1908: 83
+  2008: 69
+menu_probability_weights:
+  Babyccino: 191
+  Flavoured hot chocolate - Hazelnut: 188
+  Luxury hot chocolate: 189
+name: Port Talbot
+open_time: 708
+payment_method_probability_weights:
+  CARD: 200
+size_probability_weights:
+  Large: 217
+---
+close_time: 1700
+frequency:
+  910: 64
+  1010: 37
+  1110: 59
+  1210: 27
+  1310: 32
+  1410: 30
+  1510: 93
+  1610: 38
+menu_probability_weights:
+  Americano: 169
+  Flavoured iced latte - Vanilla: 174
+  Flavoured latte - Caramel: 190
+  Latte: 212
+  Smoothies - Glowing Greens: 155
+  Speciality Tea - Darjeeling: 232
+name: Antrim
+open_time: 810
+payment_method_probability_weights:
+  CARD: 164
+size_probability_weights:
+  Large: 275
+---
+close_time: 2100
+frequency:
+  807: 111
+  907: 122
+  1007: 102
+  1107: 52
+  1207: 32
+  1307: 139
+  1407: 51
+  1507: 140
+  1607: 52
+  1707: 40
+  1807: 36
+  1907: 61
+  2007: 36
+menu_probability_weights:
+  Espresso: 182
+  Flavoured hot chocolate - Vanilla: 234
+  Glass of milk: 180
+  Hot Chocolate: 218
+  Hot chocolate: 228
+  Latte: 198
+  Mocha: 215
+  Speciality Tea - Green: 170
+name: Gateshead
+open_time: 707
+payment_method_probability_weights:
+  CARD: 150
+size_probability_weights:
+  Large: 235
+---
+close_time: 1700
+frequency:
+  900: 34
+  1000: 106
+  1100: 20
+  1200: 27
+  1300: 121
+  1400: 135
+  1500: 140
+  1600: 31
+menu_probability_weights:
+  Filter coffee: 151
+  Flavoured iced latte - Vanilla: 207
+  Iced americano: 155
+  Speciality Tea - Peppermint: 192
+name: Wandsworth
+open_time: 800
+payment_method_probability_weights:
+  CARD: 244
+size_probability_weights:
+  Large: 142
+---
+close_time: 1700
+frequency:
+  903: 109
+  1003: 46
+  1103: 9
+  1203: 23
+  1303: 72
+  1403: 141
+  1503: 129
+  1603: 70
+menu_probability_weights:
+  Frappes - Coffee: 181
+  Hot Chocolate: 177
+  Hot chocolate: 246
+  Iced latte: 241
+  Smoothies - Carrot Kick: 236
+  Speciality Tea - English breakfast: 241
+  Speciality Tea - Peppermint: 177
+name: Exeter
+open_time: 803
+payment_method_probability_weights:
+  CASH: 194
+size_probability_weights:
+  Large: 149
+---
+close_time: 2100
+frequency:
+  810: 50
+  910: 78
+  1010: 88
+  1110: 26
+  1210: 18
+  1310: 41
+  1410: 85
+  1510: 27
+  1610: 57
+  1710: 35
+  1810: 92
+  1910: 48
+  2010: 97
+menu_probability_weights:
+  Chai latte: 188
+  Cortado: 173
+  Flavoured latte - Caramel: 215
+name: Camden Town
+open_time: 710
+payment_method_probability_weights:
+  CARD: 138
+size_probability_weights:
+  Large: 331
+---
+close_time: 1700
+frequency:
+  912: 35
+  1012: 53
+  1112: 55
+  1212: 60
+  1312: 142
+  1412: 118
+  1512: 38
+  1612: 68
+menu_probability_weights:
+  Espresso: 209
+  Flavoured hot chocolate - Vanilla: 186
+  Flavoured iced latte - Hazelnut: 214
+  Hot Chocolate: 176
+  Smoothies - Berry Beautiful: 210
+name: Alloa
+open_time: 812
+payment_method_probability_weights:
+  CASH: 133
+size_probability_weights:
+  Large: 277
+---
+close_time: 1700
+frequency:
+  900: 59
+  1000: 108
+  1100: 68
+  1200: 48
+  1300: 36
+  1400: 82
+  1500: 99
+  1600: 34
+menu_probability_weights:
+  Babyccino: 244
+  Flavoured iced latte - Vanilla: 244
+  Frappes - Coffee: 161
+  Hot Chocolate: 219
+name: Chicksands
+open_time: 800
+payment_method_probability_weights:
+  CARD: 244
+size_probability_weights:
+  Large: 333
+---
+close_time: 1700
+frequency:
+  910: 119
+  1010: 49
+  1110: 53
+  1210: 32
+  1310: 134
+  1410: 102
+  1510: 85
+  1610: 42
+menu_probability_weights:
+  Chai latte: 213
+  Flavoured hot chocolate - Hazelnut: 227
+  Frappes - Strawberries & Cream: 225
+  Red Label tea: 178
+name: Banbridge
+open_time: 810
+payment_method_probability_weights:
+  CARD: 233
+size_probability_weights:
+  Large: 283
+---
+close_time: 1700
+frequency:
+  902: 77
+  1002: 114
+  1102: 25
+  1202: 18
+  1302: 64
+  1402: 108
+  1502: 115
+  1602: 54
+menu_probability_weights:
+  Chai latte: 150
+  Frappes - Coffee: 246
+  Frappes - Strawberries & Cream: 156
+  Red Label tea: 184
+name: Walthamstow
+open_time: 802
+payment_method_probability_weights:
+  CARD: 271
+size_probability_weights:
+  Large: 327
+---
+close_time: 1700
+frequency:
+  900: 110
+  1000: 80
+  1100: 72
+  1200: 26
+  1300: 32
+  1400: 62
+  1500: 121
+  1600: 57
+menu_probability_weights:
+  Filter coffee: 208
+  Flavoured iced latte - Vanilla: 205
+  Flavoured latte - Hazelnut: 199
+  Frappes - Strawberries & Cream: 194
+  Luxury hot chocolate: 211
+  Speciality Tea - English breakfast: 178
+name: Paisley
+open_time: 800
+payment_method_probability_weights:
+  CARD: 169
+size_probability_weights:
+  Large: 139
+---
+close_time: 2100
+frequency:
+  805: 101
+  905: 72
+  1005: 44
+  1105: 44
+  1205: 26
+  1305: 76
+  1405: 133
+  1505: 78
+  1605: 44
+  1705: 54
+  1805: 74
+  1905: 46
+  2005: 85
+menu_probability_weights:
+  Red Label tea: 184
+  Smoothies - Berry Beautiful: 190
+  Speciality Tea - Earl Grey: 202
+name: Chichester
+open_time: 705
+payment_method_probability_weights:
+  CARD: 276
+size_probability_weights:
+  Large: 135
+---
+close_time: 1700
+frequency:
+  905: 90
+  1005: 119
+  1105: 32
+  1205: 63
+  1305: 146
+  1405: 123
+  1505: 70
+  1605: 60
+menu_probability_weights:
+  Americano: 162
+  Flavoured latte - Caramel: 211
+  Red Label tea: 167
+  Smoothies - Carrot Kick: 247
+  Speciality Tea - Earl Grey: 183
+name: Craigavon
+open_time: 805
+payment_method_probability_weights:
+  CARD: 215
+size_probability_weights:
+  Large: 197
+---
+close_time: 1700
+frequency:
+  902: 85
+  1002: 115
+  1102: 61
+  1202: 36
+  1302: 150
+  1402: 29
+  1502: 29
+  1602: 31
+menu_probability_weights:
+  Chai latte: 196
+  Flavoured hot chocolate - Hazelnut: 222
+  Flavoured hot chocolate - Vanilla: 234
+  Flavoured latte - Caramel: 186
+  Flavoured latte - Hazelnut: 188
+  Luxury hot chocolate: 213
+name: Woolwich
+open_time: 802
+payment_method_probability_weights:
+  CASH: 197
+size_probability_weights:
+  Large: 189
+---
+close_time: 2100
+frequency:
+  810: 42
+  910: 72
+  1010: 113
+  1110: 19
+  1210: 19
+  1310: 146
+  1410: 37
+  1510: 56
+  1610: 39
+  1710: 31
+  1810: 61
+  1910: 92
+  2010: 49
+menu_probability_weights:
+  Espresso: 158
+  Flavoured latte - Gingerbread: 193
+  Frappes - Chocolate Cookie: 237
+  Frappes - Coffee: 174
+  Iced americano: 224
+  Red Label tea: 247
+  Smoothies - Berry Beautiful: 244
+  Speciality Tea - Darjeeling: 248
+  Speciality Tea - Peppermint: 188
+name: Northallerton
+open_time: 710
+payment_method_probability_weights:
+  CARD: 169
+size_probability_weights:
+  Large: 341
+---
+close_time: 1700
+frequency:
+  907: 72
+  1007: 59
+  1107: 40
+  1207: 18
+  1307: 120
+  1407: 103
+  1507: 116
+  1607: 59
+menu_probability_weights:
+  Chai latte: 181
+  Flavoured hot chocolate - Caramel: 171
+  Flavoured iced latte - Caramel: 215
+  Flavoured latte - Gingerbread: 158
+  Glass of milk: 202
+  Hot chocolate: 200
+  Smoothies - Glowing Greens: 183
+name: Romford
+open_time: 807
+payment_method_probability_weights:
+  CASH: 127
+size_probability_weights:
+  Large: 319
+---
+close_time: 2100
+frequency:
+  805: 31
+  905: 49
+  1005: 33
+  1105: 25
+  1205: 49
+  1305: 72
+  1405: 84
+  1505: 56
+  1605: 34
+  1705: 60
+  1805: 47
+  1905: 70
+  2005: 65
+menu_probability_weights:
+  Flavoured latte - Caramel: 221
+  Frappes - Chocolate Cookie: 156
+  Mocha: 166
+  Smoothies - Glowing Greens: 206
+name: Walsall
+open_time: 705
+payment_method_probability_weights:
+  CARD: 342
+size_probability_weights:
+  Large: 167
+---
+close_time: 1700
+frequency:
+  914: 106
+  1014: 63
+  1114: 20
+  1214: 34
+  1314: 103
+  1414: 147
+  1514: 139
+  1614: 36
+menu_probability_weights:
+  Cortado: 202
+  Espresso: 157
+  Flat white: 163
+  Flavoured hot chocolate - Caramel: 186
+name: Scunthorpe
+open_time: 814
+payment_method_probability_weights:
+  CARD: 148
+size_probability_weights:
+  Large: 138
+---
+close_time: 1700
+frequency:
+  910: 78
+  1010: 109
+  1110: 23
+  1210: 47
+  1310: 28
+  1410: 148
+  1510: 80
+  1610: 73
+menu_probability_weights:
+  Chai latte: 187
+  Cortado: 189
+  Espresso: 249
+  Filter coffee: 178
+  Flavoured hot chocolate - Caramel: 247
+  Flavoured iced latte - Vanilla: 166
+  Flavoured latte - Caramel: 216
+  Luxury hot chocolate: 164
+  Smoothies - Berry Beautiful: 169
+  Speciality Tea - English breakfast: 240
+name: Islington
+open_time: 810
+payment_method_probability_weights:
+  CARD: 168
+size_probability_weights:
+  Large: 164
+---
+close_time: 1700
+frequency:
+  903: 121
+  1003: 108
+  1103: 27
+  1203: 63
+  1303: 78
+  1403: 110
+  1503: 99
+  1603: 56
+menu_probability_weights:
+  Cortado: 176
+  Frappes - Coffee: 189
+  Glass of milk: 157
+  Iced americano: 165
+name: Oldbury
+open_time: 803
+payment_method_probability_weights:
+  CARD: 300
+size_probability_weights:
+  Large: 123
+---
+close_time: 2100
+frequency:
+  815: 101
+  915: 38
+  1015: 109
+  1115: 68
+  1215: 36
+  1315: 55
+  1415: 104
+  1515: 66
+  1615: 70
+  1715: 29
+  1815: 90
+  1915: 24
+  2015: 24
+menu_probability_weights:
+  Americano: 241
+  Chai latte: 155
+  Flavoured hot chocolate - Hazelnut: 245
+  Flavoured iced latte - Caramel: 238
+  Flavoured iced latte - Vanilla: 217
+  Flavoured latte - Vanilla: 223
+  Frappes - Strawberries & Cream: 161
+  Mocha: 164
+  Speciality Tea - Fruit: 172
+name: Downpatrick
+open_time: 715
+payment_method_probability_weights:
+  CARD: 233
+size_probability_weights:
+  Large: 276
+---
+close_time: 1700
+frequency:
+  900: 94
+  1000: 99
+  1100: 18
+  1200: 42
+  1300: 71
+  1400: 124
+  1500: 130
+  1600: 24
+menu_probability_weights:
+  Glass of milk: 184
+  Hot Chocolate: 186
+  Luxury hot chocolate: 208
+  Red Label tea: 234
+  Smoothies - Berry Beautiful: 180
+  Speciality Tea - English breakfast: 240
+  Speciality Tea - Peppermint: 245
+name: Livingston
+open_time: 800
+payment_method_probability_weights:
+  CARD: 258
+size_probability_weights:
+  Large: 174
+---
+close_time: 2100
+frequency:
+  813: 64
+  913: 110
+  1013: 40
+  1113: 74
+  1213: 26
+  1313: 132
+  1413: 109
+  1513: 82
+  1613: 40
+  1713: 36
+  1813: 33
+  1913: 66
+  2013: 34
+menu_probability_weights:
+  Flavoured hot chocolate - Hazelnut: 181
+  Flavoured latte - Vanilla: 166
+  Frappes - Chocolate Cookie: 212
+  Frappes - Coffee: 167
+  Glass of milk: 178
+  Speciality Tea - Camomile: 150
+  Speciality Tea - Darjeeling: 188
+name: Ashton-under-Lyne
+open_time: 713
+payment_method_probability_weights:
+  CARD: 315
+size_probability_weights:
+  Large: 112
+---
+close_time: 1700
+frequency:
+  910: 31
+  1010: 78
+  1110: 31
+  1210: 61
+  1310: 44
+  1410: 83
+  1510: 41
+  1610: 32
+menu_probability_weights:
+  Americano: 210
+  Babyccino: 237
+  Chai latte: 228
+  Espresso: 152
+  Flavoured hot chocolate - Vanilla: 215
+  Flavoured latte - Vanilla: 229
+  Frappes - Coffee: 183
+  Smoothies - Berry Beautiful: 157
+  Smoothies - Carrot Kick: 214
+name: Winchester
+open_time: 810
+payment_method_probability_weights:
+  CARD: 245
+size_probability_weights:
+  Large: 204
+---
+close_time: 2100
+frequency:
+  806: 103
+  906: 95
+  1006: 32
+  1106: 16
+  1206: 38
+  1306: 56
+  1406: 48
+  1506: 98
+  1606: 69
+  1706: 68
+  1806: 67
+  1906: 52
+  2006: 64
+menu_probability_weights:
+  Flavoured hot chocolate - Vanilla: 160
+  Flavoured iced latte - Vanilla: 161
+  Flavoured latte - Hazelnut: 160
+  Frappes - Chocolate Cookie: 245
+  Mocha: 249
+  Red Label tea: 159
+  Smoothies - Carrot Kick: 171
+  Speciality Tea - Camomile: 239
+  Speciality Tea - Fruit: 194
+name: Sandbach
+open_time: 706
+payment_method_probability_weights:
+  CARD: 324
+size_probability_weights:
+  Large: 267
+---
+close_time: 1700
+frequency:
+  907: 72
+  1007: 97
+  1107: 22
+  1207: 35
+  1307: 96
+  1407: 36
+  1507: 73
+  1607: 53
+menu_probability_weights:
+  Flavoured hot chocolate - Caramel: 176
+  Flavoured hot chocolate - Hazelnut: 248
+  Flavoured iced latte - Hazelnut: 184
+  Flavoured latte - Gingerbread: 245
+  Frappes - Coffee: 239
+  Glass of milk: 151
+  Latte: 238
+  Smoothies - Glowing Greens: 174
+name: Derby
+open_time: 807
+payment_method_probability_weights:
+  CARD: 359
+size_probability_weights:
+  Large: 175
+---
+close_time: 2100
+frequency:
+  803: 107
+  903: 45
+  1003: 85
+  1103: 58
+  1203: 66
+  1303: 92
+  1403: 102
+  1503: 67
+  1603: 48
+  1703: 33
+  1803: 73
+  1903: 77
+  2003: 38
+menu_probability_weights:
+  Americano: 182
+  Espresso: 165
+  Flavoured iced latte - Caramel: 218
+  Flavoured latte - Hazelnut: 165
+  Hot Chocolate: 204
+  Hot chocolate: 238
+  Red Label tea: 165
+  Speciality Tea - Camomile: 171
+  Speciality Tea - Fruit: 153
+name: Twickenham
+open_time: 703
+payment_method_probability_weights:
+  CARD: 346
+size_probability_weights:
+  Large: 288
+---
+close_time: 1700
+frequency:
+  908: 44
+  1008: 51
+  1108: 30
+  1208: 69
+  1308: 122
+  1408: 137
+  1508: 140
+  1608: 69
+menu_probability_weights:
+  Americano: 169
+  Flavoured hot chocolate - Hazelnut: 241
+  Smoothies - Glowing Greens: 157
+name: Saint Helens
+open_time: 808
+payment_method_probability_weights:
+  CARD: 226
+size_probability_weights:
+  Large: 269
+---
+close_time: 1700
+frequency:
+  904: 65
+  1004: 74
+  1104: 9
+  1204: 56
+  1304: 144
+  1404: 95
+  1504: 96
+  1604: 36
+menu_probability_weights:
+  Chai latte: 189
+  Flavoured iced latte - Caramel: 239
+  Red Label tea: 242
+name: Bury
+open_time: 804
+payment_method_probability_weights:
+  CARD: 162
+size_probability_weights:
+  Large: 232
+---
+close_time: 1700
+frequency:
+  910: 111
+  1010: 60
+  1110: 63
+  1210: 66
+  1310: 48
+  1410: 84
+  1510: 64
+  1610: 29
+menu_probability_weights:
+  Iced americano: 159
+  Iced latte: 169
+  Mocha: 210
+  Smoothies - Glowing Greens: 228
+  Speciality Tea - Camomile: 190
+name: Maidenhead
+open_time: 810
+payment_method_probability_weights:
+  CARD: 305
+size_probability_weights:
+  Large: 123
+---
+close_time: 1700
+frequency:
+  902: 99
+  1002: 46
+  1102: 20
+  1202: 49
+  1302: 131
+  1402: 71
+  1502: 111
+  1602: 72
+menu_probability_weights:
+  Flat white: 226
+  Speciality Tea - Darjeeling: 208
+  Speciality Tea - Fruit: 156
+name: Wembley
+open_time: 802
+payment_method_probability_weights:
+  CARD: 263
+size_probability_weights:
+  Large: 110
+---
+close_time: 1700
+frequency:
+  901: 90
+  1001: 89
+  1101: 49
+  1201: 64
+  1301: 99
+  1401: 138
+  1501: 149
+  1601: 74
+menu_probability_weights:
+  Espresso: 208
+  Flat white: 158
+  Flavoured hot chocolate - Caramel: 171
+  Flavoured iced latte - Caramel: 204
+  Flavoured latte - Gingerbread: 196
+  Hot chocolate: 210
+  Speciality Tea - English breakfast: 165
+name: Hartlepool
+open_time: 801
+payment_method_probability_weights:
+  CASH: 133
+size_probability_weights:
+  Large: 112
+---
+close_time: 1700
+frequency:
+  909: 108
+  1009: 73
+  1109: 51
+  1209: 17
+  1309: 69
+  1409: 126
+  1509: 55
+  1609: 37
+menu_probability_weights:
+  Flavoured latte - Caramel: 157
+  Flavoured latte - Hazelnut: 189
+  Speciality Tea - Darjeeling: 222
+  Speciality Tea - English breakfast: 237
+  Speciality Tea - Peppermint: 209
+name: Hugh Town
+open_time: 809
+payment_method_probability_weights:
+  CARD: 251
+size_probability_weights:
+  Large: 115
+---
+close_time: 2100
+frequency:
+  803: 43
+  903: 44
+  1003: 25
+  1103: 70
+  1203: 25
+  1303: 85
+  1403: 28
+  1503: 136
+  1603: 51
+  1703: 25
+  1803: 75
+  1903: 81
+  2003: 68
+menu_probability_weights:
+  Americano: 194
+  Flavoured iced latte - Hazelnut: 210
+  Flavoured latte - Caramel: 201
+  Flavoured latte - Hazelnut: 209
+  Latte: 212
+  Red Label tea: 221
+  Speciality Tea - Earl Grey: 181
+  Speciality Tea - Fruit: 228
+  Speciality Tea - Green: 240
+name: Oldham
+open_time: 703
+payment_method_probability_weights:
+  CARD: 283
+size_probability_weights:
+  Large: 232
+---
+close_time: 1700
+frequency:
+  904: 75
+  1004: 32
+  1104: 26
+  1204: 41
+  1304: 75
+  1404: 50
+  1504: 114
+  1604: 59
+menu_probability_weights:
+  Americano: 247
+  Filter coffee: 155
+  Frappes - Chocolate Cookie: 220
+  Glass of milk: 220
+  Iced americano: 151
+  Iced latte: 161
+  Smoothies - Berry Beautiful: 247
+  Speciality Tea - Peppermint: 215
+name: Bexleyheath
+open_time: 804
+payment_method_probability_weights:
+  CASH: 154
+size_probability_weights:
+  Large: 340
+---
+close_time: 1700
+frequency:
+  915: 99
+  1015: 116
+  1115: 56
+  1215: 19
+  1315: 55
+  1415: 36
+  1515: 63
+  1615: 68
+menu_probability_weights:
+  Chai latte: 229
+  Cortado: 169
+  Speciality Tea - English breakfast: 183
+  Speciality Tea - Peppermint: 239
+name: Ebbw Vale
+open_time: 815
+payment_method_probability_weights:
+  CASH: 134
+size_probability_weights:
+  Large: 177
+---
+close_time: 1700
+frequency:
+  911: 58
+  1011: 55
+  1111: 33
+  1211: 43
+  1311: 77
+  1411: 42
+  1511: 122
+  1611: 29
+menu_probability_weights:
+  Chai latte: 248
+  Flat white: 192
+  Flavoured latte - Caramel: 193
+  Frappes - Chocolate Cookie: 188
+  Speciality Tea - Fruit: 186
+name: Magherafelt
+open_time: 811
+payment_method_probability_weights:
+  CARD: 183
+size_probability_weights:
+  Large: 166
+---
+close_time: 1700
+frequency:
+  901: 91
+  1001: 46
+  1101: 16
+  1201: 19
+  1301: 53
+  1401: 32
+  1501: 41
+  1601: 75
+menu_probability_weights:
+  Chai latte: 201
+  Glass of milk: 163
+  Luxury hot chocolate: 211
+  Red Label tea: 230
+  Smoothies - Berry Beautiful: 170
+name: Wigan
+open_time: 801
+payment_method_probability_weights:
+  CASH: 186
+size_probability_weights:
+  Large: 182
+---
+close_time: 1700
+frequency:
+  905: 117
+  1005: 42
+  1105: 69
+  1205: 22
+  1305: 39
+  1405: 113
+  1505: 61
+  1605: 74
+menu_probability_weights:
+  Filter coffee: 232
+  Flavoured iced latte - Caramel: 237
+  Flavoured latte - Hazelnut: 201
+  Latte: 188
+name: Ballymena
+open_time: 805
+payment_method_probability_weights:
+  CARD: 278
+size_probability_weights:
+  Large: 251
+---
+close_time: 1700
+frequency:
+  900: 28
+  1000: 77
+  1100: 51
+  1200: 54
+  1300: 49
+  1400: 135
+  1500: 122
+  1600: 44
+menu_probability_weights:
+  Flavoured hot chocolate - Caramel: 178
+  Flavoured iced latte - Hazelnut: 182
+  Hot Chocolate: 205
+  Latte: 221
+  Speciality Tea - Darjeeling: 237
+  Speciality Tea - Green: 155
+name: Halifax
+open_time: 800
+payment_method_probability_weights:
+  CARD: 320
+size_probability_weights:
+  Large: 150
+---
+close_time: 1700
+frequency:
+  908: 32
+  1008: 40
+  1108: 64
+  1208: 61
+  1308: 128
+  1408: 107
+  1508: 62
+  1608: 60
+menu_probability_weights:
+  Americano: 241
+  Babyccino: 228
+  Flavoured latte - Gingerbread: 247
+  Hot chocolate: 193
+  Speciality Tea - Earl Grey: 186
+  Speciality Tea - Peppermint: 203
+name: Stockport
+open_time: 808
+payment_method_probability_weights:
+  CARD: 324
+size_probability_weights:
+  Large: 268
+---
+close_time: 2100
+frequency:
+  803: 70
+  903: 52
+  1003: 96
+  1103: 26
+  1203: 66
+  1303: 104
+  1403: 130
+  1503: 60
+  1603: 38
+  1703: 66
+  1803: 68
+  1903: 80
+  2003: 53
+menu_probability_weights:
+  Flat white: 183
+  Flavoured hot chocolate - Hazelnut: 175
+  Flavoured hot chocolate - Vanilla: 228
+  Flavoured latte - Gingerbread: 179
+  Luxury hot chocolate: 239
+  Speciality Tea - Camomile: 182
+  Speciality Tea - Fruit: 234
+name: Stockton-on-Tees
+open_time: 703
+payment_method_probability_weights:
+  CARD: 210
+size_probability_weights:
+  Large: 289
+---
+close_time: 1700
+frequency:
+  900: 74
+  1000: 113
+  1100: 71
+  1200: 64
+  1300: 105
+  1400: 40
+  1500: 97
+  1600: 53
+menu_probability_weights:
+  Cappuccino: 162
+  Chai latte: 247
+  Flavoured hot chocolate - Caramel: 232
+  Flavoured iced latte - Caramel: 232
+  Iced latte: 211
+name: Northampton
+open_time: 800
+payment_method_probability_weights:
+  CASH: 168
+size_probability_weights:
+  Large: 294
+---
+close_time: 1700
+frequency:
+  903: 27
+  1003: 80
+  1103: 53
+  1203: 53
+  1303: 147
+  1403: 65
+  1503: 102
+  1603: 37
+menu_probability_weights:
+  Flavoured iced latte - Hazelnut: 216
+  Iced latte: 215
+  Speciality Tea - Earl Grey: 246
+name: Grays
+open_time: 803
+payment_method_probability_weights:
+  CARD: 325
+size_probability_weights:
+  Large: 147
+---
+close_time: 1700
+frequency:
+  900: 40
+  1000: 102
+  1100: 23
+  1200: 17
+  1300: 66
+  1400: 26
+  1500: 40
+  1600: 41
+menu_probability_weights:
+  Flat white: 160
+  Flavoured iced latte - Vanilla: 174
+  Mocha: 228
+  Smoothies - Berry Beautiful: 192
+  Speciality Tea - Green: 169
+name: Ystrad Mynach
+open_time: 800
+payment_method_probability_weights:
+  CASH: 117
+size_probability_weights:
+  Large: 101
+---
+close_time: 1700
+frequency:
+  905: 39
+  1005: 113
+  1105: 37
+  1205: 65
+  1305: 46
+  1405: 55
+  1505: 28
+  1605: 32
+menu_probability_weights:
+  Espresso: 235
+  Flavoured iced latte - Caramel: 189
+  Frappes - Strawberries & Cream: 222
+  Smoothies - Berry Beautiful: 157
+  Speciality Tea - Green: 249
+name: Aberaeron
+open_time: 805
+payment_method_probability_weights:
+  CARD: 227
+size_probability_weights:
+  Large: 148
+---
+close_time: 2100
+frequency:
+  814: 95
+  914: 64
+  1014: 69
+  1114: 21
+  1214: 33
+  1314: 45
+  1414: 127
+  1514: 47
+  1614: 65
+  1714: 40
+  1814: 96
+  1914: 36
+  2014: 49
+menu_probability_weights:
+  Flat white: 180
+  Flavoured hot chocolate - Caramel: 217
+  Flavoured iced latte - Hazelnut: 168
+  Flavoured latte - Hazelnut: 184
+  Iced latte: 155
+  Latte: 237
+  Speciality Tea - Camomile: 191
+name: Newtown Saint Boswells
+open_time: 714
+payment_method_probability_weights:
+  CARD: 146
+size_probability_weights:
+  Large: 319
+---
+close_time: 1700
+frequency:
+  915: 39
+  1015: 94
+  1115: 37
+  1215: 62
+  1315: 78
+  1415: 117
+  1515: 31
+  1615: 25
+menu_probability_weights:
+  Espresso: 235
+  Flavoured iced latte - Vanilla: 245
+  Flavoured latte - Vanilla: 202
+  Frappes - Coffee: 154
+  Glass of milk: 152
+  Hot chocolate: 200
+  Luxury hot chocolate: 235
+  Smoothies - Glowing Greens: 175
+  Speciality Tea - Earl Grey: 151
+  Speciality Tea - English breakfast: 239
+name: Enfield
+open_time: 815
+payment_method_probability_weights:
+  CARD: 202
+size_probability_weights:
+  Large: 325
+---
+close_time: 2100
+frequency:
+  815: 52
+  915: 29
+  1015: 40
+  1115: 27
+  1215: 29
+  1315: 40
+  1415: 144
+  1515: 67
+  1615: 58
+  1715: 26
+  1815: 48
+  1915: 69
+  2015: 26
+menu_probability_weights:
+  Americano: 160
+  Frappes - Chocolate Cookie: 230
+  Glass of milk: 200
+  Latte: 195
+  Luxury hot chocolate: 209
+  Smoothies - Carrot Kick: 247
+  Speciality Tea - Earl Grey: 169
+name: Stoke-on-Trent
+open_time: 715
+payment_method_probability_weights:
+  CARD: 183
+size_probability_weights:
+  Large: 153
+---
+close_time: 1700
+frequency:
+  901: 62
+  1001: 114
+  1101: 30
+  1201: 29
+  1301: 75
+  1401: 60
+  1501: 56
+  1601: 39
+menu_probability_weights:
+  Espresso: 176
+  Flavoured iced latte - Caramel: 209
+  Flavoured latte - Vanilla: 219
+  Luxury hot chocolate: 195
+  Speciality Tea - Fruit: 199
+name: Sutton
+open_time: 801
+payment_method_probability_weights:
+  CASH: 194
+size_probability_weights:
+  Large: 175
+---
+close_time: 1700
+frequency:
+  910: 104
+  1010: 36
+  1110: 15
+  1210: 10
+  1310: 40
+  1410: 130
+  1510: 111
+  1610: 52
+menu_probability_weights:
+  Espresso: 187
+  Flat white: 219
+  Flavoured hot chocolate - Vanilla: 201
+  Frappes - Strawberries & Cream: 232
+  Hot chocolate: 172
+  Speciality Tea - Camomile: 190
+name: Dudley
+open_time: 810
+payment_method_probability_weights:
+  CARD: 347
+size_probability_weights:
+  Large: 103
+---
+close_time: 1700
+frequency:
+  905: 113
+  1005: 81
+  1105: 25
+  1205: 68
+  1305: 110
+  1405: 64
+  1505: 150
+  1605: 32
+menu_probability_weights:
+  Cappuccino: 217
+  Espresso: 187
+  Glass of milk: 190
+  Latte: 248
+  Smoothies - Glowing Greens: 249
+name: Wrecsam
+open_time: 805
+payment_method_probability_weights:
+  CASH: 109
+size_probability_weights:
+  Large: 176
+---
+close_time: 1700
+frequency:
+  911: 39
+  1011: 110
+  1111: 19
+  1211: 48
+  1311: 96
+  1411: 94
+  1511: 91
+  1611: 64
+menu_probability_weights:
+  Flavoured iced latte - Vanilla: 171
+  Latte: 191
+  Speciality Tea - Green: 199
+name: Aberdeen
+open_time: 811
+payment_method_probability_weights:
+  CARD: 298
+size_probability_weights:
+  Large: 256
+---
+close_time: 1700
+frequency:
+  910: 81
+  1010: 99
+  1110: 44
+  1210: 23
+  1310: 134
+  1410: 109
+  1510: 68
+  1610: 25
+menu_probability_weights:
+  Espresso: 163
+  Hot chocolate: 189
+  Iced latte: 226
+  Latte: 164
+name: Bolton
+open_time: 810
+payment_method_probability_weights:
+  CARD: 267
+size_probability_weights:
+  Large: 294
+---
+close_time: 1700
+frequency:
+  900: 110
+  1000: 113
+  1100: 23
+  1200: 56
+  1300: 51
+  1400: 39
+  1500: 107
+  1600: 39
+menu_probability_weights:
+  Espresso: 187
+  Flavoured hot chocolate - Hazelnut: 157
+  Flavoured iced latte - Vanilla: 178
+  Flavoured latte - Gingerbread: 196
+  Frappes - Strawberries & Cream: 199
+  Smoothies - Berry Beautiful: 198
+  Speciality Tea - Earl Grey: 217
+name: Warrington
+open_time: 800
+payment_method_probability_weights:
+  CARD: 180
+size_probability_weights:
+  Large: 159
+---
+close_time: 1700
+frequency:
+  913: 62
+  1013: 55
+  1113: 10
+  1213: 60
+  1313: 135
+  1413: 103
+  1513: 77
+  1613: 41
+menu_probability_weights:
+  Flavoured hot chocolate - Caramel: 201
+  Flavoured iced latte - Hazelnut: 237
+  Flavoured latte - Hazelnut: 204
+  Latte: 154
+  Mocha: 216
+  Smoothies - Carrot Kick: 185
+  Speciality Tea - English breakfast: 188
+name: Salford
+open_time: 813
+payment_method_probability_weights:
+  CARD: 349
+size_probability_weights:
+  Large: 310
+---
+close_time: 1700
+frequency:
+  911: 30
+  1011: 41
+  1111: 35
+  1211: 10
+  1311: 34
+  1411: 52
+  1511: 95
+  1611: 25
+menu_probability_weights:
+  Cappuccino: 199
+  Speciality Tea - Camomile: 175
+  Speciality Tea - English breakfast: 221
+name: Kensington
+open_time: 811
+payment_method_probability_weights:
+  CARD: 195
+size_probability_weights:
+  Large: 127
+---
+close_time: 1700
+frequency:
+  910: 46
+  1010: 100
+  1110: 21
+  1210: 67
+  1310: 75
+  1410: 76
+  1510: 28
+  1610: 43
+menu_probability_weights:
+  Cappuccino: 187
+  Chai latte: 164
+  Filter coffee: 200
+  Flavoured hot chocolate - Vanilla: 202
+  Flavoured latte - Caramel: 241
+  Latte: 166
+  Speciality Tea - Darjeeling: 169
+  Speciality Tea - Green: 181
+name: Doncaster
+open_time: 810
+payment_method_probability_weights:
+  CARD: 185
+size_probability_weights:
+  Large: 296
+---
+close_time: 2100
+frequency:
+  803: 65
+  903: 113
+  1003: 77
+  1103: 54
+  1203: 17
+  1303: 101
+  1403: 61
+  1503: 93
+  1603: 32
+  1703: 56
+  1803: 73
+  1903: 35
+  2003: 75
+menu_probability_weights:
+  Americano: 234
+  Cortado: 216
+  Flavoured hot chocolate - Caramel: 173
+  Frappes - Strawberries & Cream: 197
+name: Swindon
+open_time: 703
+payment_method_probability_weights:
+  CARD: 181
+size_probability_weights:
+  Large: 323
+---
+close_time: 1700
+frequency:
+  909: 77
+  1009: 38
+  1109: 64
+  1209: 31
+  1309: 60
+  1409: 51
+  1509: 40
+  1609: 44
+menu_probability_weights:
+  Cortado: 162
+  Flavoured hot chocolate - Caramel: 224
+  Flavoured iced latte - Hazelnut: 233
+  Flavoured latte - Caramel: 218
+  Frappes - Coffee: 220
+  Glass of milk: 174
+  Red Label tea: 235
+  Smoothies - Berry Beautiful: 188
+  Speciality Tea - Camomile: 248
+name: Pen-y-Bont ar Ogwr
+open_time: 809
+payment_method_probability_weights:
+  CARD: 290
+size_probability_weights:
+  Large: 316
+---
+close_time: 2100
+frequency:
+  810: 91
+  910: 71
+  1010: 51
+  1110: 18
+  1210: 52
+  1310: 134
+  1410: 78
+  1510: 97
+  1610: 40
+  1710: 33
+  1810: 96
+  1910: 66
+  2010: 54
+menu_probability_weights:
+  Babyccino: 223
+  Cortado: 213
+  Filter coffee: 230
+  Flat white: 185
+  Flavoured iced latte - Hazelnut: 248
+  Mocha: 163
+  Smoothies - Carrot Kick: 161
+  Smoothies - Glowing Greens: 194
+  Speciality Tea - Fruit: 244
+name: Catford
+open_time: 710
+payment_method_probability_weights:
+  CARD: 170
+size_probability_weights:
+  Large: 228
+---
+close_time: 1700
+frequency:
+  901: 29
+  1001: 45
+  1101: 18
+  1201: 53
+  1301: 64
+  1401: 102
+  1501: 142
+  1601: 68
+menu_probability_weights:
+  Flavoured hot chocolate - Caramel: 185
+  Speciality Tea - Darjeeling: 164
+  Speciality Tea - Earl Grey: 245
+name: Coleraine
+open_time: 801
+payment_method_probability_weights:
+  CARD: 289
+size_probability_weights:
+  Large: 148
+---
+close_time: 1700
+frequency:
+  908: 91
+  1008: 110
+  1108: 70
+  1208: 19
+  1308: 93
+  1408: 147
+  1508: 87
+  1608: 38
+menu_probability_weights:
+  Cappuccino: 179
+  Filter coffee: 168
+  Flat white: 238
+  Flavoured hot chocolate - Hazelnut: 245
+  Flavoured iced latte - Vanilla: 150
+  Flavoured latte - Vanilla: 204
+  Frappes - Coffee: 229
+  Red Label tea: 240
+  Smoothies - Glowing Greens: 211
+  Speciality Tea - English breakfast: 228
+name: Barnsley
+open_time: 808
+payment_method_probability_weights:
+  CARD: 331
+size_probability_weights:
+  Large: 160
+---
+close_time: 1700
+frequency:
+  906: 58
+  1006: 82
+  1106: 59
+  1206: 18
+  1306: 147
+  1406: 25
+  1506: 39
+  1606: 60
+menu_probability_weights:
+  Americano: 230
+  Flavoured hot chocolate - Caramel: 237
+  Flavoured hot chocolate - Hazelnut: 161
+  Latte: 190
+  Smoothies - Glowing Greens: 198
+  Speciality Tea - Darjeeling: 238
+  Speciality Tea - English breakfast: 249
+name: Caerdydd
+open_time: 806
+payment_method_probability_weights:
+  CASH: 151
+size_probability_weights:
+  Large: 171
+---
+close_time: 1700
+frequency:
+  905: 107
+  1005: 70
+  1105: 26
+  1205: 27
+  1305: 93
+  1405: 98
+  1505: 38
+  1605: 69
+menu_probability_weights:
+  Americano: 237
+  Cappuccino: 216
+  Filter coffee: 176
+  Flavoured iced latte - Caramel: 242
+  Flavoured iced latte - Hazelnut: 213
+  Flavoured latte - Vanilla: 249
+  Frappes - Chocolate Cookie: 228
+  Latte: 181
+  Smoothies - Glowing Greens: 191
+name: Poole
+open_time: 805
+payment_method_probability_weights:
+  CASH: 131
+size_probability_weights:
+  Large: 317
+---
+close_time: 2100
+frequency:
+  804: 83
+  904: 26
+  1004: 30
+  1104: 65
+  1204: 31
+  1304: 107
+  1404: 80
+  1504: 51
+  1604: 64
+  1704: 46
+  1804: 79
+  1904: 63
+  2004: 50
+menu_probability_weights:
+  Americano: 225
+  Flat white: 191
+  Flavoured latte - Hazelnut: 178
+  Smoothies - Berry Beautiful: 232
+name: Bracknell
+open_time: 704
+payment_method_probability_weights:
+  CARD: 272
+size_probability_weights:
+  Large: 333
+---
+close_time: 2100
+frequency:
+  806: 105
+  906: 110
+  1006: 29
+  1106: 41
+  1206: 11
+  1306: 28
+  1406: 48
+  1506: 128
+  1606: 31
+  1706: 30
+  1806: 100
+  1906: 37
+  2006: 59
+menu_probability_weights:
+  Cortado: 237
+  Filter coffee: 165
+  Smoothies - Carrot Kick: 167
+  Smoothies - Glowing Greens: 178
+name: Wakefield
+open_time: 706
+payment_method_probability_weights:
+  CARD: 353
+size_probability_weights:
+  Large: 320
+---
+close_time: 1700
+frequency:
+  900: 63
+  1000: 90
+  1100: 13
+  1200: 19
+  1300: 69
+  1400: 25
+  1500: 110
+  1600: 68
+menu_probability_weights:
+  Babyccino: 247
+  Cappuccino: 202
+  Flavoured hot chocolate - Vanilla: 151
+  Flavoured latte - Hazelnut: 159
+  Hot chocolate: 174
+  Speciality Tea - Camomile: 220
+name: Thornbury
+open_time: 800
+payment_method_probability_weights:
+  CASH: 119
+size_probability_weights:
+  Large: 116
+---
+close_time: 1700
+frequency:
+  908: 95
+  1008: 119
+  1108: 42
+  1208: 62
+  1308: 69
+  1408: 118
+  1508: 149
+  1608: 29
+menu_probability_weights:
+  Cortado: 193
+  Espresso: 217
+  Flavoured hot chocolate - Vanilla: 201
+  Frappes - Strawberries & Cream: 226
+  Mocha: 190
+  Smoothies - Berry Beautiful: 164
+  Speciality Tea - English breakfast: 201
+  Speciality Tea - Peppermint: 241
+name: Wokingham
+open_time: 808
+payment_method_probability_weights:
+  CARD: 281
+size_probability_weights:
+  Large: 122
+---
+close_time: 2100
+frequency:
+  811: 80
+  911: 53
+  1011: 52
+  1111: 31
+  1211: 33
+  1311: 118
+  1411: 37
+  1511: 94
+  1611: 43
+  1711: 59
+  1811: 76
+  1911: 67
+  2011: 70
+menu_probability_weights:
+  Chai latte: 150
+  Flavoured iced latte - Hazelnut: 231
+  Frappes - Coffee: 225
+name: Falkirk
+open_time: 711
+payment_method_probability_weights:
+  CARD: 175
+size_probability_weights:
+  Large: 189
+---
+close_time: 1700
+frequency:
+  902: 74
+  1002: 98
+  1102: 51
+  1202: 35
+  1302: 115
+  1402: 36
+  1502: 36
+  1602: 74
+menu_probability_weights:
+  Americano: 187
+  Flavoured iced latte - Hazelnut: 217
+  Frappes - Chocolate Cookie: 195
+  Frappes - Strawberries & Cream: 164
+  Speciality Tea - Peppermint: 222
+name: Haddington
+open_time: 802
+payment_method_probability_weights:
+  CARD: 301
+size_probability_weights:
+  Large: 218
+---
+close_time: 1700
+frequency:
+  913: 94
+  1013: 103
+  1113: 63
+  1213: 32
+  1313: 76
+  1413: 90
+  1513: 98
+  1613: 72
+menu_probability_weights:
+  Americano: 151
+  Flavoured hot chocolate - Caramel: 185
+  Flavoured hot chocolate - Hazelnut: 230
+  Flavoured latte - Caramel: 150
+name: Abertawe
+open_time: 813
+payment_method_probability_weights:
+  CARD: 214
+size_probability_weights:
+  Large: 102
+---
+close_time: 1700
+frequency:
+  915: 123
+  1015: 96
+  1115: 55
+  1215: 68
+  1315: 114
+  1415: 121
+  1515: 137
+  1615: 55
+menu_probability_weights:
+  Americano: 162
+  Flavoured iced latte - Caramel: 160
+  Frappes - Chocolate Cookie: 215
+  Hot chocolate: 243
+  Iced latte: 173
+  Speciality Tea - Darjeeling: 173
+  Speciality Tea - Fruit: 152
+name: Beverley
+open_time: 815
+payment_method_probability_weights:
+  CARD: 223
+size_probability_weights:
+  Large: 126
+---
+close_time: 2100
+frequency:
+  802: 46
+  902: 108
+  1002: 108
+  1102: 18
+  1202: 51
+  1302: 47
+  1402: 128
+  1502: 142
+  1602: 51
+  1702: 26
+  1802: 85
+  1902: 28
+  2002: 99
+menu_probability_weights:
+  Americano: 192
+  Espresso: 166
+  Flavoured iced latte - Hazelnut: 227
+  Mocha: 179
+  Smoothies - Berry Beautiful: 198
+  Speciality Tea - Earl Grey: 176
+name: Croydon
+open_time: 702
+payment_method_probability_weights:
+  CARD: 240
+size_probability_weights:
+  Large: 221
+---
+close_time: 1700
+frequency:
+  915: 90
+  1015: 69
+  1115: 62
+  1215: 68
+  1315: 124
+  1415: 77
+  1515: 61
+  1615: 72
+menu_probability_weights:
+  Flavoured iced latte - Hazelnut: 178
+  Flavoured latte - Gingerbread: 212
+  Frappes - Chocolate Cookie: 207
+  Hot chocolate: 215
+  Iced americano: 209
+  Iced latte: 189
+  Luxury hot chocolate: 199
+  Smoothies - Berry Beautiful: 235
+name: South Shields
+open_time: 815
+payment_method_probability_weights:
+  CASH: 109
+size_probability_weights:
+  Large: 117
+---
+close_time: 1700
+frequency:
+  903: 90
+  1003: 43
+  1103: 75
+  1203: 11
+  1303: 136
+  1403: 57
+  1503: 97
+  1603: 60
+menu_probability_weights:
+  Flavoured latte - Gingerbread: 175
+  Frappes - Chocolate Cookie: 176
+  Frappes - Coffee: 161
+  Iced americano: 197
+  Smoothies - Carrot Kick: 153
+name: Morden
+open_time: 803
+payment_method_probability_weights:
+  CARD: 224
+size_probability_weights:
+  Large: 198
+---
+close_time: 2100
+frequency:
+  800: 68
+  900: 40
+  1000: 94
+  1100: 70
+  1200: 61
+  1300: 66
+  1400: 28
+  1500: 86
+  1600: 57
+  1700: 59
+  1800: 35
+  1900: 73
+  2000: 31
+menu_probability_weights:
+  Babyccino: 196
+  Cappuccino: 156
+  Espresso: 223
+  Filter coffee: 165
+  Hot chocolate: 233
+  Iced latte: 224
+  Smoothies - Carrot Kick: 237
+  Smoothies - Glowing Greens: 190
+  Speciality Tea - Darjeeling: 240
+  Speciality Tea - English breakfast: 193
+name: Lochgilphead
+open_time: 700
+payment_method_probability_weights:
+  CARD: 138
+size_probability_weights:
+  Large: 289
+---
+close_time: 1700
+frequency:
+  904: 108
+  1004: 115
+  1104: 45
+  1204: 21
+  1304: 25
+  1404: 134
+  1504: 149
+  1604: 31
+menu_probability_weights:
+  Cappuccino: 154
+  Flat white: 150
+  Flavoured hot chocolate - Vanilla: 177
+  Flavoured latte - Caramel: 189
+  Glass of milk: 236
+  Hot Chocolate: 211
+  Speciality Tea - Darjeeling: 178
+  Speciality Tea - English breakfast: 193
+name: Worcester
+open_time: 804
+payment_method_probability_weights:
+  CARD: 311
+size_probability_weights:
+  Large: 321
+---
+close_time: 1700
+frequency:
+  910: 117
+  1010: 56
+  1110: 14
+  1210: 35
+  1310: 106
+  1410: 53
+  1510: 29
+  1610: 34
+menu_probability_weights:
+  Cappuccino: 228
+  Espresso: 151
+  Latte: 218
+  Red Label tea: 216
+  Smoothies - Berry Beautiful: 230
+  Smoothies - Carrot Kick: 153
+name: Matlock
+open_time: 810
+payment_method_probability_weights:
+  CASH: 179
+size_probability_weights:
+  Large: 222
+---
+close_time: 2100
+frequency:
+  811: 49
+  911: 105
+  1011: 56
+  1111: 14
+  1211: 11
+  1311: 121
+  1411: 68
+  1511: 26
+  1611: 74
+  1711: 58
+  1811: 26
+  1911: 27
+  2011: 37
+menu_probability_weights:
+  Americano: 233
+  Cortado: 242
+  Espresso: 183
+  Flavoured latte - Gingerbread: 190
+  Iced latte: 211
+  Latte: 159
+  Smoothies - Carrot Kick: 156
+  Speciality Tea - Earl Grey: 154
+  Speciality Tea - Peppermint: 212
+name: Shrewsbury
+open_time: 711
+payment_method_probability_weights:
+  CARD: 337
+size_probability_weights:
+  Large: 105
+---
+close_time: 1700
+frequency:
+  913: 111
+  1013: 71
+  1113: 29
+  1213: 54
+  1313: 117
+  1413: 116
+  1513: 27
+  1613: 37
+menu_probability_weights:
+  Flavoured hot chocolate - Hazelnut: 166
+  Flavoured hot chocolate - Vanilla: 205
+  Flavoured iced latte - Caramel: 240
+  Frappes - Coffee: 207
+  Hot chocolate: 172
+  Latte: 151
+  Red Label tea: 230
+  Speciality Tea - Green: 162
+name: Truro
+open_time: 813
+payment_method_probability_weights:
+  CARD: 173
+size_probability_weights:
+  Large: 217
+---
+close_time: 2100
+frequency:
+  802: 60
+  902: 91
+  1002: 58
+  1102: 56
+  1202: 23
+  1302: 109
+  1402: 52
+  1502: 58
+  1602: 32
+  1702: 49
+  1802: 34
+  1902: 93
+  2002: 50
+menu_probability_weights:
+  Chai latte: 167
+  Flavoured hot chocolate - Caramel: 190
+  Flavoured iced latte - Hazelnut: 169
+  Flavoured latte - Gingerbread: 227
+  Smoothies - Berry Beautiful: 194
+name: Hereford
+open_time: 702
+payment_method_probability_weights:
+  CARD: 218
+size_probability_weights:
+  Large: 316
+---
+close_time: 1700
+frequency:
+  913: 117
+  1013: 70
+  1113: 14
+  1213: 15
+  1313: 75
+  1413: 104
+  1513: 26
+  1613: 35
+menu_probability_weights:
+  Espresso: 237
+  Flavoured hot chocolate - Hazelnut: 197
+  Flavoured iced latte - Vanilla: 183
+  Latte: 166
+  Red Label tea: 216
+name: Newport
+open_time: 813
+payment_method_probability_weights:
+  CARD: 305
+size_probability_weights:
+  Large: 212
+---
+close_time: 1700
+frequency:
+  913: 124
+  1013: 114
+  1113: 69
+  1213: 36
+  1313: 121
+  1413: 94
+  1513: 96
+  1613: 57
+menu_probability_weights:
+  Chai latte: 241
+  Filter coffee: 220
+  Flavoured hot chocolate - Caramel: 226
+  Flavoured latte - Hazelnut: 215
+  Frappes - Coffee: 202
+  Speciality Tea - Earl Grey: 222
+  Speciality Tea - Peppermint: 227
+name: Oakham
+open_time: 813
+payment_method_probability_weights:
+  CARD: 240
+size_probability_weights:
+  Large: 128
+---
+close_time: 1700
+frequency:
+  900: 85
+  1000: 103
+  1100: 62
+  1200: 50
+  1300: 92
+  1400: 128
+  1500: 75
+  1600: 37
+menu_probability_weights:
+  Americano: 214
+  Flavoured latte - Vanilla: 228
+  Latte: 242
+  Luxury hot chocolate: 249
+  Speciality Tea - English breakfast: 187
+name: Milton Keynes
+open_time: 800
+payment_method_probability_weights:
+  CARD: 190
+size_probability_weights:
+  Large: 152
+---
+close_time: 1700
+frequency:
+  902: 86
+  1002: 68
+  1102: 58
+  1202: 47
+  1302: 139
+  1402: 81
+  1502: 54
+  1602: 52
+menu_probability_weights:
+  Filter coffee: 171
+  Flavoured latte - Vanilla: 218
+name: Dagenham
+open_time: 802
+payment_method_probability_weights:
+  CASH: 179
+size_probability_weights:
+  Large: 227
+---
+close_time: 1700
+frequency:
+  915: 58
+  1015: 49
+  1115: 48
+  1215: 65
+  1315: 101
+  1415: 63
+  1515: 71
+  1615: 45
+menu_probability_weights:
+  Babyccino: 248
+  Flavoured latte - Vanilla: 231
+  Frappes - Coffee: 219
+  Hot chocolate: 159
+  Speciality Tea - Camomile: 214
+  Speciality Tea - Earl Grey: 158
+  Speciality Tea - Fruit: 196
+name: Conwy
+open_time: 815
+payment_method_probability_weights:
+  CARD: 260
+size_probability_weights:
+  Large: 331
+---
+close_time: 1700
+frequency:
+  905: 106
+  1005: 39
+  1105: 51
+  1205: 27
+  1305: 66
+  1405: 58
+  1505: 110
+  1605: 46
+menu_probability_weights:
+  Espresso: 183
+  Flavoured hot chocolate - Hazelnut: 221
+  Flavoured iced latte - Vanilla: 165
+  Frappes - Strawberries & Cream: 242
+  Speciality Tea - Darjeeling: 234
+  Speciality Tea - Earl Grey: 201
+name: Dalkeith
+open_time: 805
+payment_method_probability_weights:
+  CASH: 170
+size_probability_weights:
+  Large: 164
+---
+close_time: 2100
+frequency:
+  805: 85
+  905: 120
+  1005: 63
+  1105: 43
+  1205: 40
+  1305: 124
+  1405: 77
+  1505: 139
+  1605: 58
+  1705: 30
+  1805: 73
+  1905: 60
+  2005: 52
+menu_probability_weights:
+  Flavoured iced latte - Caramel: 197
+  Flavoured latte - Gingerbread: 209
+  Frappes - Strawberries & Cream: 165
+  Iced latte: 207
+  Smoothies - Carrot Kick: 212
+  Speciality Tea - Camomile: 232
+  Speciality Tea - Green: 248
+name: Enniskillen
+open_time: 705
+payment_method_probability_weights:
+  CARD: 256
+size_probability_weights:
+  Large: 105
+---
+close_time: 1700
+frequency:
+  906: 67
+  1006: 50
+  1106: 32
+  1206: 23
+  1306: 108
+  1406: 94
+  1506: 40
+  1606: 65
+menu_probability_weights:
+  Chai latte: 166
+  Espresso: 205
+  Filter coffee: 175
+  Flavoured hot chocolate - Caramel: 194
+  Flavoured latte - Hazelnut: 192
+  Hot chocolate: 151
+  Latte: 222
+name: Hamilton
+open_time: 806
+payment_method_probability_weights:
+  CARD: 181
+size_probability_weights:
+  Large: 323
+---
+close_time: 2100
+frequency:
+  806: 118
+  906: 47
+  1006: 49
+  1106: 72
+  1206: 41
+  1306: 79
+  1406: 149
+  1506: 148
+  1606: 24
+  1706: 62
+  1806: 42
+  1906: 88
+  2006: 76
+menu_probability_weights:
+  Filter coffee: 229
+  Flat white: 192
+  Flavoured hot chocolate - Vanilla: 193
+  Flavoured latte - Caramel: 193
+  Hot chocolate: 188
+  Iced latte: 210
+  Luxury hot chocolate: 159
+name: Hendon
+open_time: 706
+payment_method_probability_weights:
+  CARD: 247
+size_probability_weights:
+  Large: 251
+---
+close_time: 1700
+frequency:
+  906: 88
+  1006: 121
+  1106: 19
+  1206: 46
+  1306: 72
+  1406: 116
+  1506: 35
+  1606: 53
+menu_probability_weights:
+  Flavoured hot chocolate - Hazelnut: 214
+  Flavoured iced latte - Caramel: 222
+  Flavoured latte - Hazelnut: 174
+  Glass of milk: 207
+  Mocha: 240
+  Speciality Tea - Darjeeling: 219
+name: Hammersmith
+open_time: 806
+payment_method_probability_weights:
+  CASH: 136
+size_probability_weights:
+  Large: 189
+---
+close_time: 2100
+frequency:
+  811: 88
+  911: 90
+  1011: 43
+  1111: 71
+  1211: 51
+  1311: 39
+  1411: 123
+  1511: 114
+  1611: 38
+  1711: 50
+  1811: 73
+  1911: 81
+  2011: 99
+menu_probability_weights:
+  Americano: 161
+  Frappes - Coffee: 189
+  Frappes - Strawberries & Cream: 220
+  Iced americano: 239
+  Smoothies - Glowing Greens: 157
+  Speciality Tea - Earl Grey: 203
+name: Bromley
+open_time: 711
+payment_method_probability_weights:
+  CARD: 215
+size_probability_weights:
+  Large: 268
+---
+close_time: 1700
+frequency:
+  908: 108
+  1008: 89
+  1108: 71
+  1208: 71
+  1308: 110
+  1408: 121
+  1508: 146
+  1608: 50
+menu_probability_weights:
+  Americano: 198
+  Cortado: 248
+  Espresso: 218
+  Flat white: 243
+  Flavoured hot chocolate - Vanilla: 155
+  Flavoured latte - Caramel: 210
+  Red Label tea: 209
+name: Telford
+open_time: 808
+payment_method_probability_weights:
+  CARD: 242
+size_probability_weights:
+  Large: 350
+---
+close_time: 1700
+frequency:
+  900: 44
+  1000: 72
+  1100: 74
+  1200: 21
+  1300: 134
+  1400: 30
+  1500: 60
+  1600: 68
+menu_probability_weights:
+  Filter coffee: 200
+  Flavoured latte - Hazelnut: 156
+  Smoothies - Carrot Kick: 229
+name: Harrow
+open_time: 800
+payment_method_probability_weights:
+  CASH: 186
+size_probability_weights:
+  Large: 300
+---
+close_time: 1700
+frequency:
+  906: 77
+  1006: 80
+  1106: 10
+  1206: 27
+  1306: 28
+  1406: 38
+  1506: 119
+  1606: 33
+menu_probability_weights:
+  Babyccino: 171
+  Flavoured hot chocolate - Hazelnut: 202
+  Flavoured iced latte - Caramel: 175
+  Hot Chocolate: 208
+  Mocha: 224
+  Red Label tea: 244
+  Smoothies - Berry Beautiful: 216
+  Smoothies - Carrot Kick: 246
+  Speciality Tea - Darjeeling: 243
+name: Ealing
+open_time: 806
+payment_method_probability_weights:
+  CARD: 352
+size_probability_weights:
+  Large: 118
+---
+close_time: 1700
+frequency:
+  904: 115
+  1004: 62
+  1104: 50
+  1204: 66
+  1304: 62
+  1404: 103
+  1504: 100
+  1604: 27
+menu_probability_weights:
+  Cortado: 196
+  Filter coffee: 166
+  Flavoured iced latte - Caramel: 214
+  Flavoured iced latte - Vanilla: 232
+  Smoothies - Carrot Kick: 201
+name: Slough
+open_time: 804
+payment_method_probability_weights:
+  CARD: 151
+size_probability_weights:
+  Large: 244
+---
+close_time: 1700
+frequency:
+  900: 79
+  1000: 41
+  1100: 42
+  1200: 49
+  1300: 138
+  1400: 71
+  1500: 80
+  1600: 68
+menu_probability_weights:
+  Flavoured iced latte - Caramel: 244
+  Flavoured iced latte - Hazelnut: 215
+  Flavoured latte - Hazelnut: 228
+  Hot Chocolate: 184
+  Latte: 184
+  Speciality Tea - English breakfast: 195
+  Speciality Tea - Green: 225
+  Speciality Tea - Peppermint: 213
+name: Wolverhampton
+open_time: 800
+payment_method_probability_weights:
+  CASH: 152
+size_probability_weights:
+  Large: 212
+---
+close_time: 1700
+frequency:
+  915: 74
+  1015: 46
+  1115: 40
+  1215: 73
+  1315: 62
+  1415: 126
+  1515: 124
+  1615: 62
+menu_probability_weights:
+  Babyccino: 223
+  Cortado: 231
+  Espresso: 157
+  Flavoured hot chocolate - Caramel: 171
+  Flavoured hot chocolate - Vanilla: 185
+  Flavoured iced latte - Caramel: 188
+  Flavoured iced latte - Vanilla: 225
+  Frappes - Chocolate Cookie: 244
+  Speciality Tea - Fruit: 201
+name: Dumbarton
+open_time: 815
+payment_method_probability_weights:
+  CARD: 295
+size_probability_weights:
+  Large: 136
+---
+close_time: 1700
+frequency:
+  910: 108
+  1010: 51
+  1110: 71
+  1210: 35
+  1310: 112
+  1410: 121
+  1510: 89
+  1610: 61
+menu_probability_weights:
+  Flavoured iced latte - Vanilla: 216
+  Flavoured latte - Hazelnut: 173
+  Frappes - Coffee: 193
+  Hot Chocolate: 176
+  Iced latte: 171
+  Latte: 213
+  Smoothies - Glowing Greens: 198
+name: Bangor
+open_time: 810
+payment_method_probability_weights:
+  CARD: 337
+size_probability_weights:
+  Large: 219
+---
+close_time: 1700
+frequency:
+  905: 51
+  1005: 90
+  1105: 37
+  1205: 74
+  1305: 122
+  1405: 113
+  1505: 107
+  1605: 59
+menu_probability_weights:
+  Americano: 162
+  Babyccino: 197
+  Cappuccino: 208
+  Flavoured hot chocolate - Hazelnut: 158
+  Flavoured hot chocolate - Vanilla: 202
+  Flavoured latte - Caramel: 191
+  Iced latte: 165
+  Speciality Tea - Fruit: 206
+  Speciality Tea - Green: 214
+name: Wallsend
+open_time: 805
+payment_method_probability_weights:
+  CARD: 202
+size_probability_weights:
+  Large: 237
+---
+close_time: 2100
+frequency:
+  803: 50
+  903: 50
+  1003: 44
+  1103: 50
+  1203: 30
+  1303: 24
+  1403: 98
+  1503: 34
+  1603: 50
+  1703: 39
+  1803: 41
+  1903: 74
+  2003: 84
+menu_probability_weights:
+  Cappuccino: 186
+  Cortado: 202
+  Espresso: 234
+  Flavoured hot chocolate - Caramel: 249
+  Flavoured iced latte - Caramel: 229
+  Flavoured latte - Hazelnut: 219
+  Frappes - Chocolate Cookie: 230
+  Smoothies - Glowing Greens: 221
+  Speciality Tea - English breakfast: 170
+  Speciality Tea - Green: 160
+name: Strabane
+open_time: 703
+payment_method_probability_weights:
+  CARD: 217
+size_probability_weights:
+  Large: 114
+---
+close_time: 1700
+frequency:
+  908: 27
+  1008: 45
+  1108: 29
+  1208: 68
+  1308: 39
+  1408: 103
+  1508: 41
+  1608: 29
+menu_probability_weights:
+  Flavoured iced latte - Hazelnut: 184
+  Frappes - Chocolate Cookie: 241
+  Frappes - Strawberries & Cream: 163
+  Mocha: 174
+  Smoothies - Berry Beautiful: 205
+name: City of Westminster
+open_time: 808
+payment_method_probability_weights:
+  CARD: 329
+size_probability_weights:
+  Large: 321
+---
+close_time: 1700
+frequency:
+  902: 35
+  1002: 36
+  1102: 70
+  1202: 71
+  1302: 44
+  1402: 57
+  1502: 39
+  1602: 31
+menu_probability_weights:
+  Cortado: 247
+  Flat white: 173
+  Frappes - Strawberries & Cream: 248
+  Smoothies - Berry Beautiful: 246
+name: Lincoln
+open_time: 802
+payment_method_probability_weights:
+  CARD: 318
+size_probability_weights:
+  Large: 202
+---
+close_time: 1700
+frequency:
+  903: 91
+  1003: 117
+  1103: 27
+  1203: 27
+  1303: 40
+  1403: 118
+  1503: 51
+  1603: 53
+menu_probability_weights:
+  Chai latte: 189
+  Filter coffee: 161
+  Flat white: 180
+  Flavoured latte - Gingerbread: 201
+  Frappes - Chocolate Cookie: 171
+  Frappes - Coffee: 163
+  Iced americano: 214
+  Smoothies - Berry Beautiful: 150
+  Speciality Tea - Camomile: 224
+name: Newport
+open_time: 803
+payment_method_probability_weights:
+  CARD: 305
+size_probability_weights:
+  Large: 273
+---
+close_time: 1700
+frequency:
+  912: 94
+  1012: 49
+  1112: 32
+  1212: 36
+  1312: 52
+  1412: 46
+  1512: 114
+  1612: 37
+menu_probability_weights:
+  Cortado: 209
+  Flavoured iced latte - Caramel: 183
+  Glass of milk: 192
+  Iced americano: 172
+  Latte: 237
+  Mocha: 216
+  Smoothies - Glowing Greens: 193
+  Speciality Tea - Camomile: 190
+  Speciality Tea - Earl Grey: 233
+  Speciality Tea - Peppermint: 201
+name: Lisburn
+open_time: 812
+payment_method_probability_weights:
+  CARD: 150
+size_probability_weights:
+  Large: 276
+---
+close_time: 1700
+frequency:
+  903: 121
+  1003: 120
+  1103: 60
+  1203: 9
+  1303: 54
+  1403: 137
+  1503: 53
+  1603: 64
+menu_probability_weights:
+  Flavoured iced latte - Caramel: 151
+  Flavoured iced latte - Vanilla: 168
+  Frappes - Chocolate Cookie: 177
+  Latte: 242
+  Speciality Tea - Camomile: 200
+  Speciality Tea - Earl Grey: 166
+  Speciality Tea - English breakfast: 229
+name: Aylesbury
+open_time: 803
+payment_method_probability_weights:
+  CASH: 183
+size_probability_weights:
+  Large: 127
+---
+close_time: 1700
+frequency:
+  903: 25
+  1003: 51
+  1103: 36
+  1203: 60
+  1303: 55
+  1403: 111
+  1503: 145
+  1603: 62
+menu_probability_weights:
+  Flavoured latte - Caramel: 219
+  Flavoured latte - Hazelnut: 243
+  Latte: 176
+  Speciality Tea - English breakfast: 210
+  Speciality Tea - Peppermint: 179
+name: Wallasey
+open_time: 803
+payment_method_probability_weights:
+  CASH: 159
+size_probability_weights:
+  Large: 176
+---
+close_time: 2100
+frequency:
+  810: 106
+  910: 30
+  1010: 49
+  1110: 74
+  1210: 10
+  1310: 46
+  1410: 143
+  1510: 49
+  1610: 41
+  1710: 38
+  1810: 37
+  1910: 75
+  2010: 28
+menu_probability_weights:
+  Filter coffee: 215
+  Flavoured iced latte - Hazelnut: 177
+  Frappes - Coffee: 160
+  Frappes - Strawberries & Cream: 242
+  Iced latte: 217
+  Latte: 245
+  Smoothies - Berry Beautiful: 155
+  Speciality Tea - Earl Grey: 151
+  Speciality Tea - Peppermint: 238
+name: Grimsby
+open_time: 710
+payment_method_probability_weights:
+  CARD: 217
+size_probability_weights:
+  Large: 333
+---
+close_time: 1700
+frequency:
+  904: 29
+  1004: 110
+  1104: 12
+  1204: 23
+  1304: 36
+  1404: 31
+  1504: 79
+  1604: 38
+menu_probability_weights:
+  Americano: 238
+  Cappuccino: 168
+  Hot chocolate: 216
+  Luxury hot chocolate: 222
+  Mocha: 218
+  Smoothies - Berry Beautiful: 167
+  Speciality Tea - Earl Grey: 189
+name: Kilmarnock
+open_time: 804
+payment_method_probability_weights:
+  CARD: 330
+size_probability_weights:
+  Large: 304
