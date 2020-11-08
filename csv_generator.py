@@ -107,8 +107,17 @@ def get_order_times(config):
     close_time_seconds_after_midnight = (close_time_hours * 3600) + (close_time_minutes * 60)
 
     current_time_peiod_start = open_time_seconds_after_midnight
+    order_times = []
 
-    get_order_times_one_hour(current_time_peiod_start, frequency_times_in_seconds)
+    emergency_break = 0
+
+    while current_time_peiod_start < close_time_seconds_after_midnight and emergency_break < 10000:
+        new_order_times, current_time_peiod_start = get_order_times_one_hour(current_time_peiod_start, frequency_times_in_seconds)
+        order_times += new_order_times
+        emergency_break += 1
+
+    print(order_times)
+    print("loops: " + str(emergency_break))
 
     #DEBUG PRINTS
     # print(open_time_hours)
@@ -120,19 +129,28 @@ def get_order_times(config):
 
 
 def get_order_times_one_hour(start_time, frequencies):
-    starting_minutes_after_oclock = 3600 - (start_time % 3600)
+    starting_seconds_after_oclock = 3600 - (start_time % 3600)
+    time_period_end = start_time + starting_seconds_after_oclock
 
     if start_time in frequencies:
         order_count = frequencies[start_time]
     else:
         order_count = frequencies[max(tuple(frequencies.keys()))]
 
-    
+    gap_between_orders = float(3600) / float(order_count)
+    current_time = start_time
+    order_times = []
 
-    print(order_count)
+    emergency_break = 0
 
-    #return out order times for the hour period AND the new current_time_period_start
-    return None
+    while current_time < time_period_end and emergency_break < 10000:
+        order_times.append(current_time)
+        current_time += gap_between_orders
+        emergency_break += 1
+
+    print("loops: " + str(emergency_break))
+
+    return order_times, current_time
 
 
 def get_random_payment_types(config, order_count):
