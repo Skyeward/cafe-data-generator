@@ -44,6 +44,9 @@ def print_stats(file_name, file_text_line_list, time_period):
     drink_count_totals[3] = 0
     drink_count_totals[4] = 0
     drink_count_totals[5] = 0
+
+    number_of_card = 0
+    number_of_cash = 0
     
     #NUMBER OF ORDERS AND DRINK PURCHASES
     number_of_orders = len(file_text_line_list)
@@ -108,6 +111,13 @@ def print_stats(file_name, file_text_line_list, time_period):
         counts_per_period_formatted_times[formatted_time] = value
         average_drinks_per_order_per_period.append(float(value) / float(orders_per_half_hour[key]))
 
+    #CARD AND CASH
+    for line in file_text_line_list:
+        if line[-2] == "CARD":
+            number_of_card += 1
+        else:
+            number_of_cash += 1
+
     #PRINTING STATS
     print("number of orders: " + str(number_of_orders))
     print("number of individual drinks purchased: " + str(number_of_drink_purchases))
@@ -144,6 +154,9 @@ def print_stats(file_name, file_text_line_list, time_period):
     print()
     print("overall average drinks per order: " + str(meta_average))
 
+    print()
+    print("Number of CARD payments: " + str(number_of_card))
+    print("Number of CARD payments: " + str(number_of_cash))
     print()
     print("-----")
     print()
