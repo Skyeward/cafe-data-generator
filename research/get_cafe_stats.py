@@ -156,7 +156,7 @@ def print_stats(file_name, file_text_line_list, time_period):
 
     print()
     print("Number of CARD payments: " + str(number_of_card))
-    print("Number of CARD payments: " + str(number_of_cash))
+    print("Number of CASH payments: " + str(number_of_cash))
     print()
     print("-----")
     print()
