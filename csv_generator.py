@@ -2,18 +2,27 @@ import requests
 import json
 import yaml
 from datetime import date
+import random
 
 
 def generate_csv():
-    get_random_cafe_config_data()
+    random_cafe_config = get_random_cafe_config()
     #date_as_string = get_date_today()
     #fnames, lnames = get_random_names()
+    get_random_payment_types(random_cafe_config)
 
 
-def get_random_cafe_config_data():
-    config_data = yaml.load_all(open("storeConfig.yaml"))
-    print(config_data)
+def get_random_cafe_config():
+    configs = yaml.safe_load_all(open("storeConfig.yaml"))
+    cafe_configs = []
 
+    for config in configs:
+        cafe_configs.append(config)
+
+    random_index = random.randrange(0, len(cafe_configs))
+
+    return cafe_configs[random_index]
+    
 
 def get_date_today():
     date_today = str(date.today())
@@ -63,6 +72,10 @@ def get_random_names():
         print(response_as_json)
 
     return fnames, lnames
+
+
+def get_random_payment_types(config):
+    print(config)
 
 
 if __name__ == "__main__":
