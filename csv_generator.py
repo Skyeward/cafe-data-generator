@@ -1,10 +1,27 @@
 import requests
 import json
-import datetime
+import yaml
+from datetime import date
 
 
 def generate_csv():
-    fnames, lnames = get_random_names()
+    get_random_cafe_config_data()
+    #date_as_string = get_date_today()
+    #fnames, lnames = get_random_names()
+
+
+def get_random_cafe_config_data():
+    config_data = yaml.load_all(open("storeConfig.yaml"))
+    print(config_data)
+
+
+def get_date_today():
+    date_today = str(date.today())
+    split_date_today = date_today.split("-")
+
+    formatted_date_today = split_date_today[2] + "/" + split_date_today[1] + "/" + split_date_today[0]
+
+    return formatted_date_today
 
 
 def get_random_names():
@@ -38,9 +55,6 @@ def get_random_names():
 
         index_to_read += 1
 
-    print(fnames)
-    print(lnames)
-
     try:
         test = fnames[name_count_to_get - 1]
     except:
@@ -52,4 +66,4 @@ def get_random_names():
 
 
 if __name__ == "__main__":
-    get_random_names()
+    generate_csv()
