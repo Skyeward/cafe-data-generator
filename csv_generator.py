@@ -11,6 +11,7 @@ def generate_csv():
     print(random_cafe_config["name"])
     #date_as_string = get_date_today()
     #fnames, lnames = get_random_names()
+    get_order_times(random_cafe_config)
     get_random_payment_types(random_cafe_config, order_count)
 
 
@@ -83,6 +84,38 @@ def get_random_names():
         print(response_as_json)
 
     return fnames, lnames
+
+
+def get_order_times(config):
+    frequency_dict = config["frequency"]
+
+    open_time = config["open_time"]
+    open_time_hours = int(open_time / 100)
+    open_time_minutes = open_time % 100
+    # open_time_hours = int(open_time[:-2])
+    # open_time_minutes = int(open_time[-2:])
+
+    close_time = config["close_time"]
+    close_time_hours = int(close_time / 100)
+    close_time_minutes = close_time % 100
+    # close_time_hours = int(close_time[:-2])
+    # close_time_minutes = int(close_time[-2:])
+
+    open_time_seconds_after_midnight = (open_time_hours * 3600) + (open_time_minutes * 60)
+    close_time_seconds_after_midnight = (close_time_hours * 3600) + (close_time_minutes * 60)
+
+    current_time_peiod_start = open_time_seconds_after_midnight
+
+
+    #DEBUG PRINTS
+    print(open_time_hours)
+    print(open_time_minutes)
+    print(close_time_hours)
+    print(close_time_minutes)
+    print(open_time_seconds_after_midnight)
+    print(close_time_seconds_after_midnight)
+
+
 
 
 def get_random_payment_types(config, order_count):
