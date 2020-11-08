@@ -69,6 +69,7 @@ def print_stats(file_name, file_text_line_list, time_period):
     opening_time_minutes_total = (int(first_order_time_hours_and_minutes[0]) * 60) + int(first_order_time_hours_and_minutes[1])
     counts_per_half_hour = {}
     orders_per_half_hour = {}
+    orders_hour_to_hour = {}
 
     for line in file_text_line_list:
         order_time = line[0].split(" ")[1]
@@ -85,6 +86,11 @@ def print_stats(file_name, file_text_line_list, time_period):
         else:
             counts_per_half_hour[half_hour_time_period] = drink_count
             orders_per_half_hour[half_hour_time_period] = 1
+
+        if hours_and_minutes[0] in orders_hour_to_hour:
+            orders_hour_to_hour[hours_and_minutes[0]] += 1
+        else:
+            orders_hour_to_hour[hours_and_minutes[0]] = 1
     
     counts_per_period_formatted_times = {}
     average_drinks_per_order_per_period = []
@@ -129,6 +135,11 @@ def print_stats(file_name, file_text_line_list, time_period):
         meta_average += i
 
     meta_average = float(meta_average) / float(len(average_drinks_per_order_per_period)) 
+
+    print()
+
+    for hour, count in orders_hour_to_hour.items():
+        print("orders during period starting at " + hour + ":00 - " + str(count))
 
     print()
     print("overall average drinks per order: " + str(meta_average))
