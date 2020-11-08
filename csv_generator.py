@@ -2,6 +2,10 @@ import requests
 import json
 
 
+def generate_csv():
+    fnames, lnames = get_random_names()
+
+
 def get_random_names():
     name_count_to_get = 20
     request_count = 100
@@ -35,6 +39,15 @@ def get_random_names():
 
     print(fnames)
     print(lnames)
+
+    try:
+        test = fnames[name_count_to_get - 1]
+    except:
+        print("NOT ENOUGH NAMES GATHERED FROM THE API!")
+        print("RESPONSE PRINTED BELOW:")
+        print(response_as_json)
+
+    return fnames, lnames
 
 
 if __name__ == "__main__":
