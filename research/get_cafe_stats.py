@@ -37,6 +37,13 @@ def print_stats(file_name, file_text_line_list, time_period):
     number_of_large = 0
     number_of_regular = 0
     max_drinks_in_single_order = 0
+
+    drink_count_totals = {}
+    drink_count_totals[1] = 0
+    drink_count_totals[2] = 0
+    drink_count_totals[3] = 0
+    drink_count_totals[4] = 0
+    drink_count_totals[5] = 0
     
     #NUMBER OF ORDERS AND DRINK PURCHASES
     number_of_orders = len(file_text_line_list)
@@ -47,6 +54,7 @@ def print_stats(file_name, file_text_line_list, time_period):
         drinks_in_line = line[3].count(".")
         drink_count += drinks_in_line #[3] is purchases, and all drink prices contain a dot, thus finding drink count
         max_drinks_in_single_order = max(max_drinks_in_single_order, drinks_in_line)
+        drink_count_totals[drinks_in_line] += 1
 
     number_of_drink_purchases = drink_count
 
@@ -98,6 +106,12 @@ def print_stats(file_name, file_text_line_list, time_period):
     print("number of orders: " + str(number_of_orders))
     print("number of individual drinks purchased: " + str(number_of_drink_purchases))
     print("most drinks in a single order: " + str(max_drinks_in_single_order))
+    print()
+    print("number of 1 drink orders: " + str(drink_count_totals[1]))
+    print("number of 2 drink orders: " + str(drink_count_totals[2]))
+    print("number of 3 drink orders: " + str(drink_count_totals[3]))
+    print("number of 4 drink orders: " + str(drink_count_totals[4]))
+    print("number of 5 drink orders: " + str(drink_count_totals[5]))
     print()
     print("number of Large drinks: " + str(number_of_large))
     print("number of Regular drinks: " + str(number_of_regular))
