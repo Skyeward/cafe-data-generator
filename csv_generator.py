@@ -88,34 +88,51 @@ def get_random_names():
 
 def get_order_times(config):
     frequency_dict = config["frequency"]
+    frequency_times_in_seconds = {}
+
+    for time, freq in frequency_dict.items():
+        hours = int(time / 100)
+        seconds = hours * 3600
+        frequency_times_in_seconds[seconds] = freq
 
     open_time = config["open_time"]
     open_time_hours = int(open_time / 100)
     open_time_minutes = open_time % 100
-    # open_time_hours = int(open_time[:-2])
-    # open_time_minutes = int(open_time[-2:])
 
     close_time = config["close_time"]
     close_time_hours = int(close_time / 100)
     close_time_minutes = close_time % 100
-    # close_time_hours = int(close_time[:-2])
-    # close_time_minutes = int(close_time[-2:])
 
     open_time_seconds_after_midnight = (open_time_hours * 3600) + (open_time_minutes * 60)
     close_time_seconds_after_midnight = (close_time_hours * 3600) + (close_time_minutes * 60)
 
     current_time_peiod_start = open_time_seconds_after_midnight
 
+    get_order_times_one_hour(current_time_peiod_start, frequency_times_in_seconds)
 
     #DEBUG PRINTS
-    print(open_time_hours)
-    print(open_time_minutes)
-    print(close_time_hours)
-    print(close_time_minutes)
-    print(open_time_seconds_after_midnight)
-    print(close_time_seconds_after_midnight)
+    # print(open_time_hours)
+    # print(open_time_minutes)
+    # print(close_time_hours)
+    # print(close_time_minutes)
+    # print(open_time_seconds_after_midnight)
+    # print(close_time_seconds_after_midnight)
 
 
+def get_order_times_one_hour(start_time, frequencies):
+    starting_minutes_after_oclock = 3600 - (start_time % 3600)
+
+    if start_time in frequencies:
+        order_count = frequencies[start_time]
+    else:
+        order_count = frequencies[max(tuple(frequencies.keys()))]
+
+    
+
+    print(order_count)
+
+    #return out order times for the hour period AND the new current_time_period_start
+    return None
 
 
 def get_random_payment_types(config, order_count):
@@ -136,8 +153,8 @@ def get_random_payment_types(config, order_count):
             payment_types.append("CARD")
             card_count += 1
 
-    print(card_count)
-    print(cash_count)
+    # print(card_count)
+    # print(cash_count)
 
 
 if __name__ == "__main__":
