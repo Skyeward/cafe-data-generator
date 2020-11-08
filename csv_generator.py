@@ -7,9 +7,11 @@ import random
 
 def generate_csv():
     random_cafe_config = get_random_cafe_config()
+    order_count = get_order_count(random_cafe_config)
+    print(random_cafe_config["name"])
     #date_as_string = get_date_today()
     #fnames, lnames = get_random_names()
-    get_random_payment_types(random_cafe_config)
+    get_random_payment_types(random_cafe_config, order_count)
 
 
 def get_random_cafe_config():
@@ -20,8 +22,17 @@ def get_random_cafe_config():
         cafe_configs.append(config)
 
     random_index = random.randrange(0, len(cafe_configs))
+    return cafe_configs[0]
 
-    return cafe_configs[random_index]
+
+def get_order_count(config):
+    frequency_dict = config["frequency"]
+    order_count = 0
+
+    for value in frequency_dict.values():
+        order_count += value
+
+    return order_count
     
 
 def get_date_today():
@@ -74,8 +85,26 @@ def get_random_names():
     return fnames, lnames
 
 
-def get_random_payment_types(config):
-    print(config)
+def get_random_payment_types(config, order_count):
+    raw_card_probability = int(config["payment_method_probability_weights"]["CARD"])
+    adjusted_card_probability = int(raw_card_probability / 1.63)
+
+    payment_types = []
+    card_count = 0 #for debugging
+    cash_count = 0
+
+    for i in range(order_count):
+        rndm = random.randrange(0, 100 + adjusted_card_probability)
+        
+        if rndm < 100:
+            payment_types.append("CASH")
+            cash_count += 1
+        else:
+            payment_types.append("CARD")
+            card_count += 1
+
+    print(card_count)
+    print(cash_count)
 
 
 if __name__ == "__main__":
