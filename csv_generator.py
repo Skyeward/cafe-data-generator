@@ -13,30 +13,44 @@ def generate_csv():
     date_as_string = get_date_today()
     order_times = get_order_times(random_cafe_config)
     order_count = len(order_times)
-    fnames, lnames = get_random_names()
-    purchases = get_random_purchases(random_cafe_config, order_times, order_count)
+    fnames, lnames = get_random_names(order_count)
+    purchases, total_prices = get_random_purchases(random_cafe_config, order_times, order_count)
     payment_types = get_random_payment_types(random_cafe_config, order_count)
     payment_dict = assign_card_numbers(payment_types)
     assign_card_numbers(payment_types)
 
-    data_dict = build_dictionary(date_as_string, order_times, fnames, lnames, None, None, payment_dict)
-    create_csv(data_dict)
+    data_dict = build_dictionary(date_as_string, order_times, fnames, lnames, purchases, total_prices, payment_dict)
+    create_csv(data_dict, order_count)
 
 
 #MOVE DOWN FILE
-def create_csv(dict_):
-    pass
+def create_csv(dict_, order_count):
+    csv_lines = []
+    
+    # for i in range(10):
+    #     for key in dict_.keys():
+    #         print(dict_[key][i])
 
+    for i in range(order_count):
+        date_time = dict_['date'] + ' ' + dict_['time'][i] + ', '
+        full_name = dict_['fname'][i] + ' ' + dict_['lname'][i] + ', '
+        payment = dict_['payment type'][i] + ', ' + dict_['card number'][i]
+        csv_line = date_time + full_name + dict_['purchase'][i] + ', ' + dict_['total_price'][i] + ', ' + payment
+
+        csv_lines.append(csv_line)
+
+    for line in csv_lines:
+        print(line)
 
 #MOVE DOWN FILE
-def build_dictionary(date, times, fnames, lnames, ___, __, payments):
+def build_dictionary(date, times, fnames, lnames, purchases, total_prices, payments):
     return_dict = {}
     return_dict["date"] = date
     return_dict["time"] = times
     return_dict["fname"] = fnames
     return_dict["lname"] = lnames
-    #purchases
-    #total_prices
+    return_dict["purchase"] = purchases
+    return_dict["total_price"] = total_prices
     return_dict["payment type"] = payments["payment type"]
     return_dict["card number"] = payments["card number"]
 
@@ -51,7 +65,7 @@ def get_random_cafe_config():
         cafe_configs.append(config)
 
     random_index = random.randrange(0, len(cafe_configs))
-    return cafe_configs[0]
+    return cafe_configs[random_index]
     
 
 def get_date_today():
@@ -63,9 +77,9 @@ def get_date_today():
     return formatted_date_today
 
 
-def get_random_names():
-    name_count_to_get = 20
-    request_count = 100
+def get_random_names(order_count):
+    name_count_to_get = order_count
+    request_count = order_count * 3
     
     response = requests.get("https://randomuser.me/api/?results=" + str(request_count))
     response_as_json = response.json()
@@ -253,8 +267,8 @@ def get_random_purchases(random_cafe_config, order_times, order_count):
     
     total_prices_as_decimal_strings = format_total_prices(total_prices)
 
-    print(purchases)
-    print(total_prices_as_decimal_strings)
+    # print(purchases)
+    # print(total_prices_as_decimal_strings)
 
     return purchases, total_prices_as_decimal_strings
 
