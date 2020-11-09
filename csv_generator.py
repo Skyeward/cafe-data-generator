@@ -7,12 +7,12 @@ import random
 
 def generate_csv():
     random_cafe_config = get_random_cafe_config()
-    order_count = get_order_count(random_cafe_config)
     print(random_cafe_config["name"])
     #date_as_string = get_date_today()
+    order_times = get_order_times(random_cafe_config)
     #fnames, lnames = get_random_names()
-    get_order_times(random_cafe_config)
-    get_random_payment_types(random_cafe_config, order_count)
+    
+    get_random_payment_types(random_cafe_config, len(order_times))
 
 
 def get_random_cafe_config():
@@ -24,16 +24,6 @@ def get_random_cafe_config():
 
     random_index = random.randrange(0, len(cafe_configs))
     return cafe_configs[0]
-
-
-def get_order_count(config):
-    frequency_dict = config["frequency"]
-    order_count = 0
-
-    for value in frequency_dict.values():
-        order_count += value
-
-    return order_count
     
 
 def get_date_today():
@@ -114,10 +104,13 @@ def get_order_times(config):
     while current_time_peiod_start < close_time_seconds_after_midnight and emergency_break < 10000:
         new_order_times, current_time_peiod_start = get_order_times_one_hour(current_time_peiod_start, frequency_times_in_seconds)
         order_times += new_order_times
+
         emergency_break += 1
 
     print(order_times)
     print("loops: " + str(emergency_break))
+
+    return format_order_times(order_times)
 
     #DEBUG PRINTS
     # print(open_time_hours)
@@ -132,8 +125,8 @@ def get_order_times_one_hour(start_time, frequencies):
     starting_seconds_after_oclock = 3600 - (start_time % 3600)
     time_period_end = start_time + starting_seconds_after_oclock
 
-    if start_time in frequencies:
-        order_count = frequencies[start_time]
+    if time_period_end - 3600 in frequencies:
+        order_count = frequencies[time_period_end - 3600]
     else:
         order_count = frequencies[max(tuple(frequencies.keys()))]
 
@@ -146,11 +139,29 @@ def get_order_times_one_hour(start_time, frequencies):
     while current_time < time_period_end and emergency_break < 10000:
         order_times.append(current_time)
         current_time += gap_between_orders
+
         emergency_break += 1
 
     print("loops: " + str(emergency_break))
 
-    return order_times, current_time
+    return order_times, int(current_time)
+
+
+def format_order_times(order_times):
+    formatted_times = []
+    
+    for order_time in order_times:
+        total_time_in_minutes = int(order_time / 60)
+        hours = int(total_time_in_minutes / 60)
+        minutes = total_time_in_minutes % 60
+
+        hours_as_string = "{:02d}".format(hours)
+        minutes_as_string = "{:02d}".format(minutes)
+        formatted_time = hours_as_string + ":" + minutes_as_string
+        print(formatted_time)
+        formatted_times.append(formatted_time)
+
+    return formatted_times
 
 
 def get_random_payment_types(config, order_count):
