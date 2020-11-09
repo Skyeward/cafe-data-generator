@@ -233,7 +233,7 @@ def get_random_purchases(random_cafe_config, order_times, order_count):
 
             random_drinks.append(selected_drink)
 
-            if drink_dict["is_sized"][drink_to_check] == False:
+            if drink_dict["is_sized"][drink_to_check] == "False":
                 size = None
             else:
                 size = random.choice(["Large", "Regular"])
@@ -248,6 +248,7 @@ def get_random_purchases(random_cafe_config, order_times, order_count):
             drink_prices.append(price)
             total_price += int(price.replace(".", ""))
 
+        total_prices.append(total_price)
         purchases.append(concat_purchase_strings(random_drinks, drink_sizes, drink_prices))
     
     total_prices_as_decimal_strings = format_total_prices(total_prices)
@@ -277,6 +278,7 @@ def format_total_prices(total_prices):
     for price in total_prices:
         price_as_string = str(price)
         formatted_price = price_as_string[:-2] + "." + price_as_string[-2:]
+        formatted_prices.append(formatted_price)
 
     return formatted_prices
 
