@@ -1,0 +1,40 @@
+Americano,True,1.95,2.25
+Babyccino,False,0.00,0.00
+Cappuccino,True,2.15,2.45
+Chai latte,True,2.30,2.60
+Cortado,False,2.05,2.05
+Espresso,True,1.50,1.80
+Filter coffee,True,1.50,1.80
+Flat white,False,2.15,2.15
+Flavoured hot chocolate - Caramel,True,2.60,2.90
+Flavoured hot chocolate - Hazelnut,True,2.60,2.90
+Flavoured hot chocolate - Vanilla,True,2.60,2.90
+Flavoured iced latte - Caramel,False,2.75,2.75
+Flavoured iced latte - Hazelnut,False,2.75,2.75
+Flavoured iced latte - Vanilla,False,2.75,2.75
+Flavoured latte - Caramel,True,2.55,2.85
+Flavoured latte - Gingerbread,True,2.55,2.85
+Flavoured latte - Hazelnut,True,2.55,2.85
+Flavoured latte - Vanilla,True,2.55,2.85
+Frappes - Chocolate Cookie,False,2.75,2.75
+Frappes - Coffee,False,2.75,2.75
+Frappes - Strawberries & Cream,False,2.75,2.75
+Glass of milk,False,0.70,0.70
+Hot chocolate,False,1.40,1.40
+Hot chocolate,True,2.20,2.90
+Iced americano,False,2.15,2.15
+Iced latte,False,2.35,2.35
+Latte,True,2.15,2.45
+Luxury hot chocolate,True,2.40,2.70
+Mocha,False,2.30,2.30
+Red label tea,False,1.20,1.20
+Smoothies - Berry Beautiful,False,2.00,2.00
+Smoothies - Carrot Kick,False,2.00,2.00
+Smoothies - Glowing Greens,False,2.00,2.00
+Speciality Tea - Camomile,False,1.30,1.30
+Speciality Tea - Darjeeling,False,1.30,1.30
+Speciality Tea - Earl Grey,False,1.30,1.30
+Speciality Tea - English breakfast,False,1.30,1.30
+Speciality Tea - Fruit,False,1.30,1.30
+Speciality Tea - Green,False,1.30,1.30
+Speciality Tea - Peppermint,False,1.30,1.30
