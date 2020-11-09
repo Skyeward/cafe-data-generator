@@ -195,6 +195,7 @@ def format_order_times(order_times):
 def get_random_purchases(random_cafe_config, order_times, order_count):
     drink_dict = get_drink_info()
     drink_dict["probability"] = []
+
     
     config_drink_info = random_cafe_config["menu_probability_weights"]
     config_drink_names = list(config_drink_info.keys())
@@ -210,12 +211,14 @@ def get_random_purchases(random_cafe_config, order_times, order_count):
             drink_dict["probability"].append(running_probability)
 
     purchases = []
+    total_prices = []
 
     for i in range(order_count):
         drink_count = random.randrange(1, 6)
         random_drinks = []
         drink_sizes = []
         drink_prices = []
+        total_price = 0
         
         for i in range(drink_count):
             rndm = random.randrange(0, running_probability)
@@ -230,8 +233,49 @@ def get_random_purchases(random_cafe_config, order_times, order_count):
                 
             random_drinks.append(selected_drink)
 
+            if drink_dict["is_sized"][drink_to_check] == False:
+                size = None
+            else:
+                size = random.choice(["Large", "Regular"])
 
-    return purchases
+            drink_sizes.append(size)
+
+            if size == "Large":
+                price = drink_dict["large_price"][drink_to_check]
+            else:
+                price = drink_dict["regular_price"][drink_to_check]
+
+            drink_prices.append(price)
+            total_price += int(price.replace(".", ""))
+
+        purchases.append(concat_purchase_strings(random_drinks, drink_sizes, drink_prices))
+    
+    total_prices_as_decimal_strings = format_total_prices(total_prices)
+
+    return purchases, total_prices_as_decimal_strings
+
+
+def concat_purchase_strings(drink_names, drink_sizes, drink_prices):
+    return_string = ""
+
+    for i in range(len(drink_names)):
+        if drink_sizes[i] != None:
+            return_string += drink_sizes[i] + " "
+
+        return_string += drink_names[i] + " - "
+        return_string += drink_prices[i] + ", "
+
+    return return_string[:-2]
+
+
+def format_total_prices(total_prices):
+    formatted_prices = []
+
+    for price in total_prices:
+        price_as_string = str(price)
+        formatted_price = price_as_string[:-2] + "." + price_as_string[-2:]
+
+    return formatted_prices
 
 
 def get_drink_info():
