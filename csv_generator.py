@@ -135,8 +135,9 @@ def get_order_times(config):
 
         emergency_break += 1
 
-    print(order_times)
-    print("loops: " + str(emergency_break))
+    #print(order_times)
+    if emergency_break > 9000:
+        print("loops: " + str(emergency_break))
 
     return format_order_times(order_times)
 
@@ -170,7 +171,8 @@ def get_order_times_one_hour(start_time, frequencies):
 
         emergency_break += 1
 
-    print("loops: " + str(emergency_break))
+    if emergency_break > 9000:
+        print("loops: " + str(emergency_break))
 
     return order_times, int(current_time)
 
@@ -186,7 +188,6 @@ def format_order_times(order_times):
         hours_as_string = "{:02d}".format(hours)
         minutes_as_string = "{:02d}".format(minutes)
         formatted_time = hours_as_string + ":" + minutes_as_string
-        print(formatted_time)
         formatted_times.append(formatted_time)
 
     return formatted_times
@@ -195,7 +196,6 @@ def format_order_times(order_times):
 def get_random_purchases(random_cafe_config, order_times, order_count):
     drink_dict = get_drink_info()
     drink_dict["probability"] = []
-
     
     config_drink_info = random_cafe_config["menu_probability_weights"]
     config_drink_names = list(config_drink_info.keys())
@@ -205,10 +205,10 @@ def get_random_purchases(random_cafe_config, order_times, order_count):
         if drink in config_drink_names:
             print("matched drink: " + drink)
             running_probability += config_drink_info[drink]
-            drink_dict["probability"].append(running_probability)
         else:
             running_probability += 100
-            drink_dict["probability"].append(running_probability)
+            
+        drink_dict["probability"].append(running_probability)
 
     purchases = []
     total_prices = []
@@ -228,9 +228,9 @@ def get_random_purchases(random_cafe_config, order_times, order_count):
             while selected_drink == None:
                 if rndm < drink_dict["probability"][drink_to_check]:
                     selected_drink = drink_dict["name"][drink_to_check]
+                else:
+                    drink_to_check += 1
 
-                drink_to_check += 1
-                
             random_drinks.append(selected_drink)
 
             if drink_dict["is_sized"][drink_to_check] == False:
@@ -251,6 +251,9 @@ def get_random_purchases(random_cafe_config, order_times, order_count):
         purchases.append(concat_purchase_strings(random_drinks, drink_sizes, drink_prices))
     
     total_prices_as_decimal_strings = format_total_prices(total_prices)
+
+    print(purchases)
+    print(total_prices_as_decimal_strings)
 
     return purchases, total_prices_as_decimal_strings
 
