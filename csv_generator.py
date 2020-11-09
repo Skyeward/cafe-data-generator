@@ -1,4 +1,5 @@
 import requests
+import csv
 import json
 import yaml
 import datetime
@@ -11,9 +12,10 @@ def generate_csv():
 
     date_as_string = get_date_today()
     order_times = get_order_times(random_cafe_config)
+    order_count = len(order_times)
     fnames, lnames = get_random_names()
-    purchases = get_random_purchases(random_cafe_config, order_times)
-    payment_types = get_random_payment_types(random_cafe_config, len(order_times))
+    purchases = get_random_purchases(random_cafe_config, order_times, order_count)
+    payment_types = get_random_payment_types(random_cafe_config, order_count)
     payment_dict = assign_card_numbers(payment_types)
     assign_card_numbers(payment_types)
 
@@ -190,12 +192,63 @@ def format_order_times(order_times):
     return formatted_times
 
 
-def get_random_purchases(random_cafe_config, order_times):
-    pass
+def get_random_purchases(random_cafe_config, order_times, order_count):
+    drink_dict = get_drink_info()
+    drink_dict["probability"] = []
+    
+    config_drink_info = random_cafe_config["menu_probability_weights"]
+    config_drink_names = list(config_drink_info.keys())
+    running_probability = 0
+
+    for drink in drink_dict["name"]:
+        if drink in config_drink_names:
+            print("matched drink: " + drink)
+            running_probability += config_drink_info[drink]
+            drink_dict["probability"].append(running_probability)
+        else:
+            running_probability += 100
+            drink_dict["probability"].append(running_probability)
+
+    purchases = []
+
+    for i in range(order_count):
+        drink_count = random.randrange(1, 6)
+        random_drinks = []
+        drink_sizes = []
+        drink_prices = []
+        
+        for i in range(drink_count):
+            rndm = random.randrange(0, running_probability)
+            selected_drink = None
+            drink_to_check = 0
+            
+            while selected_drink == None:
+                if rndm < drink_dict["probability"][drink_to_check]:
+                    selected_drink = drink_dict["name"][drink_to_check]
+
+                drink_to_check += 1
+                
+            random_drinks.append(selected_drink)
+
+
+    return purchases
 
 
 def get_drink_info():
-    drink_dict = {}
+    drink_dict = {"name": [], "is_sized": [], "regular_price": [], "large_price": []}
+    drink_raw_text_rows = []
+
+    with open("drink_info.txt", "r") as file_:
+        drinks_file_reader = csv.reader(file_, quoting = csv.QUOTE_ALL)
+        
+        for drink in drinks_file_reader:
+            drink_raw_text_rows.append(drink)
+
+    for row in drink_raw_text_rows:
+        drink_dict["name"].append(row[0])
+        drink_dict["is_sized"].append(row[1])
+        drink_dict["regular_price"].append(row[2])
+        drink_dict["large_price"].append(row[3])
 
     return drink_dict
 
@@ -263,7 +316,7 @@ def generate_random_card_number():
     else:
         card_number = ""
 
-    while card_number < chosen_card_length:
+    while len(card_number) < chosen_card_length:
         random_digit = str(random.randrange(0, 10))
         card_number += random_digit
 
