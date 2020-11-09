@@ -47,6 +47,10 @@ def print_stats(file_name, file_text_line_list, time_period):
 
     number_of_card = 0
     number_of_cash = 0
+
+    card_lengths = {}
+    card_leading_digits = {}
+    card_frequent_digits = {}
     
     #NUMBER OF ORDERS AND DRINK PURCHASES
     number_of_orders = len(file_text_line_list)
@@ -118,6 +122,27 @@ def print_stats(file_name, file_text_line_list, time_period):
         else:
             number_of_cash += 1
 
+    #CARD NUMBERS
+    for line in file_text_line_list:
+        number = line[-1]
+        number_leading_digits = number[:4]
+        number_length = len(number)
+
+        if number_leading_digits in card_leading_digits:
+            card_leading_digits[number_leading_digits] += 1
+        else:
+            card_leading_digits[number_leading_digits] = 1
+
+        if number_length in card_lengths:
+            card_lengths[number_length] += 1
+        else:
+            card_lengths[number_length] = 1
+
+        for key, value in card_leading_digits.items():
+            if value > 1:
+                card_frequent_digits[key] = value
+
+
     #PRINTING STATS
     print("number of orders: " + str(number_of_orders))
     print("number of individual drinks purchased: " + str(number_of_drink_purchases))
@@ -133,6 +158,9 @@ def print_stats(file_name, file_text_line_list, time_period):
     print("number of Regular drinks: " + str(number_of_regular))
     print()
     print("cafe opens at " + first_order_time)
+    print()
+    print(card_lengths)
+    print(card_frequent_digits)
     print()
 
     for period, count in counts_per_period_formatted_times.items():
