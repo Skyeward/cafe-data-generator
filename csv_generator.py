@@ -1,18 +1,44 @@
 import requests
 import json
 import yaml
-from datetime import date
+import datetime
 import random
 
 
 def generate_csv():
     random_cafe_config = get_random_cafe_config()
     print(random_cafe_config["name"])
-    #date_as_string = get_date_today()
+
+    date_as_string = get_date_today()
     order_times = get_order_times(random_cafe_config)
-    #fnames, lnames = get_random_names()
-    
-    get_random_payment_types(random_cafe_config, len(order_times))
+    fnames, lnames = get_random_names()
+    purchases = get_random_purchases(random_cafe_config, order_times)
+    payment_types = get_random_payment_types(random_cafe_config, len(order_times))
+    payment_dict = assign_card_numbers(payment_types)
+    assign_card_numbers(payment_types)
+
+    data_dict = build_dictionary(date_as_string, order_times, fnames, lnames, None, None, payment_dict)
+    create_csv(data_dict)
+
+
+#MOVE DOWN FILE
+def create_csv(dict_):
+    pass
+
+
+#MOVE DOWN FILE
+def build_dictionary(date, times, fnames, lnames, ___, __, payments):
+    return_dict = {}
+    return_dict["date"] = date
+    return_dict["time"] = times
+    return_dict["fname"] = fnames
+    return_dict["lname"] = lnames
+    #purchases
+    #total_prices
+    return_dict["payment type"] = payments["payment type"]
+    return_dict["card number"] = payments["card number"]
+
+    return return_dict
 
 
 def get_random_cafe_config():
@@ -27,7 +53,7 @@ def get_random_cafe_config():
     
 
 def get_date_today():
-    date_today = str(date.today())
+    date_today = str(datetime.date.today())
     split_date_today = date_today.split("-")
 
     formatted_date_today = split_date_today[2] + "/" + split_date_today[1] + "/" + split_date_today[0]
@@ -164,6 +190,16 @@ def format_order_times(order_times):
     return formatted_times
 
 
+def get_random_purchases(random_cafe_config, order_times):
+    pass
+
+
+def get_drink_info():
+    drink_dict = {}
+
+    return drink_dict
+
+
 def get_random_payment_types(config, order_count):
     raw_card_probability = int(config["payment_method_probability_weights"]["CARD"])
     adjusted_card_probability = int(raw_card_probability / 1.63)
@@ -184,6 +220,54 @@ def get_random_payment_types(config, order_count):
 
     # print(card_count)
     # print(cash_count)
+
+    return payment_types
+
+
+def assign_card_numbers(payment_types):
+    payment_types_and_card_numbers = {}
+
+    types = []
+    numbers = []
+
+    for payment_type in payment_types:
+        if payment_type == "CASH":
+            card_number = ""
+        else:
+            card_number = generate_random_card_number()
+
+        types.append(payment_type)
+        numbers.append(card_number)
+
+    payment_types_and_card_numbers["payment type"] = types
+    payment_types_and_card_numbers["card number"] = numbers
+
+    return payment_types_and_card_numbers
+
+
+def generate_random_card_number():
+    #KEYS/VALUES ARE - CARD LENGTH: PERCENT CHANCE
+    card_length_percent_weights = {13: 16, 14: 2, 15: 18, 16: 58, 17: 6}
+    running_percent_total = 0
+    rndm = random.randrange(0, 100)
+
+    for card_length, percent_weight in card_length_percent_weights.items():
+        running_percent_total += percent_weight
+
+        if running_percent_total >= rndm:
+            chosen_card_length = card_length
+            break
+
+    if chosen_card_length == 16 and random.randrange(0, 3) == 0:
+        card_number = "6011"
+    else:
+        card_number = ""
+
+    while card_number < chosen_card_length:
+        random_digit = str(random.randrange(0, 10))
+        card_number += random_digit
+
+    return card_number
 
 
 if __name__ == "__main__":
