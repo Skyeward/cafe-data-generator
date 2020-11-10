@@ -23,62 +23,11 @@ def generate_csv():
     create_csv(random_cafe_config, data_dict, order_count)
 
 
-#MOVE DOWN FILE
-def create_csv(random_cafe_config, dict_, order_count):
-    csv_lines = []
-    
-    # for i in range(10):
-    #     for key in dict_.keys():
-    #         print(dict_[key][i])
-
-    file_name = random_cafe_config["name"].lower()
-    file_name += "_"
-    file_name += dict_['date'].replace("/", "-")
-    file_name += "_"
-    file_name += get_close_time_as_string(random_cafe_config)
-    file_name += ".csv"
-
-    for i in range(order_count):
-        date_time = dict_['date'] + ' ' + dict_['time'][i] + ','
-        full_name = dict_['fname'][i] + ' ' + dict_['lname'][i] + ','
-        payment = dict_['payment type'][i] + ',' + dict_['card number'][i]
-        purchase_in_quotes = '"' + dict_['purchase'][i] + '",'
-        csv_line = date_time + full_name + purchase_in_quotes + dict_['total_price'][i] + ',' + payment
-
-        csv_lines.append(csv_line)
-
-    for line in csv_lines:
-        print(line)
-
-    with open(file_name, "w") as file_:
-            string_to_write = ""
-            
-            for line in csv_lines:
-                string_to_write += f"{line}\n"
-        
-            file_.write(string_to_write)
-
-
 def get_close_time_as_string(config):
     close_time = config["close_time"]
     formatted_close_time = str(close_time)[:2] + "-" + str(random.randrange(10, 60)) + "-" + str(random.randrange(10, 60))
 
     return formatted_close_time
-
-
-#MOVE DOWN FILE
-def build_dictionary(date, times, fnames, lnames, purchases, total_prices, payments):
-    return_dict = {}
-    return_dict["date"] = date
-    return_dict["time"] = times
-    return_dict["fname"] = fnames
-    return_dict["lname"] = lnames
-    return_dict["purchase"] = purchases
-    return_dict["total_price"] = total_prices
-    return_dict["payment type"] = payments["payment type"]
-    return_dict["card number"] = payments["card number"]
-
-    return return_dict
 
 
 def get_random_cafe_config():
@@ -428,6 +377,51 @@ def generate_random_card_number():
         card_number += random_digit
 
     return card_number
+
+
+def build_dictionary(date, times, fnames, lnames, purchases, total_prices, payments):
+    return_dict = {}
+    return_dict["date"] = date
+    return_dict["time"] = times
+    return_dict["fname"] = fnames
+    return_dict["lname"] = lnames
+    return_dict["purchase"] = purchases
+    return_dict["total_price"] = total_prices
+    return_dict["payment type"] = payments["payment type"]
+    return_dict["card number"] = payments["card number"]
+
+    return return_dict
+
+
+def create_csv(random_cafe_config, dict_, order_count):
+    csv_lines = []
+
+    file_name = random_cafe_config["name"].lower()
+    file_name += "_"
+    file_name += dict_['date'].replace("/", "-")
+    file_name += "_"
+    file_name += get_close_time_as_string(random_cafe_config)
+    file_name += ".csv"
+
+    for i in range(order_count):
+        date_time = dict_['date'] + ' ' + dict_['time'][i] + ','
+        full_name = dict_['fname'][i] + ' ' + dict_['lname'][i] + ','
+        payment = dict_['payment type'][i] + ',' + dict_['card number'][i]
+        purchase_in_quotes = '"' + dict_['purchase'][i] + '",'
+        csv_line = date_time + full_name + purchase_in_quotes + dict_['total_price'][i] + ',' + payment
+
+        csv_lines.append(csv_line)
+
+    for line in csv_lines:
+        print(line)
+
+    with open(file_name, "w") as file_:
+            string_to_write = ""
+            
+            for line in csv_lines:
+                string_to_write += f"{line}\n"
+        
+            file_.write(string_to_write)
 
 
 if __name__ == "__main__":
