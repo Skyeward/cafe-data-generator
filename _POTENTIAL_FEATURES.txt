@@ -1,0 +1,23 @@
+1) Could potentially correct the time frequencies to not have an hour lag, which renders the 3pm/4pm config/emulator frequencies redundant respeectively.
+
+  -   CONFIG  -> CSV VALUE - CURRENT VERSION (note the hour lag, and that the 4pm config time is only used by the first two time periods in the csv)
+ - 0800:     -> 53 (using the 64 value from 4pm but truncated by not having a full hour)
+ - 0900:  39 -> 64
+ - 1000: 110 -> 39
+ - 1100:  19 -> 110
+ - 1200:  48 -> 19
+ - 1300:  96 -> 48
+ - 1400:  94 -> 96
+ - 1500:  91 -> 94
+ - 1600:  64 -> 91
+ 
+   -   CONFIG  -> CSV VALUE - PROPOSED VERSION
+ - 0800:     -> 53 (using the 64 value from 4pm but truncated by not having a full hour)
+ - 0900:  39 -> 39
+ - 1000: 110 -> 110
+ - 1100:  19 -> 19
+ - 1200:  48 -> 48
+ - 1300:  96 -> 96
+ - 1400:  94 -> 94
+ - 1500:  91 -> 91
+ - 1600:  64 -> 64
