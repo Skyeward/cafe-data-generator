@@ -20,16 +20,23 @@ def generate_csv():
     assign_card_numbers(payment_types)
 
     data_dict = build_dictionary(date_as_string, order_times, fnames, lnames, purchases, total_prices, payment_dict)
-    create_csv(data_dict, order_count)
+    create_csv(random_cafe_config, data_dict, order_count)
 
 
 #MOVE DOWN FILE
-def create_csv(dict_, order_count):
+def create_csv(random_cafe_config, dict_, order_count):
     csv_lines = []
     
     # for i in range(10):
     #     for key in dict_.keys():
     #         print(dict_[key][i])
+
+    file_name = random_cafe_config["name"].lower()
+    file_name += "_"
+    file_name += dict_['date'].replace("/", "-")
+    file_name += "_"
+    file_name += get_close_time_as_string(random_cafe_config)
+    file_name += ".csv"
 
     for i in range(order_count):
         date_time = dict_['date'] + ' ' + dict_['time'][i] + ','
@@ -42,6 +49,22 @@ def create_csv(dict_, order_count):
 
     for line in csv_lines:
         print(line)
+
+    with open(file_name, "w") as file_:
+            string_to_write = ""
+            
+            for line in csv_lines:
+                string_to_write += f"{line}\n"
+        
+            file_.write(string_to_write)
+
+
+def get_close_time_as_string(config):
+    close_time = config["close_time"]
+    formatted_close_time = str(close_time)[:2] + "-" + str(random.randrange(10, 60)) + "-" + str(random.randrange(10, 60))
+
+    return formatted_close_time
+
 
 #MOVE DOWN FILE
 def build_dictionary(date, times, fnames, lnames, purchases, total_prices, payments):
@@ -320,22 +343,40 @@ def get_drink_info():
 
 
 def get_random_payment_types(config, order_count):
-    raw_card_probability = int(config["payment_method_probability_weights"]["CARD"])
-    adjusted_card_probability = int(raw_card_probability / 1.63)
+    if "CARD" in config["payment_method_probability_weights"]:
+        raw_card_probability = int(config["payment_method_probability_weights"]["CARD"])
+        adjusted_card_probability = int(raw_card_probability / 1.63)
 
-    payment_types = []
-    card_count = 0 #for debugging
-    cash_count = 0
+        payment_types = []
+        card_count = 0 #for debugging
+        cash_count = 0
 
-    for i in range(order_count):
-        rndm = random.randrange(0, 100 + adjusted_card_probability)
-        
-        if rndm < 100:
-            payment_types.append("CASH")
-            cash_count += 1
-        else:
-            payment_types.append("CARD")
-            card_count += 1
+        for i in range(order_count):
+            rndm = random.randrange(0, 100 + adjusted_card_probability)
+            
+            if rndm < 100:
+                payment_types.append("CASH")
+                cash_count += 1
+            else:
+                payment_types.append("CARD")
+                card_count += 1
+    else:
+        raw_cash_probability = int(config["payment_method_probability_weights"]["CASH"])
+        adjusted_cash_probability = int(raw_cash_probability / 1.63)
+
+        payment_types = []
+        card_count = 0 #for debugging
+        cash_count = 0
+
+        for i in range(order_count):
+            rndm = random.randrange(0, 100 + adjusted_cash_probability)
+            
+            if rndm < 100:
+                payment_types.append("CARD")
+                card_count += 1
+            else:
+                payment_types.append("CASH")
+                cash_count += 1
 
     # print(card_count)
     # print(cash_count)
