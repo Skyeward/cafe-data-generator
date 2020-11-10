@@ -32,10 +32,11 @@ def create_csv(dict_, order_count):
     #         print(dict_[key][i])
 
     for i in range(order_count):
-        date_time = dict_['date'] + ' ' + dict_['time'][i] + ', '
-        full_name = dict_['fname'][i] + ' ' + dict_['lname'][i] + ', '
-        payment = dict_['payment type'][i] + ', ' + dict_['card number'][i]
-        csv_line = date_time + full_name + dict_['purchase'][i] + ', ' + dict_['total_price'][i] + ', ' + payment
+        date_time = dict_['date'] + ' ' + dict_['time'][i] + ','
+        full_name = dict_['fname'][i] + ' ' + dict_['lname'][i] + ','
+        payment = dict_['payment type'][i] + ',' + dict_['card number'][i]
+        purchase_in_quotes = '"' + dict_['purchase'][i] + '",'
+        csv_line = date_time + full_name + purchase_in_quotes + dict_['total_price'][i] + ',' + payment
 
         csv_lines.append(csv_line)
 
@@ -278,7 +279,9 @@ def concat_purchase_strings(drink_names, drink_sizes, drink_prices):
 
     for i in range(len(drink_names)):
         if drink_sizes[i] != None:
-            return_string += drink_sizes[i] + " "
+            return_string += drink_sizes[i]
+        
+        return_string += " " #because the csv files has a bug where leading spaces exist when the first drink has no size
 
         return_string += drink_names[i] + " - "
         return_string += drink_prices[i] + ", "
