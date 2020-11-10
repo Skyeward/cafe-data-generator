@@ -414,7 +414,7 @@ def create_csv(random_cafe_config, dict_, order_count):
         full_name = dict_['fname'][i] + ' ' + dict_['lname'][i] + ','
         payment = dict_['payment type'][i] + ',' + dict_['card number'][i]
         purchase_in_quotes = '"' + dict_['purchase'][i] + '",'
-        csv_line = date_time + full_name + purchase_in_quotes + dict_['total_price'][i] + ',' + payment
+        csv_line = date_time + random_cafe_config["name"] + ',' + full_name + purchase_in_quotes + dict_['total_price'][i] + ',' + payment
 
         csv_lines.append(csv_line)
 
