@@ -12,7 +12,7 @@ def generate_csv():
 
     date_as_string = get_date_today()
     order_times, order_count = get_order_times(random_cafe_config)
-    fnames, lnames = get_random_names(order_count, True) #to bypass the API, set second argument to True
+    fnames, lnames = get_random_names(order_count, False) #to bypass the API, set second argument to True
     purchases, total_prices = get_random_purchases(random_cafe_config, order_times, order_count)
     payment_types = get_random_payment_types(random_cafe_config, order_count)
     payment_dict = assign_card_numbers(payment_types)
@@ -134,55 +134,58 @@ def format_order_times(order_times):
 
 def get_random_names(order_count, debug_mode = False):
     if debug_mode == True:
-        return debug_names(order_count)
+        return get_debug_names(order_count)
+    else:
+        return get_names_from_api(order_count)
     
-    name_count_to_get = order_count
-    request_count = order_count * 3
-    
-    try:
-        response = requests.get("https://randomuser.me/api/?results=" + str(request_count))
-        response_as_json = response.json()
-        people_list = response_as_json["results"]
-    except:
-        print("THERE HAS BEEN A PROBLEM WITH THE API REQUEST. THE RESPONSE BODY IS AS FOLLOWS:")
-        
-        response.encoding = 'utf-8' # Optional: requests infers this internally
-        print(response.text)
-        exit()
+
+def get_names_from_api(name_count_to_get):
+    request_count = name_count_to_get * 3 #some names are unsuitable, grabs 3x the name count needed from the API to compensate
+    people_list = send_api_request(request_count)
 
     fnames = []
     lnames = []
-    index_to_read = 0
 
-    while len(fnames) < name_count_to_get and index_to_read < request_count:
-        name_dict = people_list[index_to_read]["name"]
+    for person_info in people_list:
+        name_dict = person_info["name"]
         fname = name_dict["first"]
         lname = name_dict["last"]
-        is_name_valid = True
 
         if fname.isalpha() == False or lname.isalpha() == False:
-            is_name_valid = False
+            continue
         elif len(fname) < 3 or len(lname) < 3:
-            is_name_valid = False
+            continue
         elif all(ord(c) < 128 for c in fname) == False or all(ord(c) < 128 for c in lname) == False:
-            is_name_valid = False
-        
-        if is_name_valid == True:
+            continue
+        else:
             fnames.append(fname)
             lnames.append(lname)
 
-        index_to_read += 1
+        if len(fnames) == name_count_to_get:
+            break
 
-    try:
-        test = fnames[name_count_to_get - 1]
-    except:
+    if len(fnames) < name_count_to_get:
         print("NOT ENOUGH NAMES GATHERED FROM THE API!")
         exit()
 
     return fnames, lnames
 
 
-def debug_names(order_count):
+def send_api_request(request_count):
+    try:
+        api_url = f"https://randomuser.me/api/?results={str(request_count)}"
+        response = requests.get(api_url)
+        response_as_json = response.json()
+        people_list = response_as_json["results"]
+        return people_list
+    except:
+        print("THERE HAS BEEN A PROBLEM WITH THE API REQUEST. THE RESPONSE BODY IS AS FOLLOWS:")
+        response.encoding = 'utf-8'
+        print(response.text)
+        exit()
+
+
+def get_debug_names(order_count):
     fnames = []
     lnames = []
 
