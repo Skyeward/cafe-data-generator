@@ -1,0 +1,1 @@
+This file just exists so that the output folder can be pushed to git. Empty folders can't be pushed. Feel free to delete this file (not the folder though!)
