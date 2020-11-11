@@ -12,7 +12,7 @@ def generate_csv():
 
     date_as_string = get_date_today()
     order_times, order_count = get_order_times(random_cafe_config)
-    fnames, lnames = get_random_names(order_count, False) #to bypass the API, set second argument to True
+    fnames, lnames = get_random_names(order_count, True) #to bypass the API, set second argument to True
     purchases, total_prices = get_random_purchases(random_cafe_config, order_times, order_count)
     payment_types = get_random_payment_types(random_cafe_config, order_count)
     payment_dict = assign_card_numbers(payment_types)
@@ -262,6 +262,25 @@ def get_random_purchases(random_cafe_config, order_times, order_count):
     return purchases, total_prices_as_decimal_strings
 
 
+def get_drink_info():
+    drink_dict = {"name": [], "is_sized": [], "regular_price": [], "large_price": []}
+    drink_raw_text_rows = []
+
+    with open("drink_info.txt", "r") as file_:
+        drinks_file_reader = csv.reader(file_, quoting = csv.QUOTE_ALL)
+        
+        for drink in drinks_file_reader:
+            drink_raw_text_rows.append(drink)
+
+    for row in drink_raw_text_rows:
+        drink_dict["name"].append(row[0])
+        drink_dict["is_sized"].append(row[1])
+        drink_dict["regular_price"].append(row[2])
+        drink_dict["large_price"].append(row[3])
+
+    return drink_dict
+
+
 def concat_purchase_strings(drink_names, drink_sizes, drink_prices):
     return_string = ""
 
@@ -286,25 +305,6 @@ def format_total_prices(total_prices):
         formatted_prices.append(formatted_price)
 
     return formatted_prices
-
-
-def get_drink_info():
-    drink_dict = {"name": [], "is_sized": [], "regular_price": [], "large_price": []}
-    drink_raw_text_rows = []
-
-    with open("drink_info.txt", "r") as file_:
-        drinks_file_reader = csv.reader(file_, quoting = csv.QUOTE_ALL)
-        
-        for drink in drinks_file_reader:
-            drink_raw_text_rows.append(drink)
-
-    for row in drink_raw_text_rows:
-        drink_dict["name"].append(row[0])
-        drink_dict["is_sized"].append(row[1])
-        drink_dict["regular_price"].append(row[2])
-        drink_dict["large_price"].append(row[3])
-
-    return drink_dict
 
 
 def get_random_payment_types(config, order_count):
