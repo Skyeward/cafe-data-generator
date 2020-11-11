@@ -23,13 +23,6 @@ def generate_csv():
     create_csv(random_cafe_config, data_dict, order_count)
 
 
-def get_close_time_as_string(config):
-    close_time = config["close_time"]
-    formatted_close_time = str(close_time)[:2] + "-" + str(random.randrange(10, 60)) + "-" + str(random.randrange(10, 60))
-
-    return formatted_close_time
-
-
 def get_random_cafe_config():
     configs = yaml.safe_load_all(open("storeConfig.yaml"))
     cafe_configs = []
@@ -54,9 +47,16 @@ def get_random_names(order_count):
     name_count_to_get = order_count
     request_count = order_count * 3
     
-    response = requests.get("https://randomuser.me/api/?results=" + str(request_count))
-    response_as_json = response.json()
-    people_list = response_as_json["results"]
+    try:
+        response = requests.get("https://randomuser.me/api/?results=" + str(request_count))
+        response_as_json = response.json()
+        people_list = response_as_json["results"]
+    except:
+        print("THERE HAS BEEN A PROBLEM WITH THE API REQUEST. THE RESPONSE BODY IS AS FOLLOWS:")
+        
+        response.encoding = 'utf-8' # Optional: requests infers this internally
+        print(response.text)
+        exit()
 
     fnames = []
     lnames = []
@@ -85,8 +85,7 @@ def get_random_names(order_count):
         test = fnames[name_count_to_get - 1]
     except:
         print("NOT ENOUGH NAMES GATHERED FROM THE API!")
-        print("RESPONSE PRINTED BELOW:")
-        print(response_as_json)
+        exit()
 
     return fnames, lnames
 
@@ -423,6 +422,13 @@ def create_csv(random_cafe_config, dict_, order_count):
                 string_to_write += f"{line}\n"
         
             file_.write(string_to_write)
+
+
+def get_close_time_as_string(config):
+    close_time = config["close_time"]
+    formatted_close_time = str(close_time)[:2] + "-" + str(random.randrange(10, 60)) + "-" + str(random.randrange(10, 60))
+
+    return formatted_close_time
 
 
 if __name__ == "__main__":
