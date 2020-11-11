@@ -37,8 +37,7 @@ def get_date_today(): #TODO: add a mode that allows for a manual date to be ente
     date_today = str(datetime.date.today())
     split_date_today = date_today.split("-")
 
-    formatted_date_today = split_date_today[2] + "/" + split_date_today[1] + "/" + split_date_today[0]
-
+    formatted_date_today = f"{split_date_today[2]}/{split_date_today[1]}/{split_date_today[0]}"
     return formatted_date_today
 
 
