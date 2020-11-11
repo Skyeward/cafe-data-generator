@@ -12,6 +12,8 @@ NOTES FOR BOTH VERSIONS:
  
  - The API can occasionally fail, if not due to over-requesting then simply bandwidth limitations. Try again in a short while if this is the case.
  
+ - If all names are returning "Alan Smithee" in the csv file, set debug_mode to False in the get_random_names(order_count, True) call in generate_csv().
+ 
  
 IF USING EMULATED_CSV_GENERATOR:
 Some notes to bear in mind if using the version intended to emulate the IW original:

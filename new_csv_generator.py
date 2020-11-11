@@ -8,33 +8,32 @@ import random
 
 def generate_csv():
     random_cafe_config = get_random_cafe_config()
-    print(random_cafe_config["name"])
+    #print(random_cafe_config["name"])
 
     date_as_string = get_date_today()
     order_times = get_order_times(random_cafe_config)
     order_count = len(order_times)
-    fnames, lnames = get_random_names(order_count)
+    fnames, lnames = get_random_names(order_count, True) #to bypass the API, set second argument to True
     purchases, total_prices = get_random_purchases(random_cafe_config, order_times, order_count)
     payment_types = get_random_payment_types(random_cafe_config, order_count)
     payment_dict = assign_card_numbers(payment_types)
     assign_card_numbers(payment_types)
 
     data_dict = build_dictionary(date_as_string, order_times, fnames, lnames, purchases, total_prices, payment_dict)
-    create_csv(random_cafe_config, data_dict, order_count)
+    #create_csv_file(random_cafe_config, data_dict, order_count)
 
 
 def get_random_cafe_config():
-    configs = yaml.safe_load_all(open("storeConfig.yaml"))
-    cafe_configs = []
+    configs = yaml.safe_load_all(open("storeConfig.yaml")) 
+    configs_as_list = list(configs) #safe_load_all() returns a <generator>
+    config_count = len(configs_as_list)
 
-    for config in configs:
-        cafe_configs.append(config)
-
-    random_index = random.randrange(0, len(cafe_configs))
-    return cafe_configs[random_index]
+    random_index = random.randrange(0, config_count)
+    random_config = configs_as_list[random_index]
+    return random_config
     
 
-def get_date_today():
+def get_date_today(): #TODO: add a mode that allows for a manual date to be entered
     date_today = str(datetime.date.today())
     split_date_today = date_today.split("-")
 
@@ -43,7 +42,10 @@ def get_date_today():
     return formatted_date_today
 
 
-def get_random_names(order_count):
+def get_random_names(order_count, debug_mode = False):
+    if debug_mode == True:
+        return debug_names(order_count)
+    
     name_count_to_get = order_count
     request_count = order_count * 3
     
@@ -86,6 +88,17 @@ def get_random_names(order_count):
     except:
         print("NOT ENOUGH NAMES GATHERED FROM THE API!")
         exit()
+
+    return fnames, lnames
+
+
+def debug_names(order_count):
+    fnames = []
+    lnames = []
+
+    for i in range(order_count):
+        fnames.append("Alan")
+        lnames.append("Smithee")
 
     return fnames, lnames
 
@@ -392,7 +405,7 @@ def build_dictionary(date, times, fnames, lnames, purchases, total_prices, payme
     return return_dict
 
 
-def create_csv(random_cafe_config, dict_, order_count):
+def create_csv_file(random_cafe_config, dict_, order_count):
     csv_lines = []
 
     file_name = "output/"
