@@ -8,11 +8,10 @@ import random
 
 def generate_csv():
     random_cafe_config = get_random_cafe_config()
-    #print(random_cafe_config["name"])
+    print(random_cafe_config["name"])
 
     date_as_string = get_date_today()
-    order_times = get_order_times(random_cafe_config)
-    order_count = len(order_times)
+    order_times, order_count = get_order_times(random_cafe_config)
     fnames, lnames = get_random_names(order_count, True) #to bypass the API, set second argument to True
     purchases, total_prices = get_random_purchases(random_cafe_config, order_times, order_count)
     payment_types = get_random_payment_types(random_cafe_config, order_count)
@@ -20,7 +19,7 @@ def generate_csv():
     assign_card_numbers(payment_types)
 
     data_dict = build_dictionary(date_as_string, order_times, fnames, lnames, purchases, total_prices, payment_dict)
-    #create_csv_file(random_cafe_config, data_dict, order_count)
+    create_csv_file(random_cafe_config, data_dict, order_count)
 
 
 def get_random_cafe_config():
@@ -39,6 +38,98 @@ def get_date_today(): #TODO: add a mode that allows for a manual date to be ente
 
     formatted_date_today = f"{split_date_today[2]}/{split_date_today[1]}/{split_date_today[0]}"
     return formatted_date_today
+
+
+def get_order_times(config):
+    order_frequencies = config["frequency"]
+    frequencies_with_start_times_seconds_after_midnight = get_frequencies_with_times_in_seconds(order_frequencies)
+
+    open_time = config["open_time"]
+    close_time = config["close_time"]
+    open_time_seconds_after_midnight, close_time_seconds_after_midnight = convert_open_close_times_to_seconds(open_time, close_time)
+
+    order_times = []
+    current_time_period_start = open_time_seconds_after_midnight
+
+    while current_time_period_start < close_time_seconds_after_midnight:
+        new_order_times, current_time_period_start = get_order_times_one_hour(current_time_period_start, frequencies_with_start_times_seconds_after_midnight)
+        order_times += new_order_times
+
+    formatted_order_times = format_order_times(order_times)
+    order_count = len(formatted_order_times)
+
+    return formatted_order_times, order_count
+
+
+def get_frequencies_with_times_in_seconds(order_frequencies):
+    frequencies_with_start_times_seconds_after_midnight = {}
+    
+    for start_time, order_frequency in order_frequencies.items():
+        hours = str(start_time)[:2] #times formatted in config like 1210; this slices off the minutes
+        seconds = int(hours) * 3600
+        frequencies_with_start_times_seconds_after_midnight[seconds] = order_frequency
+
+    return frequencies_with_start_times_seconds_after_midnight
+
+
+def convert_open_close_times_to_seconds(open_time, close_time):
+    open_time_hours = int(open_time / 100)
+    open_time_minutes = open_time % 100
+
+    close_time_hours = int(close_time / 100)
+    close_time_minutes = close_time % 100
+
+    open_time_seconds_after_midnight = (open_time_hours * 3600) + (open_time_minutes * 60)
+    close_time_seconds_after_midnight = (close_time_hours * 3600) + (close_time_minutes * 60)
+
+    return open_time_seconds_after_midnight, close_time_seconds_after_midnight
+
+
+def get_order_times_one_hour(start_time_in_seconds, frequencies):
+    # Time periods all end on the oclock. However, some time periods start after the hour.
+    # In these cases, the time period will be less than an hour.
+    # The code below adds an hour and then truncates the minutes by rounding down to the nearest hour.
+    # Both 8:00am and 8:15am would result in an end time of 9:00am
+    ONE_HOUR_IN_SECONDS = 3600
+
+    start_time_seconds_after_oclock = start_time_in_seconds % ONE_HOUR_IN_SECONDS
+    start_time_rounded_down_to_oclock = start_time_in_seconds - start_time_seconds_after_oclock
+    end_time_in_seconds = start_time_rounded_down_to_oclock + ONE_HOUR_IN_SECONDS
+
+    # Time periods should try to use the frequency value from the rounded down hour.
+    # If unavailable, it should use the last frequency in the config.
+    if start_time_rounded_down_to_oclock in frequencies:
+        order_count = frequencies[start_time_rounded_down_to_oclock]
+    else:
+        time_period_starts_in_seconds = tuple(frequencies.keys())
+        last_time_period_start = max(time_period_starts_in_seconds)
+        order_count = frequencies[last_time_period_start]
+
+    gap_between_orders_in_seconds = float(ONE_HOUR_IN_SECONDS) / float(order_count)
+    current_time_in_seconds = start_time_in_seconds
+    order_times = []
+
+    while current_time_in_seconds < end_time_in_seconds:
+        order_times.append(current_time_in_seconds)
+        current_time_in_seconds += gap_between_orders_in_seconds
+
+    return order_times, int(current_time_in_seconds)
+
+
+def format_order_times(order_times):
+    formatted_times = []
+    
+    for order_time in order_times:
+        total_time_in_minutes = int(order_time / 60)
+        hours = int(total_time_in_minutes / 60)
+        minutes = total_time_in_minutes % 60
+
+        hours_as_string = "{:02d}".format(hours)
+        minutes_as_string = "{:02d}".format(minutes)
+        formatted_time = hours_as_string + ":" + minutes_as_string
+        formatted_times.append(formatted_time)
+
+    return formatted_times
 
 
 def get_random_names(order_count, debug_mode = False):
@@ -100,95 +191,6 @@ def debug_names(order_count):
         lnames.append("Smithee")
 
     return fnames, lnames
-
-
-def get_order_times(config):
-    frequency_dict = config["frequency"]
-    frequency_times_in_seconds = {}
-
-    for time, freq in frequency_dict.items():
-        hours = int(time / 100)
-        seconds = hours * 3600
-        frequency_times_in_seconds[seconds] = freq
-
-    open_time = config["open_time"]
-    open_time_hours = int(open_time / 100)
-    open_time_minutes = open_time % 100
-
-    close_time = config["close_time"]
-    close_time_hours = int(close_time / 100)
-    close_time_minutes = close_time % 100
-
-    open_time_seconds_after_midnight = (open_time_hours * 3600) + (open_time_minutes * 60)
-    close_time_seconds_after_midnight = (close_time_hours * 3600) + (close_time_minutes * 60)
-
-    current_time_peiod_start = open_time_seconds_after_midnight
-    order_times = []
-
-    emergency_break = 0
-
-    while current_time_peiod_start < close_time_seconds_after_midnight and emergency_break < 10000:
-        new_order_times, current_time_peiod_start = get_order_times_one_hour(current_time_peiod_start, frequency_times_in_seconds)
-        order_times += new_order_times
-
-        emergency_break += 1
-
-    #print(order_times)
-    if emergency_break > 9000:
-        print("loops: " + str(emergency_break))
-
-    return format_order_times(order_times)
-
-    #DEBUG PRINTS
-    # print(open_time_hours)
-    # print(open_time_minutes)
-    # print(close_time_hours)
-    # print(close_time_minutes)
-    # print(open_time_seconds_after_midnight)
-    # print(close_time_seconds_after_midnight)
-
-
-def get_order_times_one_hour(start_time, frequencies):
-    starting_seconds_after_oclock = 3600 - (start_time % 3600)
-    time_period_end = start_time + starting_seconds_after_oclock
-
-    if time_period_end - 3600 in frequencies:
-        order_count = frequencies[time_period_end - 3600]
-    else:
-        order_count = frequencies[max(tuple(frequencies.keys()))]
-
-    gap_between_orders = float(3600) / float(order_count)
-    current_time = start_time
-    order_times = []
-
-    emergency_break = 0
-
-    while current_time < time_period_end and emergency_break < 10000:
-        order_times.append(current_time)
-        current_time += gap_between_orders
-
-        emergency_break += 1
-
-    if emergency_break > 9000:
-        print("loops: " + str(emergency_break))
-
-    return order_times, int(current_time)
-
-
-def format_order_times(order_times):
-    formatted_times = []
-    
-    for order_time in order_times:
-        total_time_in_minutes = int(order_time / 60)
-        hours = int(total_time_in_minutes / 60)
-        minutes = total_time_in_minutes % 60
-
-        hours_as_string = "{:02d}".format(hours)
-        minutes_as_string = "{:02d}".format(minutes)
-        formatted_time = hours_as_string + ":" + minutes_as_string
-        formatted_times.append(formatted_time)
-
-    return formatted_times
 
 
 def get_random_purchases(random_cafe_config, order_times, order_count):
