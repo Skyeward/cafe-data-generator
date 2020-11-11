@@ -397,7 +397,7 @@ def create_csv(random_cafe_config, dict_, order_count):
     csv_lines = []
 
     file_name = "output/"
-    file_name += random_cafe_config["name"].lower()
+    file_name += random_cafe_config["name"].lower().replace(" ", "_")
     file_name += "_"
     file_name += dict_['date'].replace("/", "-")
     file_name += "_"
