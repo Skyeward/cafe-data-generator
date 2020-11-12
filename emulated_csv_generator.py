@@ -300,8 +300,13 @@ def format_total_prices(total_prices):
     formatted_prices = []
 
     for price in total_prices:
-        price_as_string = str(price)
-        formatted_price = price_as_string[:-2] + "." + price_as_string[-2:]
+        pounds = int(price / 100)
+        pence = price % 100
+
+        pounds_as_string = "{:01d}".format(pounds)
+        pence_as_string = "{:02d}".format(pence)
+
+        formatted_price = pounds_as_string + "." + pence_as_string
         formatted_prices.append(formatted_price)
 
     return formatted_prices
