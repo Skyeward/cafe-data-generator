@@ -308,6 +308,8 @@ def format_total_prices(total_prices):
 
 
 def get_random_payment_types(config, order_count):
+    #USE random.choices()!!!!!!
+    
     if "CARD" in config["payment_method_probability_weights"]:
         raw_card_probability = int(config["payment_method_probability_weights"]["CARD"])
         adjusted_card_probability = int(raw_card_probability / 1.63)
@@ -421,12 +423,20 @@ def create_csv_file(random_cafe_config, dict_, order_count):
     file_name += ".csv"
 
     for i in range(order_count):
+        #number of decimals in a purchase represents the number of drinks, since each drink has one price associated with it (eg 1.50)
+        drink_count_in_order = dict_['purchase'][i].count('.')
+        
         date_time = dict_['date'] + ' ' + dict_['time'][i] + ','
         full_name = dict_['fname'][i] + ' ' + dict_['lname'][i] + ','
         payment = dict_['payment type'][i] + ',' + dict_['card number'][i]
-        purchase_in_quotes = '"' + dict_['purchase'][i] + '",'
-        csv_line = date_time + random_cafe_config["name"] + ',' + full_name + purchase_in_quotes + dict_['total_price'][i] + ',' + payment
 
+        #purchases in csv files only have quotes around them when more than one drink is present
+        if drink_count_in_order == 1:
+            purchase_string = dict_['purchase'][i] + ','
+        else:
+            purchase_string = '"' + dict_['purchase'][i] + '",'
+
+        csv_line = date_time + random_cafe_config["name"] + ',' + full_name + purchase_string + dict_['total_price'][i] + ',' + payment
         csv_lines.append(csv_line)
 
     for line in csv_lines:
