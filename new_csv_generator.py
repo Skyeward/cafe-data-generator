@@ -262,7 +262,7 @@ def get_sizes_and_prices_of_drinks(drink_list, drink_menu):
     drink_prices = []
 
     for drink in drink_list:
-        drink_index = drink_menu["name"].indexof(drink)
+        drink_index = drink_menu["name"].index(drink)
         drink_has_size = drink_menu["is_sized"][drink_index]
 
         if drink_has_size == "True":
