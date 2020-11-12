@@ -21,3 +21,17 @@
  - 1400:  94 -> 94
  - 1500:  91 -> 91
  - 1600:  64 -> 64
+ 
+2) Could fix the 'Hot Chocolate' bug. In the original IW version, all drink types have a parameter that detemines if they are given a Large/Regular size, or no size. Hot Chocolate is the only exception (which appears to be a bug) where it can appear both sized and unsized. This seems to be because Hot chocolate (sized) and Hot chocolate (unsized) are considered two different drinks by the IW program. This is suggested by Hot chocolate appearing twice as often as expecting, and the nonsensical pricing. Currently it can appear as:
+
+ - Hot chocolate - 1.40
+ - Regular hot chocolate - 2.20
+ - Large hot chocolate - 2.90
+ 
+3) Could look at fixing spacing. In the IW version, drinks without a Large/Regular size have a leading space before their name. Examples of that formatting:
+ - "Large tea, Large coffee"
+ - " Tea,  Coffee"
+ 
+4) Currently, the number of drinks per order is simply a random selection between 1-5. Could add some kind of probability weighting to this to make non-homogenous data, where trends could be found.
+
+5) Anything else we can think of! The generator could rely on a settings file with all kinds of customizable settings. For example, the file could intentionally produce faulty data.

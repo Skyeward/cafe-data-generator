@@ -308,46 +308,17 @@ def format_total_prices(total_prices):
 
 
 def get_random_payment_types(config, order_count):
-    #USE random.choices()!!!!!!
+    payment_types = ["CARD", "CASH"]
+    payment_weightings = [100]
     
     if "CARD" in config["payment_method_probability_weights"]:
-        raw_card_probability = int(config["payment_method_probability_weights"]["CARD"])
-        adjusted_card_probability = int(raw_card_probability / 1.63)
-
-        payment_types = []
-        card_count = 0 #for debugging
-        cash_count = 0
-
-        for i in range(order_count):
-            rndm = random.randrange(0, 100 + adjusted_card_probability)
-            
-            if rndm < 100:
-                payment_types.append("CASH")
-                cash_count += 1
-            else:
-                payment_types.append("CARD")
-                card_count += 1
+        card_weighting = int(config["payment_method_probability_weights"]["CARD"])
+        payment_weightings.insert(0, card_weighting)
     else:
-        raw_cash_probability = int(config["payment_method_probability_weights"]["CASH"])
-        adjusted_cash_probability = int(raw_cash_probability / 1.63)
+        cash_weighting = int(config["payment_method_probability_weights"]["CASH"])
+        payment_weightings.append(cash_weighting)
 
-        payment_types = []
-        card_count = 0 #for debugging
-        cash_count = 0
-
-        for i in range(order_count):
-            rndm = random.randrange(0, 100 + adjusted_cash_probability)
-            
-            if rndm < 100:
-                payment_types.append("CARD")
-                card_count += 1
-            else:
-                payment_types.append("CASH")
-                cash_count += 1
-
-    # print(card_count)
-    # print(cash_count)
-
+    payment_types = random.choices(payment_types, weights = payment_weightings, k = order_count)
     return payment_types
 
 
@@ -373,20 +344,16 @@ def assign_card_numbers(payment_types):
 
 
 def generate_random_card_number():
-    #KEYS/VALUES ARE - CARD LENGTH: PERCENT CHANCE
-    card_length_percent_weights = {13: 16, 14: 2, 15: 18, 16: 58, 17: 6}
-    running_percent_total = 0
-    rndm = random.randrange(0, 100)
+    card_lengths = [13, 14, 15, 16, 17]
+    card_length_weightings = [16, 2, 18, 58, 6] # arbitrary numbers based on csv observations
+    chosen_card_length_as_list = random.choices(card_lengths, weights = card_length_weightings)
+    chosen_card_length = chosen_card_length_as_list[0]
 
-    for card_length, percent_weight in card_length_percent_weights.items():
-        running_percent_total += percent_weight
-
-        if running_percent_total >= rndm:
-            chosen_card_length = card_length
-            break
+    print(chosen_card_length)
+    print(type(chosen_card_length))
 
     if chosen_card_length == 16 and random.randrange(0, 3) == 0:
-        card_number = "6011"
+        card_number = "6011" #based on csv observations, appears that 33% of 16 digit numbers start with 6011
     else:
         card_number = ""
 
@@ -412,8 +379,6 @@ def build_dictionary(date, times, fnames, lnames, purchases, total_prices, payme
 
 
 def create_csv_file(random_cafe_config, dict_, order_count):
-    csv_lines = []
-
     file_name = "output/"
     file_name += random_cafe_config["name"].lower().replace(" ", "_")
     file_name += "_"
@@ -421,6 +386,8 @@ def create_csv_file(random_cafe_config, dict_, order_count):
     file_name += "_"
     file_name += get_close_time_as_string(random_cafe_config)
     file_name += ".csv"
+
+    csv_lines = []
 
     for i in range(order_count):
         #number of decimals in a purchase represents the number of drinks, since each drink has one price associated with it (eg 1.50)

@@ -3,8 +3,8 @@ import csv
 
 def define_file_list():
     files = []
-    #files.append("livingston_10-11-2020_17-46-34.csv")
-    files.append("aberdeen_11-10-2020_19-49-26.csv")
+    files.append("portsmouth_12-11-2020_17-35-13.csv")
+    #files.append("aberdeen_11-10-2020_19-49-26.csv")
     #files.append("chesterfield_05-11-2020_14-04-23.csv")
 
     files_with_directory = []
