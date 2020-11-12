@@ -1,5 +1,6 @@
-Cafe Data Generator is a program for generating random sales data for one day of a virtual cafe. It is based on an original version by IW.
+start with the bash command: 'pip -m install requirements.txt'
 
+Cafe Data Generator is a program for generating random sales data for one day of a virtual cafe. It is based on an original version by IW.
 
 There are [or will be] two versions:
  - csv_generator.py will generate a .csv file intended to emulate the original IW cafe data generator as accurately as possible.
