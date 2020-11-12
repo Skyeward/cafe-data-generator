@@ -6,30 +6,61 @@ import datetime
 import random
 
 
-def generate_csv():
-    random_cafe_config = get_random_cafe_config()
-    print(random_cafe_config["name"])
+def main():
+    #READ FROM SETTINGS AND CONFIG YAML FILES
+    settings = get_formatted_settings()
+    cafe_config = get_cafe_config(settings)
+    print(cafe_config["name"])
 
+    #GENERATING RANDOM CSV DATA
     date_as_string = get_date_today()
-    order_times, order_count = get_order_times(random_cafe_config)
+    order_times, order_count = get_order_times(cafe_config)
     fnames, lnames = get_random_names(order_count, True) #to bypass the API, set second argument to True
-    purchases, total_prices = get_random_purchases(random_cafe_config, order_times, order_count)
-    payment_types = get_random_payment_types(random_cafe_config, order_count)
+    purchases, total_prices = get_random_purchases(cafe_config, order_times, order_count)
+    payment_types = get_random_payment_types(cafe_config, order_count)
     payment_dict = assign_card_numbers(payment_types)
     assign_card_numbers(payment_types)
 
+    #BUILDING CSV WITH GENERATED DATA
     data_dict = build_dictionary(date_as_string, order_times, fnames, lnames, purchases, total_prices, payment_dict)
-    create_csv_file(random_cafe_config, data_dict, order_count)
+    create_csv_file(cafe_config, data_dict, order_count)
 
 
-def get_random_cafe_config():
+def get_formatted_settings():
+    settings = yaml.safe_load(open("settings.yaml"))
+
+    if settings["use_custom_location"] == "true":
+        settings["use_custom_location"] = True
+    elif settings["use_custom_location"] == "false":
+        settings["use_custom_location"] = False
+    elif settings["use_custom_location"] != True and settings["use_custom_location"] != False:
+        print("SETTINGS.YAML ERROR: use_custom_location should be set to True or False")
+        exit()
+
+    if type(settings["custom_location"]) == str:
+        settings["custom_location"] = settings["custom_location"].lower()
+    else:
+        print("SETTINGS.YAML ERROR: use_custom_location should be set to True or False")
+        exit()
+
+    return settings
+
+
+def get_cafe_config(settings):
     configs = yaml.safe_load_all(open("storeConfig.yaml")) 
     configs_as_list = list(configs) #safe_load_all() returns a <generator>
-    config_count = len(configs_as_list)
+    
+    if settings["use_custom_location"] == True:
+        location = settings["custom_location"]
 
-    random_index = random.randrange(0, config_count)
-    random_config = configs_as_list[random_index]
-    return random_config
+        for config in configs_as_list:
+            if config["name"].lower() == location:
+                return config
+    else:
+        config_count = len(configs_as_list)
+        random_index = random.randrange(0, config_count)
+        random_config = configs_as_list[random_index]
+        return random_config
     
 
 def get_date_today(): #TODO: add a mode that allows for a manual date to be entered
@@ -349,9 +380,6 @@ def generate_random_card_number():
     chosen_card_length_as_list = random.choices(card_lengths, weights = card_length_weightings)
     chosen_card_length = chosen_card_length_as_list[0]
 
-    print(chosen_card_length)
-    print(type(chosen_card_length))
-
     if chosen_card_length == 16 and random.randrange(0, 3) == 0:
         card_number = "6011" #based on csv observations, appears that 33% of 16 digit numbers start with 6011
     else:
@@ -426,4 +454,4 @@ def get_close_time_as_string(config):
 
 
 if __name__ == "__main__":
-    generate_csv()
+    main()
