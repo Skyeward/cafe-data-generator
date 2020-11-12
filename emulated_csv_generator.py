@@ -11,156 +11,109 @@ def generate_csv():
     print(random_cafe_config["name"])
 
     date_as_string = get_date_today()
-    order_times = get_order_times(random_cafe_config)
-    order_count = len(order_times)
-    fnames, lnames = get_random_names(order_count)
+    order_times, order_count = get_order_times(random_cafe_config)
+    fnames, lnames = get_random_names(order_count, True) #to bypass the API, set second argument to True
     purchases, total_prices = get_random_purchases(random_cafe_config, order_times, order_count)
     payment_types = get_random_payment_types(random_cafe_config, order_count)
     payment_dict = assign_card_numbers(payment_types)
     assign_card_numbers(payment_types)
 
     data_dict = build_dictionary(date_as_string, order_times, fnames, lnames, purchases, total_prices, payment_dict)
-    create_csv(random_cafe_config, data_dict, order_count)
+    create_csv_file(random_cafe_config, data_dict, order_count)
 
 
 def get_random_cafe_config():
-    configs = yaml.safe_load_all(open("storeConfig.yaml"))
-    cafe_configs = []
+    configs = yaml.safe_load_all(open("storeConfig.yaml")) 
+    configs_as_list = list(configs) #safe_load_all() returns a <generator>
+    config_count = len(configs_as_list)
 
-    for config in configs:
-        cafe_configs.append(config)
-
-    random_index = random.randrange(0, len(cafe_configs))
-    return cafe_configs[random_index]
+    random_index = random.randrange(0, config_count)
+    random_config = configs_as_list[random_index]
+    return random_config
     
 
-def get_date_today():
+def get_date_today(): #TODO: add a mode that allows for a manual date to be entered
     date_today = str(datetime.date.today())
     split_date_today = date_today.split("-")
 
-    formatted_date_today = split_date_today[2] + "/" + split_date_today[1] + "/" + split_date_today[0]
-
+    formatted_date_today = f"{split_date_today[2]}/{split_date_today[1]}/{split_date_today[0]}"
     return formatted_date_today
 
 
-def get_random_names(order_count):
-    name_count_to_get = order_count
-    request_count = order_count * 3
-    
-    try:
-        response = requests.get("https://randomuser.me/api/?results=" + str(request_count))
-        response_as_json = response.json()
-        people_list = response_as_json["results"]
-    except:
-        print("THERE HAS BEEN A PROBLEM WITH THE API REQUEST. THE RESPONSE BODY IS AS FOLLOWS:")
-        
-        response.encoding = 'utf-8' # Optional: requests infers this internally
-        print(response.text)
-        exit()
-
-    fnames = []
-    lnames = []
-    index_to_read = 0
-
-    while len(fnames) < name_count_to_get and index_to_read < request_count:
-        name_dict = people_list[index_to_read]["name"]
-        fname = name_dict["first"]
-        lname = name_dict["last"]
-        is_name_valid = True
-
-        if fname.isalpha() == False or lname.isalpha() == False:
-            is_name_valid = False
-        elif len(fname) < 3 or len(lname) < 3:
-            is_name_valid = False
-        elif all(ord(c) < 128 for c in fname) == False or all(ord(c) < 128 for c in lname) == False:
-            is_name_valid = False
-        
-        if is_name_valid == True:
-            fnames.append(fname)
-            lnames.append(lname)
-
-        index_to_read += 1
-
-    try:
-        test = fnames[name_count_to_get - 1]
-    except:
-        print("NOT ENOUGH NAMES GATHERED FROM THE API!")
-        exit()
-
-    return fnames, lnames
-
-
 def get_order_times(config):
-    frequency_dict = config["frequency"]
-    frequency_times_in_seconds = {}
-
-    for time, freq in frequency_dict.items():
-        hours = int(time / 100)
-        seconds = hours * 3600
-        frequency_times_in_seconds[seconds] = freq
+    order_frequencies = config["frequency"]
+    frequencies_with_start_times_seconds_after_midnight = get_frequencies_with_times_in_seconds(order_frequencies)
 
     open_time = config["open_time"]
+    close_time = config["close_time"]
+    open_time_seconds_after_midnight, close_time_seconds_after_midnight = convert_open_close_times_to_seconds(open_time, close_time)
+
+    order_times = []
+    current_time_period_start = open_time_seconds_after_midnight
+
+    while current_time_period_start < close_time_seconds_after_midnight:
+        new_order_times, current_time_period_start = get_order_times_one_hour(current_time_period_start, frequencies_with_start_times_seconds_after_midnight)
+        order_times += new_order_times
+
+    formatted_order_times = format_order_times(order_times)
+    order_count = len(formatted_order_times)
+
+    return formatted_order_times, order_count
+
+
+def get_frequencies_with_times_in_seconds(order_frequencies):
+    frequencies_with_start_times_seconds_after_midnight = {}
+    
+    for start_time, order_frequency in order_frequencies.items():
+        hours = str(start_time)[:2] #times formatted in config like 1210; this slices off the minutes
+        seconds = int(hours) * 3600
+        frequencies_with_start_times_seconds_after_midnight[seconds] = order_frequency
+
+    return frequencies_with_start_times_seconds_after_midnight
+
+
+def convert_open_close_times_to_seconds(open_time, close_time):
     open_time_hours = int(open_time / 100)
     open_time_minutes = open_time % 100
 
-    close_time = config["close_time"]
     close_time_hours = int(close_time / 100)
     close_time_minutes = close_time % 100
 
     open_time_seconds_after_midnight = (open_time_hours * 3600) + (open_time_minutes * 60)
     close_time_seconds_after_midnight = (close_time_hours * 3600) + (close_time_minutes * 60)
 
-    current_time_peiod_start = open_time_seconds_after_midnight
-    order_times = []
-
-    emergency_break = 0
-
-    while current_time_peiod_start < close_time_seconds_after_midnight and emergency_break < 10000:
-        new_order_times, current_time_peiod_start = get_order_times_one_hour(current_time_peiod_start, frequency_times_in_seconds)
-        order_times += new_order_times
-
-        emergency_break += 1
-
-    #print(order_times)
-    if emergency_break > 9000:
-        print("loops: " + str(emergency_break))
-
-    return format_order_times(order_times)
-
-    #DEBUG PRINTS
-    # print(open_time_hours)
-    # print(open_time_minutes)
-    # print(close_time_hours)
-    # print(close_time_minutes)
-    # print(open_time_seconds_after_midnight)
-    # print(close_time_seconds_after_midnight)
+    return open_time_seconds_after_midnight, close_time_seconds_after_midnight
 
 
-def get_order_times_one_hour(start_time, frequencies):
-    starting_seconds_after_oclock = 3600 - (start_time % 3600)
-    time_period_end = start_time + starting_seconds_after_oclock
+def get_order_times_one_hour(start_time_in_seconds, frequencies):
+    # Time periods all end on the oclock. However, some time periods start after the hour.
+    # In these cases, the time period will be less than an hour.
+    # The code below adds an hour and then truncates the minutes by rounding down to the nearest hour.
+    # Both 8:00am and 8:15am would result in an end time of 9:00am
+    ONE_HOUR_IN_SECONDS = 3600
 
-    if time_period_end - 3600 in frequencies:
-        order_count = frequencies[time_period_end - 3600]
+    start_time_seconds_after_oclock = start_time_in_seconds % ONE_HOUR_IN_SECONDS
+    start_time_rounded_down_to_oclock = start_time_in_seconds - start_time_seconds_after_oclock
+    end_time_in_seconds = start_time_rounded_down_to_oclock + ONE_HOUR_IN_SECONDS
+
+    # Time periods should try to use the frequency value from the rounded down hour.
+    # If unavailable, it should use the last frequency in the config.
+    if start_time_rounded_down_to_oclock in frequencies:
+        order_count = frequencies[start_time_rounded_down_to_oclock]
     else:
-        order_count = frequencies[max(tuple(frequencies.keys()))]
+        time_period_starts_in_seconds = tuple(frequencies.keys())
+        last_time_period_start = max(time_period_starts_in_seconds)
+        order_count = frequencies[last_time_period_start]
 
-    gap_between_orders = float(3600) / float(order_count)
-    current_time = start_time
+    gap_between_orders_in_seconds = float(ONE_HOUR_IN_SECONDS) / float(order_count)
+    current_time_in_seconds = start_time_in_seconds
     order_times = []
 
-    emergency_break = 0
+    while current_time_in_seconds < end_time_in_seconds:
+        order_times.append(current_time_in_seconds)
+        current_time_in_seconds += gap_between_orders_in_seconds
 
-    while current_time < time_period_end and emergency_break < 10000:
-        order_times.append(current_time)
-        current_time += gap_between_orders
-
-        emergency_break += 1
-
-    if emergency_break > 9000:
-        print("loops: " + str(emergency_break))
-
-    return order_times, int(current_time)
+    return order_times, int(current_time_in_seconds)
 
 
 def format_order_times(order_times):
@@ -179,96 +132,96 @@ def format_order_times(order_times):
     return formatted_times
 
 
-def get_random_purchases(random_cafe_config, order_times, order_count):
-    drink_dict = get_drink_info()
-    drink_dict["probability"] = []
+def get_random_names(order_count, debug_mode = False):
+    if debug_mode == True:
+        return get_debug_names(order_count)
+    else:
+        return get_names_from_api(order_count)
     
-    config_drink_info = random_cafe_config["menu_probability_weights"]
-    config_drink_names = list(config_drink_info.keys())
-    running_probability = 0
 
-    for drink in drink_dict["name"]:
-        if drink in config_drink_names:
-            print("matched drink: " + drink)
-            running_probability += config_drink_info[drink]
+def get_names_from_api(name_count_to_get):
+    request_count = name_count_to_get * 3 #some names are unsuitable, grabs 3x the name count needed from the API to compensate
+    people_list = send_api_request(request_count)
+
+    fnames = []
+    lnames = []
+
+    for person_info in people_list:
+        name_dict = person_info["name"]
+        fname = name_dict["first"]
+        lname = name_dict["last"]
+
+        if fname.isalpha() == False or lname.isalpha() == False:
+            continue
+        elif len(fname) < 3 or len(lname) < 3:
+            continue
+        elif all(ord(c) < 128 for c in fname) == False or all(ord(c) < 128 for c in lname) == False:
+            continue
         else:
-            running_probability += 100
-            
-        drink_dict["probability"].append(running_probability)
+            fnames.append(fname)
+            lnames.append(lname)
 
+        if len(fnames) == name_count_to_get:
+            break
+
+    if len(fnames) < name_count_to_get:
+        print("NOT ENOUGH NAMES GATHERED FROM THE API!")
+        exit()
+
+    return fnames, lnames
+
+
+def send_api_request(request_count):
+    try:
+        api_url = f"https://randomuser.me/api/?results={str(request_count)}"
+        response = requests.get(api_url)
+        response_as_json = response.json()
+        people_list = response_as_json["results"]
+        return people_list
+    except:
+        print("THERE HAS BEEN A PROBLEM WITH THE API REQUEST. THE RESPONSE BODY IS AS FOLLOWS:")
+        response.encoding = 'utf-8'
+        print(response.text)
+        exit()
+
+
+def get_debug_names(order_count):
+    fnames = []
+    lnames = []
+
+    for i in range(order_count):
+        fnames.append("Alan")
+        lnames.append("Smithee")
+
+    return fnames, lnames
+
+
+def get_random_purchases(random_cafe_config, order_times, order_count):
+    config_drink_info = random_cafe_config["menu_probability_weights"]
+    drink_menu = get_drink_info()
+    drink_weightings = get_drink_weightings(drink_menu, config_drink_info)
+    
     purchases = []
     total_prices = []
 
     for i in range(order_count):
-        drink_count = random.randrange(1, 6)
-        random_drinks = []
-        drink_sizes = []
-        drink_prices = []
+        random_drink_count = random.randrange(1, 6)
+
+        random_drinks = random.choices(drink_menu["name"], weights = drink_weightings, k = random_drink_count)
+        drink_sizes, drink_prices = get_sizes_and_prices_of_drinks(random_drinks, drink_menu)
+
         total_price = 0
-        
-        for i in range(drink_count):
-            rndm = random.randrange(0, running_probability)
-            selected_drink = None
-            drink_to_check = 0
-            
-            while selected_drink == None:
-                if rndm < drink_dict["probability"][drink_to_check]:
-                    selected_drink = drink_dict["name"][drink_to_check]
-                else:
-                    drink_to_check += 1
 
-            random_drinks.append(selected_drink)
-
-            if drink_dict["is_sized"][drink_to_check] == "False":
-                size = None
-            else:
-                size = random.choice(["Large", "Regular"])
-
-            drink_sizes.append(size)
-
-            if size == "Large":
-                price = drink_dict["large_price"][drink_to_check]
-            else:
-                price = drink_dict["regular_price"][drink_to_check]
-
-            drink_prices.append(price)
+        for price in drink_prices:
             total_price += int(price.replace(".", ""))
 
+        full_purchase_string = concat_purchase_strings(random_drinks, drink_sizes, drink_prices)
+        purchases.append(full_purchase_string)
         total_prices.append(total_price)
-        purchases.append(concat_purchase_strings(random_drinks, drink_sizes, drink_prices))
-    
+
     total_prices_as_decimal_strings = format_total_prices(total_prices)
 
-    # print(purchases)
-    # print(total_prices_as_decimal_strings)
-
     return purchases, total_prices_as_decimal_strings
-
-
-def concat_purchase_strings(drink_names, drink_sizes, drink_prices):
-    return_string = ""
-
-    for i in range(len(drink_names)):
-        if drink_sizes[i] != None:
-            return_string += drink_sizes[i]
-        
-        return_string += " " #because the csv files has a bug where leading spaces exist when the first drink has no size
-
-        return_string += drink_names[i] + " - "
-        return_string += drink_prices[i] + ", "
-
-    return return_string[:-2]
-
-
-def format_total_prices(total_prices):
-    formatted_prices = []
-
-    for price in total_prices:
-        price_as_string = str(price)
-        formatted_price = price_as_string[:-2] + "." + price_as_string[-2:]
-        formatted_prices.append(formatted_price)
-
-    return formatted_prices
 
 
 def get_drink_info():
@@ -290,45 +243,82 @@ def get_drink_info():
     return drink_dict
 
 
+def get_drink_weightings(drink_menu, config_drink_info):
+    DEFAULT_DRINK_WEIGHTING = 100
+    drink_weightings = []
+
+    for drink in drink_menu["name"]:
+        if drink in config_drink_info:
+            drink_weighting = config_drink_info[drink]
+            drink_weightings.append(drink_weighting)
+        else:
+            drink_weightings.append(DEFAULT_DRINK_WEIGHTING)
+    
+    return drink_weightings
+
+
+def get_sizes_and_prices_of_drinks(drink_list, drink_menu):
+    drink_sizes = []
+    drink_prices = []
+
+    for drink in drink_list:
+        drink_index = drink_menu["name"].index(drink)
+        drink_has_size = drink_menu["is_sized"][drink_index]
+
+        if drink_has_size == "True":
+            random_drink_size = random.choice(["Large", "Regular"])
+        else:
+            random_drink_size = None
+
+        if random_drink_size == "Large":
+            drink_price = drink_menu["large_price"][drink_index]
+        else:
+            drink_price = drink_menu["regular_price"][drink_index]
+
+        drink_sizes.append(random_drink_size)
+        drink_prices.append(drink_price)
+
+    return drink_sizes, drink_prices
+
+
+def concat_purchase_strings(drink_names, drink_sizes, drink_prices):
+    return_string = ""
+
+    for i in range(len(drink_names)):
+        if drink_sizes[i] != None:
+            return_string += drink_sizes[i]
+        
+        return_string += " " #because the csv files has a bug where leading spaces exist when the first drink has no size
+
+        return_string += drink_names[i] + " - "
+        return_string += drink_prices[i] + ", "
+
+    return return_string[:-2] #slices off final trailing comma and space
+
+
+def format_total_prices(total_prices):
+    formatted_prices = []
+
+    for price in total_prices:
+        price_as_string = str(price)
+        formatted_price = price_as_string[:-2] + "." + price_as_string[-2:]
+        formatted_prices.append(formatted_price)
+
+    return formatted_prices
+
+
 def get_random_payment_types(config, order_count):
+    payment_types = ["CARD", "CASH"]
+    payment_weightings = [100]
+    
     if "CARD" in config["payment_method_probability_weights"]:
-        raw_card_probability = int(config["payment_method_probability_weights"]["CARD"])
-        adjusted_card_probability = int(raw_card_probability / 1.63)
-
-        payment_types = []
-        card_count = 0 #for debugging
-        cash_count = 0
-
-        for i in range(order_count):
-            rndm = random.randrange(0, 100 + adjusted_card_probability)
-            
-            if rndm < 100:
-                payment_types.append("CASH")
-                cash_count += 1
-            else:
-                payment_types.append("CARD")
-                card_count += 1
+        card_weighting = int(config["payment_method_probability_weights"]["CARD"])
+        payment_weightings.insert(0, card_weighting)
     else:
-        raw_cash_probability = int(config["payment_method_probability_weights"]["CASH"])
-        adjusted_cash_probability = int(raw_cash_probability / 1.63)
+        cash_weighting = int(config["payment_method_probability_weights"]["CASH"])
+        payment_weightings.append(cash_weighting)
 
-        payment_types = []
-        card_count = 0 #for debugging
-        cash_count = 0
-
-        for i in range(order_count):
-            rndm = random.randrange(0, 100 + adjusted_cash_probability)
-            
-            if rndm < 100:
-                payment_types.append("CARD")
-                card_count += 1
-            else:
-                payment_types.append("CASH")
-                cash_count += 1
-
-    # print(card_count)
-    # print(cash_count)
-
+    payment_types = random.choices(payment_types, weights = payment_weightings, k = order_count)
     return payment_types
 
 
@@ -354,20 +344,16 @@ def assign_card_numbers(payment_types):
 
 
 def generate_random_card_number():
-    #KEYS/VALUES ARE - CARD LENGTH: PERCENT CHANCE
-    card_length_percent_weights = {13: 16, 14: 2, 15: 18, 16: 58, 17: 6}
-    running_percent_total = 0
-    rndm = random.randrange(0, 100)
+    card_lengths = [13, 14, 15, 16, 17]
+    card_length_weightings = [16, 2, 18, 58, 6] # arbitrary numbers based on csv observations
+    chosen_card_length_as_list = random.choices(card_lengths, weights = card_length_weightings)
+    chosen_card_length = chosen_card_length_as_list[0]
 
-    for card_length, percent_weight in card_length_percent_weights.items():
-        running_percent_total += percent_weight
-
-        if running_percent_total >= rndm:
-            chosen_card_length = card_length
-            break
+    print(chosen_card_length)
+    print(type(chosen_card_length))
 
     if chosen_card_length == 16 and random.randrange(0, 3) == 0:
-        card_number = "6011"
+        card_number = "6011" #based on csv observations, appears that 33% of 16 digit numbers start with 6011
     else:
         card_number = ""
 
@@ -392,9 +378,7 @@ def build_dictionary(date, times, fnames, lnames, purchases, total_prices, payme
     return return_dict
 
 
-def create_csv(random_cafe_config, dict_, order_count):
-    csv_lines = []
-
+def create_csv_file(random_cafe_config, dict_, order_count):
     file_name = "output/"
     file_name += random_cafe_config["name"].lower().replace(" ", "_")
     file_name += "_"
@@ -402,6 +386,8 @@ def create_csv(random_cafe_config, dict_, order_count):
     file_name += "_"
     file_name += get_close_time_as_string(random_cafe_config)
     file_name += ".csv"
+
+    csv_lines = []
 
     for i in range(order_count):
         #number of decimals in a purchase represents the number of drinks, since each drink has one price associated with it (eg 1.50)
