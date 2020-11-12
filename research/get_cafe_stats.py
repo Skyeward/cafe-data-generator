@@ -3,8 +3,8 @@ import csv
 
 def define_file_list():
     files = []
-    files.append("livingston_10-11-2020_17-46-34.csv")
-    #files.append("aberdeen_11-10-2020_19-49-26.csv")
+    #files.append("livingston_10-11-2020_17-46-34.csv")
+    files.append("aberdeen_11-10-2020_19-49-26.csv")
     #files.append("chesterfield_05-11-2020_14-04-23.csv")
 
     files_with_directory = []
@@ -52,6 +52,8 @@ def print_stats(file_name, file_text_line_list, time_period):
     card_lengths = {}
     card_leading_digits = {}
     card_frequent_digits = {}
+
+    drink_names_and_frequencies = {}
     
     #NUMBER OF ORDERS AND DRINK PURCHASES
     number_of_orders = len(file_text_line_list)
@@ -143,6 +145,20 @@ def print_stats(file_name, file_text_line_list, time_period):
             if value > 1:
                 card_frequent_digits[key] = value
 
+    #DRINK COUNTS
+    for line in file_text_line_list:
+        drinks_string = line[3].lower().replace("large", "").replace("regular", "")
+        drinks_string = drinks_string.replace('"', '')
+        drinks = drinks_string.split(",")
+        
+        for drink in drinks:
+            drink = drink[:-7].strip()
+
+            if drink in drink_names_and_frequencies:
+                drink_names_and_frequencies[drink] += 1
+            else:
+                drink_names_and_frequencies[drink] = 1
+
 
     #PRINTING STATS
     print("number of orders: " + str(number_of_orders))
@@ -162,6 +178,11 @@ def print_stats(file_name, file_text_line_list, time_period):
     print()
     print(card_lengths)
     print(card_frequent_digits)
+    print()
+
+    for drink, count in drink_names_and_frequencies.items():
+        print("Number of " + drink + ": " + str(count))
+
     print()
 
     for period, count in counts_per_period_formatted_times.items():
