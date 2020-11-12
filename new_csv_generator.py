@@ -197,67 +197,29 @@ def get_debug_names(order_count):
 
 
 def get_random_purchases(random_cafe_config, order_times, order_count):
-    drink_dict = get_drink_info()
-    drink_dict["probability"] = []
-    
     config_drink_info = random_cafe_config["menu_probability_weights"]
-    config_drink_names = list(config_drink_info.keys())
-    running_probability = 0
-
-    for drink in drink_dict["name"]:
-        if drink in config_drink_names:
-            print("matched drink: " + drink)
-            running_probability += config_drink_info[drink]
-        else:
-            running_probability += 100
-            
-        drink_dict["probability"].append(running_probability)
-
+    drink_menu = get_drink_info()
+    drink_weightings = get_drink_weightings(drink_menu, config_drink_info)
+    
     purchases = []
     total_prices = []
 
     for i in range(order_count):
-        drink_count = random.randrange(1, 6)
-        random_drinks = []
-        drink_sizes = []
-        drink_prices = []
+        random_drink_count = random.randrange(1, 6)
+
+        random_drinks = random.choices(drink_menu["name"], weights = drink_weightings, k = random_drink_count)
+        drink_sizes, drink_prices = get_sizes_and_prices_of_drinks(random_drinks, drink_menu)
+
         total_price = 0
-        
-        for i in range(drink_count):
-            rndm = random.randrange(0, running_probability)
-            selected_drink = None
-            drink_to_check = 0
-            
-            while selected_drink == None:
-                if rndm < drink_dict["probability"][drink_to_check]:
-                    selected_drink = drink_dict["name"][drink_to_check]
-                else:
-                    drink_to_check += 1
 
-            random_drinks.append(selected_drink)
-
-            if drink_dict["is_sized"][drink_to_check] == "False":
-                size = None
-            else:
-                size = random.choice(["Large", "Regular"])
-
-            drink_sizes.append(size)
-
-            if size == "Large":
-                price = drink_dict["large_price"][drink_to_check]
-            else:
-                price = drink_dict["regular_price"][drink_to_check]
-
-            drink_prices.append(price)
+        for price in drink_prices:
             total_price += int(price.replace(".", ""))
 
+        full_purchase_string = concat_purchase_strings(random_drinks, drink_sizes, drink_prices)
+        purchases.append(full_purchase_string)
         total_prices.append(total_price)
-        purchases.append(concat_purchase_strings(random_drinks, drink_sizes, drink_prices))
-    
-    total_prices_as_decimal_strings = format_total_prices(total_prices)
 
-    # print(purchases)
-    # print(total_prices_as_decimal_strings)
+    total_prices_as_decimal_strings = format_total_prices(total_prices)
 
     return purchases, total_prices_as_decimal_strings
 
@@ -281,6 +243,44 @@ def get_drink_info():
     return drink_dict
 
 
+def get_drink_weightings(drink_menu, config_drink_info):
+    DEFAULT_DRINK_WEIGHTING = 100
+    drink_weightings = []
+
+    for drink in drink_menu["name"]:
+        if drink in config_drink_info:
+            drink_weighting = config_drink_info[drink]
+            drink_weightings.append(drink_weighting)
+        else:
+            drink_weightings.append(DEFAULT_DRINK_WEIGHTING)
+    
+    return drink_weightings
+
+
+def get_sizes_and_prices_of_drinks(drink_list, drink_menu):
+    drink_sizes = []
+    drink_prices = []
+
+    for drink in drink_list:
+        drink_index = drink_menu["name"].indexof(drink)
+        drink_has_size = drink_menu["is_sized"][drink_index]
+
+        if drink_has_size == "True":
+            random_drink_size = random.choice(["Large", "Regular"])
+        else:
+            random_drink_size = None
+
+        if random_drink_size == "Large":
+            drink_price = drink_menu["large_price"][drink_index]
+        else:
+            drink_price = drink_menu["regular_price"][drink_index]
+
+        drink_sizes.append(random_drink_size)
+        drink_prices.append(drink_price)
+
+    return drink_sizes, drink_prices
+
+
 def concat_purchase_strings(drink_names, drink_sizes, drink_prices):
     return_string = ""
 
@@ -293,7 +293,7 @@ def concat_purchase_strings(drink_names, drink_sizes, drink_prices):
         return_string += drink_names[i] + " - "
         return_string += drink_prices[i] + ", "
 
-    return return_string[:-2]
+    return return_string[:-2] #slices off final trailing comma and space
 
 
 def format_total_prices(total_prices):
