@@ -15,7 +15,7 @@ def main():
     #GENERATING RANDOM CSV DATA
     date_as_string = get_date_today()
     order_times, order_count = get_order_times(cafe_config)
-    fnames, lnames = get_random_names(order_count, True) #to bypass the API, set second argument to True
+    fnames, lnames = get_random_names(order_count, settings) #to bypass the API, set second argument to True
     purchases, total_prices = get_random_purchases(cafe_config, order_times, order_count)
     payment_types = get_random_payment_types(cafe_config, order_count)
     payment_dict = assign_card_numbers(payment_types)
@@ -29,9 +29,9 @@ def main():
 def get_formatted_settings():
     settings = yaml.safe_load(open("settings.yaml"))
 
-    if settings["use_custom_location"] == "true":
+    if settings["use_custom_location"] == "true" or settings["use_custom_location"] == "TRUE":
         settings["use_custom_location"] = True
-    elif settings["use_custom_location"] == "false":
+    elif settings["use_custom_location"] == "false" or settings["use_custom_location"] == "FALSE":
         settings["use_custom_location"] = False
     elif settings["use_custom_location"] != True and settings["use_custom_location"] != False:
         print("SETTINGS.YAML ERROR: use_custom_location should be set to True or False")
@@ -39,8 +39,13 @@ def get_formatted_settings():
 
     if type(settings["custom_location"]) == str:
         settings["custom_location"] = settings["custom_location"].lower()
-    else:
-        print("SETTINGS.YAML ERROR: use_custom_location should be set to True or False")
+
+    if settings["use_random_name_api"] == "true" or settings["use_random_name_api"] == "TRUE":
+        settings["use_random_name_api"] = True
+    elif settings["use_random_name_api"] == "false" or settings["use_random_name_api"] == "FALSE":
+        settings["use_random_name_api"] = False
+    elif settings["use_random_name_api"] != True and settings["use_random_name_api"] != False:
+        print("SETTINGS.YAML ERROR: use_random_name_api should be set to True or False")
         exit()
 
     return settings
@@ -56,6 +61,9 @@ def get_cafe_config(settings):
         for config in configs_as_list:
             if config["name"].lower() == location:
                 return config
+
+        print("SETTINGS.YAML ERROR: custom_location does not match any location in storeConfig.yaml")
+        exit()
     else:
         config_count = len(configs_as_list)
         random_index = random.randrange(0, config_count)
@@ -163,11 +171,11 @@ def format_order_times(order_times):
     return formatted_times
 
 
-def get_random_names(order_count, debug_mode = False):
-    if debug_mode == True:
-        return get_debug_names(order_count)
-    else:
+def get_random_names(order_count, settings):
+    if settings["use_random_name_api"] == True:
         return get_names_from_api(order_count)
+    else:
+        return get_debug_names(order_count)
     
 
 def get_names_from_api(name_count_to_get):
