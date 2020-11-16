@@ -450,13 +450,13 @@ def create_csv_file(random_cafe_config, dict_, order_count):
     for line in csv_lines:
         print(line)
 
-    with open(file_name, "w") as file_:
+    with open(file_name, "wb") as file_:
             string_to_write = ""
             
             for line in csv_lines:
                 string_to_write += f"{line}\n"
         
-            file_.write(string_to_write)
+            file_.write(string_to_write.encode("utf-8"))
 
 
 def get_close_time_as_string(config):
