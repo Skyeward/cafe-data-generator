@@ -62,7 +62,7 @@ def get_cafe_config(settings):
             if config["name"].lower() == location:
                 return config
 
-        print("SETTINGS.YAML ERROR: custom_location does not match any location in storeConfig.yaml")
+        print(f"SETTINGS.YAML ERROR: custom_location {location} does not match any location in storeConfig.yaml")
         exit()
     else:
         config_count = len(configs_as_list)
