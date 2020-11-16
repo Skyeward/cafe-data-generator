@@ -34,7 +34,7 @@ def get_formatted_settings():
     elif settings["use_custom_location"] == "false" or settings["use_custom_location"] == "FALSE":
         settings["use_custom_location"] = False
     elif settings["use_custom_location"] != True and settings["use_custom_location"] != False:
-        print("SETTINGS.YAML ERROR: use_custom_location should be set to True or False")
+        print(f"SETTINGS.YAML ERROR: use_custom_location should be set to True or False - currently set to {settings['use_custom_location']}")
         exit()
 
     if type(settings["custom_location"]) == str:
@@ -45,7 +45,7 @@ def get_formatted_settings():
     elif settings["use_random_name_api"] == "false" or settings["use_random_name_api"] == "FALSE":
         settings["use_random_name_api"] = False
     elif settings["use_random_name_api"] != True and settings["use_random_name_api"] != False:
-        print("SETTINGS.YAML ERROR: use_random_name_api should be set to True or False")
+        print(f"SETTINGS.YAML ERROR: use_random_name_api should be set to True or False - currently set to {settings['use_random_name_api']}")
         exit()
 
     return settings
